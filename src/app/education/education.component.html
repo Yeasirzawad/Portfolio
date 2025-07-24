@@ -1,0 +1,19 @@
+<section class="education-section">
+    <section class="section-heading">
+        <h3 class="section-heading">{{ sectionTitle }}</h3>
+    </section>
+
+    <div class="education-list">
+        <div class="education-card" *ngFor="let edu of educationList">
+            <h3 class="degree">{{ edu.degree }}</h3>
+            <p class="school">{{ edu.school }}</p>
+            <div *ngIf="!edu.gpa">
+                <p class="duration">{{ edu.duration }}</p>
+            </div>
+            <div *ngIf="edu.gpa" class="bottom-row">
+                <span class="duration">{{ edu.duration }}</span>
+                <span class="gpa">{{ edu.gpa }}</span>
+            </div>
+        </div>
+    </div>
+</section>

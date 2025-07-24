@@ -1,0 +1,16 @@
+<section class="certification-section">
+    <section class="section-heading">
+        <h3 class="section-heading">Certifications</h3>
+    </section>
+
+    <div class="certification-grid">
+        <div class="cert-card" *ngFor="let cert of certifications">
+            <h3 class="cert-title">{{ cert.title }}</h3>
+            <p class="cert-org">{{ cert.event }}</p>
+            <p class="cert-date">{{ cert.date }}</p>
+            <a [href]="cert.credentialUrl" class="cert-link" target="_blank" rel="noopener noreferrer">
+                View Credential
+            </a>
+        </div>
+    </div>
+</section>

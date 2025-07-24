@@ -1,0 +1,31 @@
+<section class="contact-section">
+    <section class="section-heading">
+        <h3 class="section-heading">Get In Touch</h3>
+    </section>
+
+    <p class="contact-intro">
+        Whether you're interested in hiring or exploring potential collaborations, I'm always open to new opportunities. Feel free to get in touch through Email or LinkedIn.
+    </p>
+
+    <div class="contact-info">
+        <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>{{ location }}</span>
+        </div>
+
+        <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a [href]="'tel:' + phone">{{ phone }}</a>
+        </div>
+
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a [href]="'mailto:' + email">{{ email }}</a>
+        </div>
+
+        <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <a [href]="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        </div>
+    </div>
+</section>

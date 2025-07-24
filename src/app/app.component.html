@@ -1,0 +1,75 @@
+<nav class="navbar">
+    <div class="navbar-brand">
+        <img src="assets/logos/profilepic.png" alt="Profile" />
+        <span>MD. Yeasir Zawad</span>
+    </div>
+    <button class="navbar-toggle" (click)="isMenuOpen = !isMenuOpen">
+        ☰
+    </button>
+
+    <ul [class.open]="isMenuOpen">
+        <li><button (click)="scrollToSection('home')">Home</button></li>
+        <li><button (click)="scrollToSection('experience')">Experience</button></li>
+        <li><button (click)="scrollToSection('education')">Education</button></li>
+        <li><button (click)="scrollToSection('projects')">Projects</button></li>
+        <li><button (click)="scrollToSection('skills')">Skills</button></li>
+        <li><button (click)="scrollToSection('contact')">Contact Me</button></li>
+    </ul>
+</nav>
+
+<section class="hero-section">
+    <div class="hero-text">
+        <p class="name">{{ name }}</p>
+        <h1 class="greeting">{{ jobTitle }}</h1>
+        <p class="description">{{ description }}</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <rect width="24" height="24" rx="6" fill="#2563EB"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.603-3.369-1.342-3.369-1.342-.454-1.154-1.109-1.461-1.109-1.461-.908-.62.069-.607.069-.607 1.004.07 1.532 1.032 1.532 1.032.892 1.528 2.341 1.087 2.91.832.091-.647.349-1.087.636-1.338-2.22-.253-4.555-1.111-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.254-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.025a9.563 9.563 0 012.5-.336c.848.004 1.705.115 2.5.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.376.203 2.392.1 2.646.64.7 1.028 1.592 1.028 2.683 0 3.842-2.338 4.687-4.566 4.935.358.308.678.918.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .268.18.58.688.481A10.013 10.013 0 0022 12c0-5.523-4.477-10-10-10z" fill="white"/>
+                </svg>
+            </a>
+
+            <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                    <rect width="24" height="24" rx="6" fill="#2563EB"/>
+                    <path d="M6.94 8.108c0 1.136-.914 2.057-2.04 2.057-1.126 0-2.04-.92-2.04-2.057 0-1.136.914-2.057 2.04-2.057 1.127 0 2.04.92 2.04 2.057zM6.925 9.787H4.24v7.953h2.685v-7.953zM9.354 9.787h2.574v1.06h.037c.358-.678 1.23-1.393 2.532-1.393 2.708 0 3.206 1.78 3.206 4.09v4.195h-2.685v-3.717c0-.888-.02-2.034-1.239-2.034-1.24 0-1.428.97-1.428 1.972v3.779H9.354v-7.352z" fill="white"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="assets/logos/profilepic.png" alt="{{ name }}" />
+    </div>
+</section>
+
+
+
+
+<section id="experience" class="content-section fade-in">
+    <experience></experience>
+</section>
+
+
+<section id="education" class="content-section fade-in">
+    <education></education>
+</section>
+
+<section id="projects" class="content-section fade-in">
+    <projects></projects>
+</section>
+
+
+<section id="skills" class="content-section fade-in">
+    <skills></skills>
+</section>
+
+<section id="certifications" class="content-section fade-in">
+    <certifications></certifications>
+</section>
+
+
+<section id="contact" class="content-section fade-in">
+    <contact></contact>
+</section>

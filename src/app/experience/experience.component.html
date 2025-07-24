@@ -1,0 +1,16 @@
+<div class="experience-section">
+    <section class="section-heading">
+        <h3 class="section-heading">Experience</h3>
+    </section>
+    <div class="cards-container">
+        <div class="experience-card" *ngFor="let item of experiences">
+            <img [src]="item.image" alt="{{ item.company }} logo" class="company-logo" />
+            <h3 class="role">{{ item.role }}</h3>
+            <p class="company">{{ item.company }}</p>
+            <p class="duration">{{ item.duration }}</p>
+            <ul class="details">
+                <li *ngFor="let duty of item.details">{{ duty }}</li>
+            </ul>
+        </div>
+    </div>
+</div>

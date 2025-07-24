@@ -1,0 +1,66 @@
+.experience-section {
+    padding: 2rem 1rem;
+    overflow-x: hidden;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+.experience-card {
+    flex: 0 0 350px; /* fixed width for horizontal layout */
+    background: white;
+    padding: 1.8rem 2rem;
+    border-radius: 12px;
+    border: 1.5px solid #d1d9e6; /* subtle light border */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    border-color: #2980b9;
+}
+
+.role {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.3rem;
+}
+
+.company {
+    font-size: 18px;
+    color: #2980b9;
+    font-weight: 520;
+    margin-bottom: 0.3rem;
+}
+
+.duration {
+    color: #999;
+    margin-bottom: 1rem;
+}
+
+.company-logo {
+    width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+}
+
+.details {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+}
+
+.details li {
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}

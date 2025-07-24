@@ -43,7 +43,7 @@ Tracked KPIs, analyzed product trends, identifying best-selling brands, customer
       description: `Conducted a comprehensive study of 400 students across 17 departments in SUST using PPS and SRS sampling techniques.
 Performed data analysis including descriptive statistics, chi-square tests, and binary logistic regression modeling.
 Identified key factors influencing students’ involvement in freelancing and tuition activities, providing insights into their background characteristics and associations between various factors.`,
-      technologies: ['Google Sheets', 'RStudio', 'SPSS', 'Logistic', 'Report Writing'],
+      technologies: ['Google Sheets', 'RStudio', 'SPSS', 'Logistic Regression', 'Report Writing'],
       imageUrl: 'assets/images/freelancing-sust.jpg',
       link: '#',
       githubLink: 'https://github.com/yourusername/freelancing-sust'

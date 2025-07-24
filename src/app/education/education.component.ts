@@ -16,7 +16,7 @@ export class EducationComponent {
       degree: 'M.Sc. in Applied Statistics and Data Science',
       school: 'Jahangirnagar University',
       duration: '2024 - 2025 (Expected)',
-      gpa: null
+      gpa: 'CGPA: 4.00 / 4.00'
     },
     {
       degree: 'B.Sc. in Statistics',

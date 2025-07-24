@@ -11,13 +11,12 @@ import {CommonModule} from "@angular/common";
 export class ExperienceComponent {
   experiences = [
     {
-      role: 'Data Analyst',
+      role: 'Research Analyst',
       company: 'AI Byters',
       duration: 'December 2024 – Present',
       details: [
-        'Conducted web scraping and data analysis using Python.',
-        'Developed interactive Power BI dashboard for job market insights.',
-        'Working on a financial service tool for trend forecasting.'
+        'Conduct market research and developed 25+ reports with TAM/SAM/SOM estimation, market size forecasting, customer segmentation, competitive analysis, and M&A evaluation',
+        'Created interactive market intelligence reports in Power BI, and developed forecasting models in Python to project market size, growth trends, and strategic opportunities',
       ],
       image: 'assets/logos/ai-byters.png',
     },

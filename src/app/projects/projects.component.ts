@@ -41,10 +41,10 @@ Tracked KPIs, analyzed product trends, identifying best-selling brands, customer
     {
       title: 'Exploring the Involvement in Freelancing (tuition) Activities of Students in SUST',
       description: 'Analyzed survey data from 400 students across 17 departments at SUST to identify the main factors influencing involvement in freelancing and private tuition. Built a binary logistic regression model with 96.8% classification accuracy and 0.98 AUC, revealing that tuition was the dominant earning activity (220 students, 55%) and that time spent on income-generating work was the strongest predictor of participation.',
-      technologies: ['Google Sheets', 'RStudio', 'SPSS', 'Logistic Regression', 'Report Writing'],
+      technologies: ['Google Form','RStudio', 'SPSS', 'Logistic Regression', 'Chi-Square', 'Report Writing'],
       imageUrl: 'assets/images/freelancing-sust.jpg',
       link: '#',
-      githubLink: 'https://github.com/yourusername/freelancing-sust'
+      githubLink: 'https://github.com/Yeasirzawad/Involvement-in-Freelancing--tuition--Activities-in-SUST'
     }
   ];
 }

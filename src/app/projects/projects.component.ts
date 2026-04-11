@@ -33,7 +33,7 @@ export class ProjectsComponent {
       imageUrl: 'assets/project-image/market-performance.png',
       link: '#',
       githubLink: 'https://github.com/yourusername/market-performance'
-    }
+    },
     {
       title: 'Student Freelancing and Tuition Activity Analysis at SUST',
       description: 'Analyzed survey data from 400 students across 17 departments at SUST to identify the key factors influencing participation in freelancing and private tuition. Built a binary logistic regression model with 96.8% classification accuracy and 0.98 AUC, showing that tuition was the dominant income activity (220 students, 55%) and that time spent on income-generating work was the strongest predictor of participation.',

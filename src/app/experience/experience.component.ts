@@ -10,19 +10,18 @@ import {CommonModule} from "@angular/common";
 })
 export class ExperienceComponent {
     experiences = [
-        {
-          role: 'Lead Research Analyst',
-          company: 'Perceive Now, Inc.',
-          duration: 'Oct 2025 – Present',
-          details: [
-            'Lead end-to-end market and enterprise research across multiple industries, designing research frameworks that turn market, competitive, and operational data into clear business insights.',
-            'Delivered 30+ market intelligence reports covering market sizing, customer segmentation, competitive analysis, forecasting, pricing strategy, product-market fit, and go-to-market planning.',
-            'Support business development through proposal writing, research scoping, next-step planning, and follow-up content for investor and client communications.',
-            'Collaborate cross-functionally with backend, UI/UX, and other internal teams to gather requirements, align on deliverables, and ensure the right data, information, and content are available for execution.',
-            'Contribute to project coordination and operational workflows by helping manage documentation, communication, and handoff processes across research and delivery teams.'
-          ],
-          image: 'assets/logos/Perceive_Now.png',
-        },
+          {
+        role: 'Lead Research Analyst',
+        company: 'Perceive Now, Inc.',
+        duration: 'Oct 2025 – Present',
+        details: [
+          'Lead market and enterprise research across industries, turning complex data into clear business insights.',
+          'Delivered 30+ market intelligence reports covering market sizing, competitive analysis, forecasting, pricing, and go-to-market strategy.',
+          'Support business development through proposal writing, research scoping, and client/investor communication.',
+          'Work cross-functionally with backend, UI/UX, and internal teams to align requirements and support execution.'
+        ],
+        image: 'assets/logos/Perceive_Now.png',
+      },
       {
         role: 'Data Analyst',
         company: 'Perceive Now, Inc.',

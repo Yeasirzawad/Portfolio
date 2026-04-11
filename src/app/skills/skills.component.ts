@@ -45,7 +45,7 @@ export class SkillsComponent {
     },
     {
       category: 'Databases & Research Tools',
-      skills: ['MySQL', 'PostgreSQL', 'SPSS', 'STATA', 'Jupyter Notebook']
+      skills: ['MySQL', 'PostgreSQL', 'SPSS', 'STATA']
     },
     {
       category: 'Visualization & Communication',

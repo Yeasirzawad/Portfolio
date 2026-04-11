@@ -10,7 +10,6 @@ import {CommonModule} from "@angular/common";
 })
 export class ContactComponent {
   location = 'Kallyanpur, Dhaka';
-  phone = '+8801317974269';
   email = 'amirsifat@gmail.com';
   linkedin = 'https://linkedin.com/in/amirsifat';
 }

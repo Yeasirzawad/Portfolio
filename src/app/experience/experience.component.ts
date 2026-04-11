@@ -9,36 +9,56 @@ import {CommonModule} from "@angular/common";
   styleUrl: './experience.component.css'
 })
 export class ExperienceComponent {
-  experiences = [
-    {
-      role: 'Research Analyst',
-      company: 'AI Byters',
-      duration: 'December 2024 – Present',
-      details: [
-        'Conduct market research and developed 25+ reports with TAM/SAM/SOM estimation, market size forecasting, customer segmentation, competitive analysis, and M&A evaluation',
-        'Created interactive market intelligence reports in Power BI, and developed forecasting models in Python to project market size, growth trends, and strategic opportunities',
-      ],
-      image: 'assets/logos/ai-byters.png',
-    },
-    {
-      role: 'Data Analyst Intern',
-      company: 'AI Byters',
-      duration: 'April 2024 – November 2024',
-      details: [
-        'Conducted web scraping and data analysis using Python.',
-        'Developed interactive Power BI dashboard for job market insights.',
-        'Working on a financial service tool for trend forecasting.'
-      ],
-      image: 'assets/logos/ai-byters.png',
-    },
-    {
-      role: 'Junior Data Annotator',
-      company: 'Quantigo AI',
-      duration: 'January 2021 – April 2021',
-      details: [
-        'Worked as an image and video annotator for ML projects.'
-      ],
-      image: 'assets/logos/q-ai.png',
-    }
-  ];
+    experiences = [
+      {
+        role: 'Lead Research Analyst',
+        company: 'Perceive Now, Inc.',
+        duration: 'Oct 2025 – Present',
+        details: [
+          'Manage end-to-end market and enterprise research across multiple industries, designing research frameworks that turn complex market, competitive, and operational data into clear business insights.',
+          'Delivered 30+ market intelligence reports covering market sizing, customer segmentation, competitive analysis, forecasting, pricing strategy, product-market fit, and go-to-market planning.',
+          'Support new business development through proposal writing, research scoping, and data-driven input for investor and client pitch materials.'
+        ],
+        image: 'assets/logos/Perceive_Now.png',
+      },
+      {
+        role: 'Data Analyst',
+        company: 'Perceive Now, Inc.',
+        duration: 'Nov 2024 – Sep 2025',
+        details: [
+          'Worked on statistical data analysis and research-driven problem solving to support market intelligence and client-facing analytical work.',
+          'Contributed to data-backed reporting, insight generation, and structured analysis across research and business projects.'
+        ],
+        image: 'assets/logos/Perceive_Now.png',
+      },
+      {
+        role: 'Founding Member',
+        company: 'AI Byters',
+        duration: 'Oct 2024 – Present',
+        details: [
+          'Contribute to market analysis, business research, and data-driven solution development as part of the founding team.',
+          'Support strategic initiatives across analytics, research, and business development activities.'
+        ],
+        image: 'assets/logos/ai-byters.png',
+      },
+      {
+        role: 'Data Analyst Intern',
+        company: 'AI Byters',
+        duration: 'Apr 2024 – Sep 2024',
+        details: [
+          'Performed web scraping, data cleaning, and structured data preparation using Python for business and research use cases.',
+          'Designed interactive Power BI dashboards to visualize business metrics and communicate insights clearly.'
+        ],
+        image: 'assets/logos/ai-byters.png',
+      },
+      {
+        role: 'Data Annotator',
+        company: 'Quantigo AI',
+        duration: 'Jul 2020 – Apr 2021',
+        details: [
+          'Annotated image and video datasets for machine learning projects, supporting quality assurance and model training workflows.'
+        ],
+        image: 'assets/logos/q-ai.png',
+      }
+    ];
 }

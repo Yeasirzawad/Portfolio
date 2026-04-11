@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {CommonModule} from "@angular/common";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'certifications',
@@ -11,28 +11,40 @@ import {CommonModule} from "@angular/common";
 export class CertificationsComponent {
   certifications = [
     {
-      title: 'Poster presentation on An Assessment On Online Learning During COVID-19 Pandemic Among Secondary Level Delegates In Bangladesh',
-      event: 'International Seminar and Stat Fest, SUST',
-      date: '11–12 March 2023',
+      title: 'Microsoft Certified: Power BI Data Analyst Associate',
+      event: 'Microsoft',
+      date: 'June 2025',
       credentialUrl: '#'
     },
     {
-      title: 'Poster presentation on A Comparison between ARCH and GARCH Models: Evidence From The Onion Price Volatility in Bangladesh Over The Past Decades',
-      event: 'International Seminar and Stat Fest, SUST',
-      date: '11–12 March 2023',
-      credentialUrl: '#'
-    },
-    {
-      title: 'Associate Data Analyst in SQL',
-      event: 'Datacamp',
-      date: 'May 2024',
-      credentialUrl: '#'
+      title: 'Time Series Analysis with Python',
+      event: '365 Data Science',
+      date: 'November 2024',
+      credentialUrl: 'https://learn.365datascience.com/certificates/CC-FDAB86234E/'
     },
     {
       title: 'Power BI Specialist',
       event: 'Maven Analytics',
       date: 'October 2024',
-      credentialUrl: '#'
+      credentialUrl: 'https://certificates.mavenanalytics.io/743a0d37-a118-4984-ac17-d3c92da55aae#acc.kbi3loqJ'
+    },
+    {
+      title: 'Associate Data Analyst in SQL',
+      event: 'DataCamp',
+      date: 'May 2024',
+      credentialUrl: 'https://www.datacamp.com/statement-of-accomplishment/track/743516b75740baab86c9583d998c95bea807ef0b?raw=1'
+    },
+    {
+      title: 'Poster Presentation: An Assessment on Online Learning During COVID-19 Pandemic Among Secondary Level Delegates in Bangladesh',
+      event: 'International Seminar and Stat Fest, SUST',
+      date: 'March 2023',
+      credentialUrl: 'https://drive.google.com/file/d/1t4lamfYaeZmhg9UCg8cmuCTSq_HOcKSL/view'
+    },
+    {
+      title: 'Poster Presentation: A Comparison between ARCH and GARCH Models: Evidence from the Onion Price Volatility in Bangladesh over the Past Decades',
+      event: 'International Seminar and Stat Fest, SUST',
+      date: 'March 2023',
+      credentialUrl: 'https://drive.google.com/file/d/1fPmVjKCcti2_R7YcN0MAXTUaSLrgllHw/view'
     }
   ];
 }

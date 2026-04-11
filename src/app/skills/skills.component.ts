@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {CommonModule} from "@angular/common";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'skills',
@@ -11,35 +11,66 @@ import {CommonModule} from "@angular/common";
 export class SkillsComponent {
   skillGroups = [
     {
-      category: 'Programming Languages',
+      category: 'Programming',
       skills: ['Python', 'R', 'SQL']
     },
     {
-      category: 'Technologies',
+      category: 'BI & Reporting',
+      skills: ['Power BI', 'Power Query', 'DAX', 'Excel']
+    },
+    {
+      category: 'Statistical & Data Analysis',
       skills: [
-        'MS Word', 'MS Excel', 'Power Query', 'MS Power BI',
-        'DAX', 'SPSS', 'STATA', 'Jupyter Notebook'
+        'Regression Analysis',
+        'Time Series Analysis',
+        'A/B Testing',
+        'Predictive Modeling',
+        'Hypothesis Testing',
+        'Cohort Analysis',
+        'Forecasting'
       ]
     },
     {
-      category: 'Visualization',
-      skills: ['MS Power BI', 'Excel Charts', 'Matplotlib', 'Seaborn']
-    },
-    {
-      category: 'Database',
-      skills: ['MySQL', 'PostgreSQL']
-    },
-    {
-      category: 'Analysis',
-      skills: ['Descriptive Analysis', 'Quantitative Analysis', 'Statistical Analysis',
-        'Predictive Modelling', 'Regression Analysis', 'Time Series Analysis'
+      category: 'Market Research',
+      skills: [
+        'TAM/SAM/SOM Estimation',
+        'Market Sizing',
+        'Market Forecasting',
+        'Competitive Analysis',
+        'Pricing Diagnostics',
+        'Customer Segmentation',
+        'Product-Market Fit Analysis',
+        'Trend Analysis'
       ]
     },
     {
-      category: 'Market Research & Business Intelligence',
-      skills: ['TAM/SAM/SOM Estimation', 'Market Size Forecasting','Competitive Analysis', 'SWOT Analysis', 
-        'Customer Segmentation','M&A Evaluation', 'Trend Analysis', 'Sentiment Analysis', 'Business Intelligence', 
-        'Data-Driven Decision Making', 'Data Storytelling', 'Report Writing'
+      category: 'Databases & Research Tools',
+      skills: ['MySQL', 'PostgreSQL', 'SPSS', 'STATA', 'Jupyter Notebook']
+    },
+    {
+      category: 'Visualization & Communication',
+      skills: [
+        'Dashboard Design',
+        'Data Storytelling',
+        'Executive Reporting',
+        'Report Writing'
+      ]
+    },
+    {
+      category: 'Project & Workflow Tools',
+      skills: ['Trello', 'Confluence', 'Slack']
+    },
+    {
+      category: 'AI Research & Productivity Tools',
+      skills: [
+        'ChatGPT',
+        'Perplexity',
+        'Gemini',
+        'Kimi',
+        'Gamma',
+        'Custom GPTs',
+        'AI-Assisted Research',
+        'Prompt Engineering'
       ]
     }
   ];

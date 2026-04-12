@@ -35,13 +35,13 @@ export class CertificationsComponent {
       credentialUrl: 'https://www.datacamp.com/statement-of-accomplishment/track/743516b75740baab86c9583d998c95bea807ef0b?raw=1'
     },
     {
-      title: 'Poster Presentation: An Assessment on Online Learning During COVID-19 Pandemic Among Secondary Level Delegates in Bangladesh',
+      title: 'An Assessment on Online Learning During COVID-19 Pandemic Among Secondary Level Delegates in Bangladesh',
       event: 'International Seminar and Stat Fest, SUST',
       date: 'March 2023',
       credentialUrl: 'https://drive.google.com/file/d/1t4lamfYaeZmhg9UCg8cmuCTSq_HOcKSL/view'
     },
     {
-      title: 'Poster Presentation: A Comparison between ARCH and GARCH Models: Evidence from the Onion Price Volatility in Bangladesh over the Past Decades',
+      title: 'A Comparison between ARCH and GARCH Models: Evidence from the Onion Price Volatility in Bangladesh over the Past Decades',
       event: 'International Seminar and Stat Fest, SUST',
       date: 'March 2023',
       credentialUrl: 'https://drive.google.com/file/d/1fPmVjKCcti2_R7YcN0MAXTUaSLrgllHw/view'

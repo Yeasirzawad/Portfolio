@@ -11,14 +11,14 @@ import {CommonModule} from "@angular/common";
 export class ExperienceComponent {
     experiences = [
           {
-        role: 'Lead Research Analyst',
+        role: 'Senior Research Analyst',
         company: 'Perceive Now, Inc.',
         duration: 'Oct 2025 – Present',
         details: [
           'Lead market and enterprise research across industries, turning complex data into clear business insights.',
           'Delivered 30+ market intelligence reports covering market sizing, competitive analysis, forecasting, pricing, and go-to-market strategy.',
           'Support business development through proposal writing, research scoping, and client/investor communication.',
-          'Work cross-functionally with backend, UI/UX, and internal teams to align requirements and support execution.'
+          'Work with cross-functional teams to align requirements and support execution.'
         ],
         image: 'assets/logos/Perceive_Now.png',
       },
@@ -47,7 +47,7 @@ export class ExperienceComponent {
         company: 'AI Byters',
         duration: 'Apr 2024 – Sep 2024',
         details: [
-          'Performed web scraping, data cleaning, and structured data preparation using Python for business and research use cases.',
+          'Performed web scraping, data cleaning, and structured data preparation for business and research use cases.',
           'Designed interactive Power BI dashboards to visualize business metrics and communicate insights clearly.'
         ],
         image: 'assets/logos/ai-byters.png',

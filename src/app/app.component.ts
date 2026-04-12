@@ -10,7 +10,9 @@ export class AppComponent {
   name = 'Md. Yeasir Zawad';
 
   description: string = `I am a Microsoft Certified Data Analyst with experience in market research, 
-  business intelligence, and statistical analysis. I work with Python, R, SQL, Excel, and Power BI to turn raw data into actionable insights, build decision-support dashboards, and deliver research that helps businesses make smarter decisions.`;
+  business intelligence, and statistical analysis. I work with Python, R, SQL, Excel, and Power BI 
+  to turn data into clear insights, create interactive dashboards, 
+  and deliver research that supports strategy, performance improvement, and business growth.`;
 
   isMenuOpen = false;
 

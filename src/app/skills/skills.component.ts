@@ -15,8 +15,8 @@ export class SkillsComponent {
       skills: ['Python', 'R', 'SQL']
     },
     {
-      category: 'BI & Reporting',
-      skills: ['Power BI', 'Power Query', 'DAX', 'Excel']
+      category: 'Business Intelligence & Reporting',
+      skills: ['Power BI', "Excel", "Metabase", 'Power Query', 'DAX']
     },
     {
       category: 'Statistical & Data Analysis',
@@ -32,8 +32,7 @@ export class SkillsComponent {
     },
     {
       category: 'Market Research',
-      skills: [
-        'TAM/SAM/SOM Estimation',
+      skills: [,
         'Market Sizing',
         'Market Forecasting',
         'Competitive Analysis',

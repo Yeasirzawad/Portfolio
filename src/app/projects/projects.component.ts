@@ -41,6 +41,14 @@ export class ProjectsComponent {
       imageUrl: 'assets/project-image/Freelancing Project.png',
       link: "https://drive.google.com/file/d/1e5jMPFiJO0RwHUB_c7R2uwHU0Vol0BX2/view?usp=drive_link",
       githubLink: 'https://github.com/Yeasirzawad/Involvement-in-Freelancing--tuition--Activities-in-SUST'
-    }
+    },
+    {
+        title: 'Regional Revenue Dashboard for Toy Store Business',
+        description: 'Built a dynamic Excel dashboard to monitor regional revenue, compare store performance, and track month-over-month product movement for a toy retail business. Structured the workbook with a dedicated Data Prep layer using time-based KPI logic, ranking formulas, and dynamic region selection to create a scalable and user-friendly reporting model.',
+        technologies: ['Microsoft Excel', 'Data Modeling', 'Dashboard Design', 'SUMIFS', 'INDEX-MATCH', 'YoY / MoM Analysis'],
+        imageUrl: 'assets/project-image/Toy_Store.png',
+        link: 'https://github.com/Yeasirzawad/Toy-Store-Monthly-Sales-Analysis/tree/main',
+        githubLink: 'https://github.com/Yeasirzawad/Toy-Store-Monthly-Sales-Analysis/tree/main'
+      }
   ];
 }

@@ -32,8 +32,7 @@ export class SkillsComponent {
     },
     {
       category: 'Market Research',
-      skills: [,
-        'Market Sizing',
+      skills: [ 'Market Sizing',
         'Market Forecasting',
         'Competitive Analysis',
         'Pricing Diagnostics',

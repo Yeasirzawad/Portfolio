@@ -14,11 +14,11 @@ export class ExperienceComponent {
         role: 'Senior Research Analyst',
         company: 'Perceive Now, Inc.',
         duration: 'Oct 2025 – Present',
-        details: [
-          'Lead market and enterprise research across industries, turning complex data into clear business insights.',
-          'Delivered 30+ market intelligence reports covering market sizing, competitive analysis, forecasting, pricing, and go-to-market strategy.',
-          'Support business development through proposal writing, research scoping, and client/investor communication.',
-          'Work with cross-functional teams to align requirements and support execution.'
+        details: ["Built structured analytical outputs using Excel, Google Sheets, Power BI to support client research, reporting, and decision-making.",
+          "Lead market and enterprise research across industries, turning complex data into clear business insights.",
+          "Delivered 30+ market intelligence reports covering market sizing, competitive analysis, forecasting, pricing, and go-to-market strategy.",
+          "Support business development through proposal writing, research scoping, and client/investor communication.",
+          "Work with cross-functional teams to align requirements and support execution."
         ],
         image: 'assets/logos/Perceive_Now.png',
       },

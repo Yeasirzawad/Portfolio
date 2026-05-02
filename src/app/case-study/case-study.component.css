@@ -1,5 +1,6 @@
 .case-study-section {
   width: 100%;
+  padding: 0 clamp(16px, 2vw, 24px);
 }
 
 .cs-intro {

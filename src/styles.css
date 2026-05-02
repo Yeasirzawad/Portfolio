@@ -1,35 +1,127 @@
-body {
-  font-family: Rubik, sans-serif, serif;
-  margin: 0;
-  background: #f8f9fa;
-  color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+/* ===== Design Tokens ===== */
+:root {
+  --color-primary: #0a2540;
+  --color-accent: #1a6fc4;
+  --color-accent-light: #e8f1fb;
+  --color-neutral-50: #f7f9fc;
+  --color-neutral-100: #eef2f7;
+  --color-neutral-200: #d6dfe8;
+  --color-neutral-400: #8fa3b8;
+  --color-neutral-600: #4a647a;
+  --color-neutral-800: #1e3448;
+  --color-foreground: #0a2540;
+  --color-background: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-border: #d6dfe8;
+  --color-muted: #8fa3b8;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 3px rgba(10, 37, 64, 0.08);
+  --shadow-md: 0 4px 16px rgba(10, 37, 64, 0.10);
+  --shadow-lg: 0 8px 32px rgba(10, 37, 64, 0.14);
+
+  --max-width: 1100px;
 }
 
-.section-heading
-{
-  padding-bottom: 45px;
+/* ===== Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-background);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Section Heading ===== */
+.section-heading {
+  padding-bottom: 48px;
 }
 
 .section-heading h3 {
   position: relative;
   display: inline-block;
-  vertical-align: top;
-  padding-right: 45px;
-  font-size: 40px;
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-primary);
   margin: 0;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-  color: #000000;
-  font-family: Rubik, sans-serif, serif;
+  padding-bottom: 14px;
+  letter-spacing: -0.01em;
 }
 
-.section-heading h3:after {
+.section-heading h3::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 60px;
+  width: 48px;
   height: 3px;
-  background-color: #4790d6;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* ===== Content Sections ===== */
+.content-section {
+  padding: 72px max(24px, calc((100% - var(--max-width)) / 2));
+  background-color: var(--color-background);
+}
+
+.content-section:nth-child(even) {
+  background-color: var(--color-surface);
+}
+
+/* ===== Fade-in animation ===== */
+.fade-in {
+  animation: fadeInUp 0.5s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Scroll offset fix for sticky nav ===== */
+:target::before {
+  content: "";
+  display: block;
+  height: 72px;
+  margin-top: -72px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ===== Utility ===== */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

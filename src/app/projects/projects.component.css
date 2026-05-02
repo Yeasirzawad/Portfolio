@@ -1,133 +1,149 @@
 .project-section {
-    padding: 2rem 1rem;
-    margin: 0 auto;
+  /* inherits padding from content-section */
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
 }
 
+/* ===== Card ===== */
 .project-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1.5px solid #d1d9e6;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    border-color: #2980b9;
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
 }
 
+/* ===== Image ===== */
 .image-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px 10px 0 0;
-    height: 180px;
+  position: relative;
+  overflow: hidden;
+  height: 190px;
 }
 
 .image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
 .project-card:hover .image-wrapper img {
-    transform: scale(1.05);
+  transform: scale(1.04);
 }
 
+/* ===== Overlay ===== */
 .overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.6);
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    transition: opacity 0.3s ease;
-    border-radius: 10px 10px 0 0;
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 37, 64, 0.72);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: opacity 0.28s ease;
 }
 
 .project-card:hover .overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
-.view-btn, .github-btn {
-    background: #2980b9;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    box-shadow: 0 3px 8px rgba(41, 128, 185, 0.6);
-    transition: background-color 0.3s ease;
+.view-btn,
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 
-.github-btn svg {
-    fill: white;
-    width: 20px;
-    height: 20px;
+.view-btn {
+  background-color: var(--color-accent);
+  color: #ffffff;
 }
 
-.view-btn:hover, .github-btn:hover {
-    background: #1c5980;
+.view-btn:hover {
+  background-color: #155fa0;
+  text-decoration: none;
 }
 
+.github-btn {
+  background-color: rgba(255,255,255,0.14);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.github-btn:hover {
+  background-color: rgba(255,255,255,0.24);
+  text-decoration: none;
+}
+
+/* ===== Info ===== */
 .project-info {
-    padding: 1rem 1.2rem 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+  padding: 20px 22px 22px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .project-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #222;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.35;
+  margin: 0;
 }
 
 .project-desc {
-    font-size: 0.95rem;
-    color: #555;
-    flex-grow: 1;
-    margin-bottom: 1rem;
-    line-height: 1.4;
+  font-size: 13.5px;
+  color: var(--color-neutral-600);
+  line-height: 1.65;
+  flex-grow: 1;
+  margin: 0;
 }
 
+/* ===== Tech Stack ===== */
 .tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
 }
 
 .tech-badge {
-    background: #e0f0ff;
-    color: #2980b9;
-    padding: 0.25rem 0.7rem;
-    font-size: 0.85rem;
-    border-radius: 4px;
-    font-weight: 600;
-    user-select: none;
-    box-shadow: inset 0 -2px 0 rgba(41, 128, 185, 0.2);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+  padding: 4px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  letter-spacing: 0.01em;
+  user-select: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .tech-badge:hover {
-    background: #2980b9;
-    color: white;
-    cursor: default;
+  background-color: var(--color-accent);
+  color: #ffffff;
 }

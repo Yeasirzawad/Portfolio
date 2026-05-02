@@ -1,26 +1,26 @@
 <section class="certification-section">
-    <section class="section-heading">
-        <h3 class="section-heading">Certifications</h3>
-    </section>
+  <section class="section-heading">
+    <h3>Certifications &amp; Publications</h3>
+  </section>
 
-    <div class="certification-grid">
-        <div class="cert-card" *ngFor="let cert of certifications">
-            <div class="cert-visual" *ngIf="cert.logoUrl">
-                <img [src]="cert.logoUrl" [alt]="cert.title + ' certificate logo'" />
-            </div>
-            <div class="cert-header">
-                <div *ngIf="!cert.logoUrl" class="cert-logo" [ngClass]="'cert-logo--' + cert.logoClass" aria-hidden="true">
-                    {{ cert.logoText }}
-                </div>
-                <div>
-                    <p class="cert-org">{{ cert.event }}</p>
-                    <h3 class="cert-title">{{ cert.title }}</h3>
-                </div>
-            </div>
-            <p class="cert-date">{{ cert.date }}</p>
-            <a [href]="cert.credentialUrl" class="cert-link" target="_blank" rel="noopener noreferrer">
-                View Credential
-            </a>
+  <div class="certification-grid">
+    <div class="cert-card" *ngFor="let cert of certifications">
+      <div class="cert-visual" *ngIf="cert.logoUrl">
+        <img [src]="cert.logoUrl" [alt]="cert.title + ' certificate'" />
+      </div>
+
+      <div class="cert-body">
+        <span class="cert-org">{{ cert.event }}</span>
+        <h3 class="cert-title">{{ cert.title }}</h3>
+        <div class="cert-footer">
+          <span class="cert-date">
+            <i class="far fa-calendar-alt" aria-hidden="true"></i> {{ cert.date }}
+          </span>
+          <a [href]="cert.credentialUrl" class="cert-link" target="_blank" rel="noopener noreferrer">
+            View Credential <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
         </div>
+      </div>
     </div>
+  </div>
 </section>

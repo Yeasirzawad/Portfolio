@@ -52,14 +52,5 @@ export class ExperienceComponent {
         ],
         image: 'assets/logos/ai-byters.png',
       },
-      {
-        role: 'Data Annotator',
-        company: 'Quantigo AI',
-        duration: 'Jul 2020 – Apr 2021',
-        details: [
-          'Annotated image and video datasets for machine learning projects, supporting quality assurance and model training workflows.'
-        ],
-        image: 'assets/logos/q-ai.png',
-      }
     ];
 }

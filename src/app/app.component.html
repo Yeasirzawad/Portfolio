@@ -5,7 +5,7 @@
     <span>Md. Yeasir Zawad</span>
   </div>
 
-  <button class="navbar-toggle" (click)="isMenuOpen = !isMenuOpen" aria-label="Toggle navigation" aria-expanded="{{ isMenuOpen }}">
+  <button class="navbar-toggle" (click)="isMenuOpen = !isMenuOpen" aria-label="Toggle navigation" [attr.aria-expanded]="isMenuOpen">
     &#9776;
   </button>
 

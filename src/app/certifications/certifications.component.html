@@ -5,8 +5,23 @@
 
     <div class="certification-grid">
         <div class="cert-card" *ngFor="let cert of certifications">
-            <h3 class="cert-title">{{ cert.title }}</h3>
-            <p class="cert-org">{{ cert.event }}</p>
+            <div class="cert-header">
+                <img
+                    *ngIf="cert.logoUrl; else logoBadge"
+                    class="cert-logo cert-logo-image"
+                    [src]="cert.logoUrl"
+                    [alt]="cert.event + ' logo'"
+                />
+                <ng-template #logoBadge>
+                    <div class="cert-logo" [ngClass]="'cert-logo--' + cert.logoClass" aria-hidden="true">
+                        {{ cert.logoText }}
+                    </div>
+                </ng-template>
+                <div>
+                    <p class="cert-org">{{ cert.event }}</p>
+                    <h3 class="cert-title">{{ cert.title }}</h3>
+                </div>
+            </div>
             <p class="cert-date">{{ cert.date }}</p>
             <a [href]="cert.credentialUrl" class="cert-link" target="_blank" rel="noopener noreferrer">
                 View Credential

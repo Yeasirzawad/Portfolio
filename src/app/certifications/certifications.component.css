@@ -23,17 +23,70 @@
     border-color: #2980b9;
 }
 
+.cert-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.9rem;
+}
+
+.cert-logo {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 54px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 750;
+    letter-spacing: 0;
+    box-shadow: inset 0 -8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.cert-logo-image {
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    object-fit: contain;
+    padding: 0.35rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cert-logo--microsoft {
+    background: linear-gradient(135deg, #f25022 0 50%, #7fba00 50% 100%);
+}
+
+.cert-logo--data-science {
+    background: #1b6ca8;
+}
+
+.cert-logo--maven {
+    background: #ff7a30;
+}
+
+.cert-logo--datacamp {
+    background: #03a86b;
+}
+
+.cert-logo--sust {
+    background: #244f8f;
+    font-size: 12px;
+}
+
 .cert-title {
     font-size: 18px;
     font-weight: 600;
     color: #000000;
-    margin-bottom: 0.75rem;
+    margin: 0;
+    line-height: 1.35;
 }
 
 .cert-org {
     font-size: 16px;
-    color: #555;
-    margin-bottom: 0.25rem;
+    color: #2980b9;
+    font-weight: 600;
+    margin: 0 0 0.35rem;
 }
 
 .cert-date {

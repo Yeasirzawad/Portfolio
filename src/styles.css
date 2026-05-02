@@ -54,7 +54,7 @@ body {
 
 /* ===== Section Heading ===== */
 .section-heading {
-  padding-bottom: 48px;
+  padding-bottom: 32px;
   text-align: center;
 }
 
@@ -84,7 +84,7 @@ body {
 
 /* ===== Content Sections ===== */
 .content-section {
-  padding: 72px max(24px, calc((100% - var(--max-width)) / 2));
+  padding: 52px max(24px, calc((100% - var(--max-width)) / 2));
   background-color: var(--color-background);
 }
 

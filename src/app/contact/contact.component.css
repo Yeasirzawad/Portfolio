@@ -1,138 +1,202 @@
-.contact-section {
-  /* inherits from content-section */
+/* ===== Two-column layout ===== */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
 }
 
-/* ===== Intro ===== */
+/* ===== Left column ===== */
+.contact-tagline {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 6px;
+  line-height: 1.15;
+}
+
+.contact-subtitle {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0 0 18px;
+}
+
 .contact-intro {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--color-neutral-600);
-  margin: 0 0 32px;
-  text-align: center;
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 0 28px;
 }
 
-/* ===== Cards Grid ===== */
-.contact-cards {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
+/* ===== Info list ===== */
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
 }
 
-.contact-card {
+.contact-info-item {
   display: flex;
   align-items: center;
-  gap: 14px;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 18px 16px;
-  box-shadow: var(--shadow-sm);
+  gap: 12px;
   text-decoration: none;
-  color: inherit;
-  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.contact-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-accent);
-  transform: translateY(-3px);
-  text-decoration: none;
+.contact-info-item:hover {
+  color: var(--color-accent);
 }
 
-.contact-card.no-link {
-  cursor: default;
-}
-
-.contact-card.no-link:hover {
-  transform: none;
-  box-shadow: var(--shadow-sm);
-  border-color: var(--color-border);
-}
-
-/* ===== Resume card accent ===== */
-.resume-card {
-  border-color: var(--color-accent);
-  background-color: var(--color-accent-light);
-}
-
-.resume-card:hover {
-  background-color: var(--color-accent);
-}
-
-.resume-card:hover .contact-label,
-.resume-card:hover .contact-value {
-  color: #ffffff;
-}
-
-.resume-card:hover .resume-icon {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-}
-
-/* ===== Icon ===== */
-.contact-icon {
-  width: 42px;
-  height: 42px;
+.ci-icon {
+  width: 36px;
+  height: 36px;
   border-radius: var(--radius-sm);
   background-color: var(--color-accent-light);
+  color: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-accent);
-  font-size: 17px;
+  font-size: 14px;
   flex-shrink: 0;
 }
 
-.resume-icon {
-  background-color: rgba(26, 111, 196, 0.15);
+/* ===== Resume button ===== */
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  letter-spacing: 0.03em;
 }
 
-/* ===== Text ===== */
-.contact-detail {
+.resume-btn:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* ===== Right column — form card ===== */
+.contact-right {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+}
+
+/* ===== Form ===== */
+.contact-form {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  overflow: hidden;
-  min-width: 0;
+  gap: 20px;
 }
 
-.contact-label {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--color-muted);
-  transition: color 0.25s ease;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
-.contact-value {
+.form-group label {
   font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-sans);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  outline: none;
+  resize: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ===== Submit button ===== */
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 13px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: 4px;
+}
+
+.form-submit:hover:not(:disabled) {
+  background-color: #1458a0;
+  transform: translateY(-2px);
+}
+
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== Success message ===== */
+.form-success {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
   font-weight: 500;
-  color: var(--color-primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: color 0.25s ease;
+}
+
+.form-success i {
+  color: #4ade80;
+  font-size: 20px;
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .contact-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .contact-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 400px) {
-  .contact-cards {
+@media (max-width: 860px) {
+  .contact-layout {
     grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contact-tagline {
+    font-size: 30px;
   }
 }

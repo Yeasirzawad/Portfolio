@@ -11,11 +11,11 @@
 
   <ul [class.open]="isMenuOpen">
     <li><button (click)="scrollToSection('home')">Home</button></li>
-    <li><button (click)="scrollToSection('skills')">Skills</button></li>
     <li><button (click)="scrollToSection('experience')">Experience</button></li>
-    <li><button (click)="scrollToSection('education')">Education</button></li>
+    <li><button (click)="scrollToSection('skills')">Skills</button></li>
     <li><button (click)="scrollToSection('projects')">Projects</button></li>
     <li><button (click)="scrollToSection('case-study')">Case Study</button></li>
+    <li><button (click)="scrollToSection('education')">Education</button></li>
     <li><button (click)="scrollToSection('certifications')">Certifications</button></li>
     <li><button (click)="scrollToSection('contact')">Contact</button></li>
   </ul>
@@ -49,19 +49,14 @@
 </section>
 
 
-<!-- ===== Skills ===== -->
-<section id="skills" class="content-section fade-in">
-  <skills></skills>
-</section>
-
-<!-- ===== Experience ===== -->
+<!-- ===== Professional Experience ===== -->
 <section id="experience" class="content-section fade-in">
   <experience></experience>
 </section>
 
-<!-- ===== Education ===== -->
-<section id="education" class="content-section fade-in">
-  <education></education>
+<!-- ===== Skills ===== -->
+<section id="skills" class="content-section fade-in">
+  <skills></skills>
 </section>
 
 <!-- ===== Projects ===== -->
@@ -72,6 +67,11 @@
 <!-- ===== Case Study ===== -->
 <section id="case-study" class="content-section fade-in">
   <case-study></case-study>
+</section>
+
+<!-- ===== Education ===== -->
+<section id="education" class="content-section fade-in">
+  <education></education>
 </section>
 
 <!-- ===== Certifications ===== -->

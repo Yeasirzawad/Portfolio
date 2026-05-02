@@ -55,6 +55,7 @@ body {
 /* ===== Section Heading ===== */
 .section-heading {
   padding-bottom: 48px;
+  text-align: center;
 }
 
 .section-heading h3 {
@@ -73,7 +74,8 @@ body {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 48px;
   height: 3px;
   background-color: var(--color-accent);

@@ -7,6 +7,7 @@ import {SkillsComponent} from "./skills/skills.component";
 import {CertificationsComponent} from "./certifications/certifications.component";
 import {ProjectsComponent} from "./projects/projects.component";
 import {ContactComponent} from "./contact/contact.component";
+import {CaseStudyComponent} from "./case-study/case-study.component";
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,8 @@ import {ContactComponent} from "./contact/contact.component";
     SkillsComponent,
     CertificationsComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    CaseStudyComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,66 +1,83 @@
 .education-section {
-    margin: 2rem auto;
-    padding: 0 1rem;
-    color: #2c3e50;
+  width: 100%;
 }
 
 .education-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .education-card {
-    flex: 1 1 280px;
-    max-width: 320px;
-    border-radius: 10px;
-    padding: 1.5rem 1.75rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    border: 1px solid #2980b9;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    cursor: default;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .education-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    border-color: #2980b9;
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.edu-left {
+  flex-shrink: 0;
+}
+
+.edu-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  font-size: 18px;
+}
+
+.edu-right {
+  flex: 1;
 }
 
 .degree {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: .4rem;
-    color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 5px;
+  line-height: 1.4;
 }
 
 .school {
-    font-size: 16px;
-    color: #7f8c8d;
-    margin-bottom: 0.6rem;
+  font-size: 14px;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.edu-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .duration {
-    font-size: 14px;
-    color: #95a5a6;
+  font-size: 13px;
+  color: var(--color-muted);
+  font-weight: 500;
 }
 
 .gpa {
-    font-size: 14px;
-    font-weight: 500;
-    color: #2980b9;
-}
-
-.company-logo {
-    width: 100%;
-    max-height: 120px;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    border-radius: 6px;
-}
-
-.bottom-row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.6rem;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background-color: var(--color-accent-light);
+  padding: 3px 10px;
+  border-radius: 20px;
 }

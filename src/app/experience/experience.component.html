@@ -1,16 +1,28 @@
 <div class="experience-section">
-    <section class="section-heading">
-        <h3 class="section-heading">Experience</h3>
-    </section>
-    <div class="cards-container">
-        <div class="experience-card" *ngFor="let item of experiences">
-            <img [src]="item.image" alt="{{ item.company }} logo" class="company-logo" />
-            <h3 class="role">{{ item.role }}</h3>
-            <p class="company">{{ item.company }}</p>
-            <p class="duration">{{ item.duration }}</p>
-            <ul class="details">
-                <li *ngFor="let duty of item.details">{{ duty }}</li>
-            </ul>
+  <section class="section-heading">
+    <h3>Professional Experience</h3>
+  </section>
+
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let item of experiences; let last = last">
+      <div class="timeline-line" [class.last]="last"></div>
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <div class="timeline-meta">
+            <img [src]="item.image" [alt]="item.company + ' logo'" class="company-logo" />
+            <div>
+              <h4 class="role">{{ item.role }}</h4>
+              <span class="company">{{ item.company }}</span>
+            </div>
+          </div>
+          <span class="duration">{{ item.duration }}</span>
         </div>
+        <ul class="details">
+          <li *ngFor="let duty of item.details">{{ duty }}</li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>

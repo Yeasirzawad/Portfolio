@@ -1,89 +1,98 @@
-/* Reset box-sizing */
-* {
-  box-sizing: border-box;
-}
+/* ===== Navbar ===== */
 .navbar {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #004466;
-  padding: 12px 32px;
+  background-color: var(--color-primary);
+  padding: 0 max(24px, calc((100% - var(--max-width)) / 2));
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06), var(--shadow-md);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 68px;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  gap: 10px;
+  text-decoration: none;
 }
 
 .navbar-brand img {
-  height: 32px;
-  width: 32px;
+  height: 36px;
+  width: 36px;
   border-radius: 50%;
-  margin-right: 10px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.25);
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
+  align-items: center;
+  gap: 4px;
   margin: 0;
   padding: 0;
-}
-
-.navbar ul li {
-  margin: 0 18px;
 }
 
 .navbar ul li button {
   background: none;
   border: none;
-  color: white;
-  font-weight: 600;
-  font-size: 16px;
+  color: rgba(255,255,255,0.78);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 14px;
   cursor: pointer;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .navbar ul li button:hover {
-  background-color: #006699;
+  background-color: rgba(255,255,255,0.10);
+  color: #ffffff;
 }
 
-/* Hamburger button */
+/* ===== Hamburger ===== */
 .navbar-toggle {
   display: none;
   background: none;
-  border: none;
-  font-size: 28px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: var(--radius-sm);
+  font-size: 20px;
   color: white;
   cursor: pointer;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Responsive styles for small screens */
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
-    padding: 12px 20px;
+    height: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   .navbar-toggle {
-    display: block;
+    display: flex;
   }
 
   .navbar ul {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #004466;
-    margin-top: 10px;
+    padding: 10px 0 4px;
+    gap: 2px;
   }
 
   .navbar ul.open {
@@ -91,132 +100,139 @@
   }
 
   .navbar ul li {
-    margin: 10px 0;
-    text-align: center;
+    width: 100%;
   }
 
   .navbar ul li button {
     width: 100%;
-    padding: 10px 0;
+    text-align: left;
+    padding: 10px 4px;
+    border-radius: var(--radius-sm);
   }
 }
 
+/* ===== Hero Section ===== */
 .hero-section {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  background-color: var(--color-primary);
+  padding: 80px max(24px, calc((100% - var(--max-width)) / 2));
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 40px 60px;
-  gap: 40px;
+  gap: 60px;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .hero-section {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 30px 20px;
+    padding: 48px 24px;
+    gap: 32px;
   }
 }
 
 .hero-text {
   flex: 1;
+}
 
-  @media (max-width: 768px) {
-    padding: 0;
+.hero-text .name {
+  font-family: var(--font-serif);
+  font-size: 52px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.hero-text .greeting {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 500;
+  color: #7bb8f0;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.hero-text .description {
+  font-size: 16px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+@media (max-width: 768px) {
+  .hero-text .description {
+    max-width: 100%;
   }
 
-  .name {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 12px;
-    color: #000;
-    letter-spacing: 0.05em;
-
-
+  .hero-text .name {
+    font-size: 36px;
   }
+}
 
-  .greeting {
-    font-size: 24px;
-    color: #3580e4;
-    margin-bottom: 8px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+.hero-text .social-links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
 
-
+@media (max-width: 768px) {
+  .hero-text .social-links {
+    justify-content: center;
   }
+}
 
-  .description {
-    font-size: 1.25rem;
-    color: #074070;
-    margin-bottom: 20px;
+.hero-text .social-links a svg {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
 
-
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: flex-start;
-    gap: 24px;
-
-    @media (max-width: 768px) {
-      justify-content: center;
-    }
-
-    a svg {
-      width: 32px;
-      height: 32px;
-      transition: transform 0.3s ease;
-    }
-
-    a:hover svg {
-      transform: scale(1.1);
-    }
-  }
+.hero-text .social-links a:hover svg {
+  transform: translateY(-2px);
+  opacity: 0.85;
 }
 
 .hero-image {
   flex-shrink: 0;
+}
 
-  img {
-    max-width: 180px;
-    border-radius: 50%;
-    box-shadow: 0 6px 14px rgba(44, 62, 80, 0.2);
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
+.hero-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255,255,255,0.18);
+  box-shadow: var(--shadow-lg);
+}
 
-    @media (max-width: 768px) {
-      max-width: 140px;
-    }
-
-    @media (max-width: 480px) {
-      max-width: 120px;
-    }
+@media (max-width: 768px) {
+  .hero-image img {
+    width: 140px;
+    height: 140px;
   }
 }
 
-/* Section styles */
+/* ===== General section resets ===== */
 section {
-  padding: 40px 20px 40px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
 }
 
 section h2 {
-  color: #004466;
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-size: 2rem;
+  color: var(--color-primary);
 }
 
-/* Smooth scroll padding fix for fixed navbar */
-:target::before {
-  content: "";
-  display: block;
-  height: 70px; /* height of navbar + some spacing */
-  margin-top: -70px;
-  visibility: hidden;
-  pointer-events: none;
+/* ===== Footer ===== */
+.site-footer {
+  background-color: var(--color-primary);
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+  padding: 28px 24px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
 }

@@ -25,8 +25,13 @@ export class ContactComponent {
   submitted = false;
 
   onSubmit() {
+    const subject = encodeURIComponent(`Portfolio Contact from ${this.formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${this.formData.name}\nEmail: ${this.formData.email}\nPhone: ${this.formData.phone}\n\nMessage:\n${this.formData.message}`
+    );
+    window.location.href = `mailto:amirsifat@gmail.com?subject=${subject}&body=${body}`;
     this.submitted = true;
-    setTimeout(() => { this.submitted = false; }, 3500);
+    setTimeout(() => { this.submitted = false; }, 4000);
     this.formData = { name: '', email: '', phone: '', message: '' };
   }
 }

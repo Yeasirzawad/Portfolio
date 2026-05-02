@@ -4,6 +4,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: start;
+  padding: 0 8px;
 }
 
 /* ===== Left column ===== */
@@ -35,8 +36,8 @@
 .contact-info-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 32px;
+  gap: 10px;
+  margin-bottom: 28px;
 }
 
 .contact-info-item {

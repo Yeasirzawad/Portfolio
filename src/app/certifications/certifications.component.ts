@@ -26,6 +26,7 @@ export class CertificationsComponent {
       date: 'June 2025',
       logoText: 'MS',
       logoClass: 'microsoft',
+      logoUrl: 'assets/certificate logo/Microsoft Certified Power BI Data Analyst Associate.png',
       credentialUrl: '#'
     },
     {
@@ -34,6 +35,7 @@ export class CertificationsComponent {
       date: 'November 2024',
       logoText: '365',
       logoClass: 'data-science',
+      logoUrl: 'assets/certificate logo/Time Series Analysis with Python.png',
       credentialUrl: 'https://learn.365datascience.com/certificates/CC-FDAB86234E/'
     },
     {
@@ -42,6 +44,7 @@ export class CertificationsComponent {
       date: 'October 2024',
       logoText: 'MA',
       logoClass: 'maven',
+      logoUrl: 'assets/certificate logo/Power BI Specialist.png',
       credentialUrl: 'https://certificates.mavenanalytics.io/743a0d37-a118-4984-ac17-d3c92da55aae#acc.kbi3loqJ'
     },
     {
@@ -50,6 +53,7 @@ export class CertificationsComponent {
       date: 'May 2024',
       logoText: 'DC',
       logoClass: 'datacamp',
+      logoUrl: 'assets/certificate logo/Associate Data Analyst in SQL.png',
       credentialUrl: 'https://www.datacamp.com/statement-of-accomplishment/track/743516b75740baab86c9583d998c95bea807ef0b?raw=1'
     },
     {

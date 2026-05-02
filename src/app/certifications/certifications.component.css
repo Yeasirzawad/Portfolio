@@ -23,6 +23,26 @@
     border-color: #2980b9;
 }
 
+.cert-visual {
+    height: 125px;
+    margin-bottom: 1rem;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    background: #f8fbff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cert-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.55rem;
+    display: block;
+}
+
 .cert-header {
     display: flex;
     align-items: flex-start;
@@ -43,14 +63,6 @@
     font-weight: 750;
     letter-spacing: 0;
     box-shadow: inset 0 -8px 18px rgba(0, 0, 0, 0.12);
-}
-
-.cert-logo-image {
-    background: #ffffff;
-    border: 1px solid #d9e2ec;
-    object-fit: contain;
-    padding: 0.35rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .cert-logo--microsoft {

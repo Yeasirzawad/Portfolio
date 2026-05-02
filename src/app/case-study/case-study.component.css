@@ -1,13 +1,13 @@
 .case-study-section {
-  max-width: 900px;
+  width: 100%;
 }
 
 .cs-intro {
   font-size: 16px;
   line-height: 1.75;
   color: var(--color-neutral-600);
-  margin: 0 0 36px;
-  max-width: 680px;
+  margin: 0 0 24px;
+  text-align: center;
 }
 
 /* ===== List ===== */

@@ -3,55 +3,61 @@
     <h3>Get In Touch</h3>
   </section>
 
-  <div class="contact-layout">
-    <div class="contact-intro-block">
-      <p class="contact-intro">
-        Whether you are looking to hire, collaborate on research, or explore a data-driven
-        project together — I am always open to new opportunities. Reach out through any
-        of the channels below and I will get back to you promptly.
-      </p>
-    </div>
+  <p class="contact-intro">
+    Whether you are looking to hire, collaborate on research, or explore a data-driven
+    project together — I am always open to new opportunities. Reach out through any
+    of the channels below and I will get back to you promptly.
+  </p>
 
-    <div class="contact-cards">
-      <a class="contact-card" [href]="'mailto:' + email" aria-label="Send email">
-        <div class="contact-icon">
-          <i class="fas fa-envelope" aria-hidden="true"></i>
-        </div>
-        <div class="contact-detail">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">{{ email }}</span>
-        </div>
-      </a>
+  <div class="contact-cards">
+    <a class="contact-card" [href]="'mailto:' + email" aria-label="Send email">
+      <div class="contact-icon">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">{{ email }}</span>
+      </div>
+    </a>
 
-      <a class="contact-card" [href]="'tel:' + phone" aria-label="Call phone number">
-        <div class="contact-icon">
-          <i class="fas fa-phone-alt" aria-hidden="true"></i>
-        </div>
-        <div class="contact-detail">
-          <span class="contact-label">Phone</span>
-          <span class="contact-value">{{ phone }}</span>
-        </div>
-      </a>
+    <a class="contact-card" [href]="'tel:' + phone" aria-label="Call phone number">
+      <div class="contact-icon">
+        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value">{{ phone }}</span>
+      </div>
+    </a>
 
-      <a class="contact-card" [href]="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-        <div class="contact-icon">
-          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-        </div>
-        <div class="contact-detail">
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">linkedin.com/in/yeasir-zawad</span>
-        </div>
-      </a>
+    <a class="contact-card" href="https://linkedin.com/in/yeasir-zawad" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+      <div class="contact-icon">
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">linkedin.com/in/yeasir-zawad</span>
+      </div>
+    </a>
 
-      <div class="contact-card no-link">
-        <div class="contact-icon">
-          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-        </div>
-        <div class="contact-detail">
-          <span class="contact-label">Location</span>
-          <span class="contact-value">{{ location }}</span>
-        </div>
+    <div class="contact-card no-link">
+      <div class="contact-icon">
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-label">Location</span>
+        <span class="contact-value">{{ location }}</span>
       </div>
     </div>
+
+    <a class="contact-card resume-card" href="assets/resume/Yeasir_Zawad_Resume.pdf" download aria-label="Download Resume">
+      <div class="contact-icon resume-icon">
+        <i class="fas fa-file-download" aria-hidden="true"></i>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-label">Resume</span>
+        <span class="contact-value">Download CV</span>
+      </div>
+    </a>
   </div>
 </section>

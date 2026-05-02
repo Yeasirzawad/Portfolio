@@ -1,10 +1,11 @@
 .skills-section {
-  /* inherits from content-section */
+  width: 100%;
+  padding: 0 clamp(16px, 2vw, 24px);
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 18px;
 }
 

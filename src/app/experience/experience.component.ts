@@ -11,7 +11,7 @@ import {CommonModule} from "@angular/common";
 export class ExperienceComponent {
     experiences = [
           {
-        role: 'Senior Research Analyst',
+        role: 'Research Analyst',
         company: 'Perceive Now, Inc.',
         duration: 'Oct 2025 – Present',
         details: ["Built structured analytical outputs using Excel, Google Sheets, Power BI to support client research, reporting, and decision-making.",

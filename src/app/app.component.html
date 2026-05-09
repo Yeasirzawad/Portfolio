@@ -59,16 +59,18 @@
 
 <!-- ===== About ===== -->
 <section id="about" class="content-section fade-in about-section">
-  <div class="about-layout">
-    <div class="about-story">
-      <p class="section-kicker">About</p>
-      <h2>Research, analytics, and decision-ready business insight.</h2>
-      <p class="about-lead">
-        I work at the intersection of market research, business intelligence, and statistical analysis — turning fragmented information into structured insights, dashboards, and reporting that help stakeholders make clearer decisions.
-      </p>
-      <p>
-        My work spans market intelligence, competitive analysis, company research, forecasting, pricing diagnostics, opportunity assessment, and performance reporting. I combine statistical thinking with business context so that research does not stay as raw information — it becomes usable direction.
-      </p>
+  <div class="about-container">
+    <div class="about-intro-panel">
+      <div class="about-intro-copy">
+        <p class="section-kicker">About</p>
+        <h2>Research and analytics for clearer business decisions.</h2>
+        <p>
+          I work across market research, business intelligence, and statistical analysis to turn fragmented information into structured insight, dashboard-ready reporting, and decision-focused narratives.
+        </p>
+        <p>
+          My work spans market intelligence, competitive analysis, company research, forecasting, pricing diagnostics, opportunity assessment, and performance reporting. I combine statistical thinking with business context so research becomes usable direction, not just raw information.
+        </p>
+      </div>
 
       <div class="about-highlights" aria-label="Selected credibility highlights">
         <div class="about-highlight" *ngFor="let item of aboutHighlights">
@@ -78,8 +80,8 @@
       </div>
     </div>
 
-    <div class="about-cards" aria-label="Expertise overview">
-      <article class="about-info-card expertise-card">
+    <div class="about-snapshot-grid" aria-label="Expertise overview">
+      <article class="about-snapshot-card">
         <div class="card-heading">
           <span class="card-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
           <div>
@@ -92,7 +94,7 @@
         </div>
       </article>
 
-      <article class="about-info-card">
+      <article class="about-snapshot-card">
         <div class="card-heading">
           <span class="card-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></span>
           <div>
@@ -100,36 +102,41 @@
             <h3>Industries & Domains</h3>
           </div>
         </div>
-        <div class="tag-cloud compact">
+        <div class="tag-cloud">
           <span *ngFor="let item of industries">{{ item }}</span>
         </div>
       </article>
 
-      <article class="about-info-card">
+      <article class="about-snapshot-card">
         <div class="card-heading">
-          <span class="card-icon"><i class="fas fa-compass-drafting" aria-hidden="true"></i></span>
+          <span class="card-icon"><i class="fas fa-file-lines" aria-hidden="true"></i></span>
           <div>
-            <p class="card-eyebrow">How I think</p>
-            <h3>Frameworks & Methods</h3>
+            <p class="card-eyebrow">What I deliver</p>
+            <h3>Decision Outputs</h3>
           </div>
         </div>
-        <div class="tag-cloud compact">
-          <span *ngFor="let item of methods">{{ item }}</span>
+        <div class="tag-cloud">
+          <span *ngFor="let item of decisionOutputs">{{ item }}</span>
         </div>
       </article>
+    </div>
 
-      <article class="about-info-card workflow-card">
-        <div class="card-heading">
-          <span class="card-icon"><i class="fas fa-route" aria-hidden="true"></i></span>
+    <div class="workflow-panel">
+      <div class="workflow-header">
+        <p class="section-kicker">How I work</p>
+        <h3>Research Workflow</h3>
+        <p>A clear flow from business question to source-backed insight and stakeholder-ready output.</p>
+      </div>
+
+      <ol class="workflow-flow">
+        <li *ngFor="let item of workflowSteps; let i = index" [style.--step-index]="i">
+          <span class="workflow-dot">{{ i + 1 }}</span>
           <div>
-            <p class="card-eyebrow">How I work</p>
-            <h3>Research Workflow</h3>
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.detail }}</p>
           </div>
-        </div>
-        <ol class="mini-process">
-          <li *ngFor="let item of workingStyle">{{ item }}</li>
-        </ol>
-      </article>
+        </li>
+      </ol>
     </div>
   </div>
 </section>

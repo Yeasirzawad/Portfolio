@@ -37,21 +37,36 @@ export class AppComponent {
     'Consumer & Business Strategy'
   ];
 
-  methods = [
-    'TAM / SAM / SOM',
-    'SWOT / PESTLE',
-    'Porter’s Five Forces',
-    'Competitive Benchmarking',
-    'Customer Segmentation',
-    'Scoring Frameworks'
+  decisionOutputs = [
+    'Market and company research reports',
+    'Competitive landscapes',
+    'Forecasting and trend summaries',
+    'Power BI dashboards',
+    'Pricing and opportunity diagnostics',
+    'Stakeholder-ready presentation insights'
   ];
 
-  workingStyle = [
-    'Define the business question',
-    'Structure the analysis',
-    'Gather and validate sources',
-    'Synthesize patterns and signals',
-    'Deliver clear reports or dashboards'
+  workflowSteps = [
+    {
+      title: 'Frame the question',
+      detail: 'Clarify the objective, audience, scope, and decision the work needs to support.'
+    },
+    {
+      title: 'Structure the analysis',
+      detail: 'Translate the problem into a clear outline, logic flow, and research plan.'
+    },
+    {
+      title: 'Collect and validate',
+      detail: 'Gather source-backed information, compare signals, and clean the evidence base.'
+    },
+    {
+      title: 'Analyze the patterns',
+      detail: 'Use statistical thinking, market context, and BI logic to find what matters.'
+    },
+    {
+      title: 'Deliver the story',
+      detail: 'Convert findings into reports, dashboards, summaries, and decision-ready narratives.'
+    }
   ];
 
   isMenuOpen = false;

@@ -9,10 +9,11 @@ export class AppComponent {
   jobTitle = 'Research Analyst | Microsoft Certified Data Analyst | Statistician';
   name = 'Md. Yeasir Zawad';
 
-  description: string = `I am a Microsoft Certified Data Analyst with experience in market research, 
-  business intelligence, and statistical analysis. I work with Python, R, SQL, Excel, and Power BI 
-  to turn data into clear insights, create interactive dashboards, 
-  and deliver research that supports strategy, performance improvement, and business growth.`;
+  description: string = `I’m a Microsoft Certified Data Analyst with 3+ years of experience in market research, 
+  competitive intelligence, data & statistical analysis. I help businesses, startups, founders, investors understand markets, evaluate opportunities, 
+  and make smarter decisions through clear market research and data analysis.
+  
+`;
 
   isMenuOpen = false;
 

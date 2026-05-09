@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'contact',
@@ -23,15 +23,43 @@ export class ContactComponent {
   };
 
   submitted = false;
+  isSubmitting = false;
+  submitError = '';
 
-  onSubmit() {
-    const subject = encodeURIComponent(`Portfolio Contact from ${this.formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${this.formData.name}\nEmail: ${this.formData.email}\nPhone: ${this.formData.phone}\n\nMessage:\n${this.formData.message}`
-    );
-    window.location.href = `mailto:amirsifat@gmail.com?subject=${subject}&body=${body}`;
-    this.submitted = true;
-    setTimeout(() => { this.submitted = false; }, 4000);
-    this.formData = { name: '', email: '', phone: '', message: '' };
+  async onSubmit(contactForm: NgForm) {
+    if (contactForm.invalid || this.isSubmitting) {
+      return;
+    }
+
+    this.isSubmitting = true;
+    this.submitError = '';
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(this.formData)
+      });
+
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok || !result?.success) {
+        throw new Error(result?.message || 'Message could not be sent.');
+      }
+
+      this.submitted = true;
+      this.formData = { name: '', email: '', phone: '', message: '' };
+      contactForm.resetForm(this.formData);
+
+      setTimeout(() => {
+        this.submitted = false;
+      }, 4000);
+    } catch {
+      this.submitError = 'Something went wrong. Please email me directly at amirsifat@gmail.com.';
+    } finally {
+      this.isSubmitting = false;
+    }
   }
 }

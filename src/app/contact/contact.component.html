@@ -45,36 +45,42 @@
     <div class="contact-right">
       <div *ngIf="submitted" class="form-success" role="alert">
         <i class="fas fa-check-circle" aria-hidden="true"></i>
-        Thank you! Your message has been received.
+        Thank you! Your message has been sent to my email.
       </div>
 
-      <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm" *ngIf="!submitted">
+      <div *ngIf="submitError" class="form-error" role="alert">
+        <i class="fas fa-circle-exclamation" aria-hidden="true"></i>
+        {{ submitError }}
+      </div>
+
+      <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" *ngIf="!submitted">
         <div class="form-group">
           <label for="cf-name">Name</label>
           <input id="cf-name" type="text" placeholder="Enter your name"
-                 [(ngModel)]="formData.name" name="name" required />
+                 [(ngModel)]="formData.name" name="name" required [disabled]="isSubmitting" />
         </div>
 
         <div class="form-group">
           <label for="cf-email">Email</label>
           <input id="cf-email" type="email" placeholder="Enter your email"
-                 [(ngModel)]="formData.email" name="email" required />
+                 [(ngModel)]="formData.email" name="email" required [disabled]="isSubmitting" />
         </div>
 
         <div class="form-group">
           <label for="cf-phone">Phone Number</label>
           <input id="cf-phone" type="tel" placeholder="Enter your phone number"
-                 [(ngModel)]="formData.phone" name="phone" />
+                 [(ngModel)]="formData.phone" name="phone" [disabled]="isSubmitting" />
         </div>
 
         <div class="form-group">
           <label for="cf-message">Message</label>
           <textarea id="cf-message" rows="5" placeholder="Write your message here..."
-                    [(ngModel)]="formData.message" name="message" required></textarea>
+                    [(ngModel)]="formData.message" name="message" required [disabled]="isSubmitting"></textarea>
         </div>
 
-        <button type="submit" class="form-submit" [disabled]="contactForm.invalid">
-          Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i>
+        <button type="submit" class="form-submit" [disabled]="contactForm.invalid || isSubmitting">
+          {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+          <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
         </button>
       </form>
     </div>

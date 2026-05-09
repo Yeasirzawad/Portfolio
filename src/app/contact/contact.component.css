@@ -1,3 +1,14 @@
+/* ===== Contact section spacing ===== */
+:host {
+  display: block;
+  padding-bottom: clamp(64px, 7vw, 110px);
+}
+
+.contact-section {
+  width: 100%;
+  padding: 0 clamp(16px, 2vw, 24px);
+}
+
 /* ===== Two-column layout ===== */
 .contact-layout {
   display: grid;
@@ -91,9 +102,11 @@
 
 /* ===== Right column — form card ===== */
 .contact-right {
+  align-self: start;
   background-color: var(--color-primary);
   border-radius: var(--radius-lg);
   padding: 36px 32px;
+  box-shadow: var(--shadow-lg);
 }
 
 /* ===== Form ===== */
@@ -141,6 +154,12 @@
   background-color: rgba(255, 255, 255, 0.12);
 }
 
+.form-group input:disabled,
+.form-group textarea:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 /* ===== Submit button ===== */
 .form-submit {
   display: inline-flex;
@@ -171,18 +190,23 @@
   cursor: not-allowed;
 }
 
-/* ===== Success message ===== */
-.form-success {
+/* ===== Success and error messages ===== */
+.form-success,
+.form-error {
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius-md);
   padding: 20px 24px;
   color: rgba(255, 255, 255, 0.9);
   font-size: 15px;
   font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.form-success {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .form-success i {
@@ -190,11 +214,30 @@
   font-size: 20px;
 }
 
+.form-error {
+  background-color: rgba(248, 113, 113, 0.14);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  color: #fecaca;
+}
+
+.form-error i {
+  color: #fca5a5;
+  font-size: 18px;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
+  :host {
+    padding-bottom: 72px;
+  }
+
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+
+  .contact-right {
+    padding: 28px 22px;
   }
 
   .contact-tagline {

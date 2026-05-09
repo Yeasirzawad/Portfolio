@@ -11,12 +11,12 @@
 
   <ul [class.open]="isMenuOpen">
     <li><button (click)="scrollToSection('home')">Home</button></li>
-    <li><button (click)="scrollToSection('impact')">Impact</button></li>
     <li><button (click)="scrollToSection('about')">About</button></li>
-    <li><button (click)="scrollToSection('frameworks')">Methods</button></li>
     <li><button (click)="scrollToSection('experience')">Experience</button></li>
-    <li><button (click)="scrollToSection('workflow')">Workflow</button></li>
+    <li><button (click)="scrollToSection('skills')">Skills</button></li>
     <li><button (click)="scrollToSection('projects')">Projects</button></li>
+    <li><button (click)="scrollToSection('case-study')">Case Study</button></li>
+    <li><button (click)="scrollToSection('education')">Education</button></li>
     <li><button (click)="scrollToSection('contact')">Contact</button></li>
   </ul>
 </nav>
@@ -57,71 +57,86 @@
   </div>
 </section>
 
-<!-- ===== Impact ===== -->
-<section id="impact" class="content-section fade-in impact-section">
-  <section class="section-heading">
-    <h3>Impact</h3>
-  </section>
-  <div class="impact-grid">
-    <article class="impact-card" *ngFor="let stat of impactStats">
-      <span class="impact-value">{{ stat.value }}</span>
-      <h4>{{ stat.label }}</h4>
-      <p>{{ stat.detail }}</p>
-    </article>
-  </div>
-</section>
-
 <!-- ===== About ===== -->
 <section id="about" class="content-section fade-in about-section">
-  <section class="section-heading">
-    <h3>About</h3>
-  </section>
-  <div class="about-card">
-    <p>
-      I work at the intersection of research, analytics, and business reporting — translating complex market,
-      company, and operational information into structured insights that support decisions.
-    </p>
-    <p>
-      With a foundation in statistics and hands-on experience across research and BI workflows, I focus on making
-      information more usable, more structured, and more valuable for stakeholders.
-    </p>
-  </div>
-</section>
+  <div class="about-layout">
+    <div class="about-story">
+      <p class="section-kicker">About</p>
+      <h2>Research, analytics, and decision-ready business insight.</h2>
+      <p class="about-lead">
+        I work at the intersection of market research, business intelligence, and statistical analysis — turning fragmented information into structured insights, dashboards, and reporting that help stakeholders make clearer decisions.
+      </p>
+      <p>
+        My work spans market intelligence, competitive analysis, company research, forecasting, pricing diagnostics, opportunity assessment, and performance reporting. I combine statistical thinking with business context so that research does not stay as raw information — it becomes usable direction.
+      </p>
 
-<!-- ===== Frameworks & Methods ===== -->
-<section id="frameworks" class="content-section fade-in frameworks-section">
-  <section class="section-heading">
-    <h3>Frameworks & Methods</h3>
-  </section>
-  <div class="framework-grid">
-    <article class="framework-card" *ngFor="let framework of frameworks">
-      <h4>{{ framework.title }}</h4>
-      <p>{{ framework.detail }}</p>
-    </article>
+      <div class="about-highlights" aria-label="Selected credibility highlights">
+        <div class="about-highlight" *ngFor="let item of aboutHighlights">
+          <strong>{{ item.value }}</strong>
+          <span>{{ item.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-cards" aria-label="Expertise overview">
+      <article class="about-info-card expertise-card">
+        <div class="card-heading">
+          <span class="card-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
+          <div>
+            <p class="card-eyebrow">What I do</p>
+            <h3>Core Expertise</h3>
+          </div>
+        </div>
+        <div class="tag-cloud">
+          <span *ngFor="let item of coreExpertise">{{ item }}</span>
+        </div>
+      </article>
+
+      <article class="about-info-card">
+        <div class="card-heading">
+          <span class="card-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></span>
+          <div>
+            <p class="card-eyebrow">Where I apply it</p>
+            <h3>Industries & Domains</h3>
+          </div>
+        </div>
+        <div class="tag-cloud compact">
+          <span *ngFor="let item of industries">{{ item }}</span>
+        </div>
+      </article>
+
+      <article class="about-info-card">
+        <div class="card-heading">
+          <span class="card-icon"><i class="fas fa-compass-drafting" aria-hidden="true"></i></span>
+          <div>
+            <p class="card-eyebrow">How I think</p>
+            <h3>Frameworks & Methods</h3>
+          </div>
+        </div>
+        <div class="tag-cloud compact">
+          <span *ngFor="let item of methods">{{ item }}</span>
+        </div>
+      </article>
+
+      <article class="about-info-card workflow-card">
+        <div class="card-heading">
+          <span class="card-icon"><i class="fas fa-route" aria-hidden="true"></i></span>
+          <div>
+            <p class="card-eyebrow">How I work</p>
+            <h3>Research Workflow</h3>
+          </div>
+        </div>
+        <ol class="mini-process">
+          <li *ngFor="let item of workingStyle">{{ item }}</li>
+        </ol>
+      </article>
+    </div>
   </div>
 </section>
 
 <!-- ===== Professional Experience ===== -->
 <section id="experience" class="content-section fade-in">
   <experience></experience>
-</section>
-
-<!-- ===== How I Work ===== -->
-<section id="workflow" class="content-section fade-in workflow-section">
-  <section class="section-heading">
-    <h3>How I Work</h3>
-  </section>
-  <p class="workflow-intro">
-    A disciplined research workflow helps turn broad business questions into clear outputs, source-backed findings,
-    and decision-ready recommendations.
-  </p>
-  <div class="workflow-grid">
-    <article class="workflow-step" *ngFor="let item of workflowSteps">
-      <span class="workflow-number">{{ item.step }}</span>
-      <h4>{{ item.title }}</h4>
-      <p>{{ item.detail }}</p>
-    </article>
-  </div>
 </section>
 
 <!-- ===== Skills ===== -->

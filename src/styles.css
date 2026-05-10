@@ -54,7 +54,8 @@ body {
 
 /* ===== Section Heading ===== */
 .section-heading {
-  padding-bottom: 32px;
+  padding-bottom: 38px;
+  padding-top: 18px;
   text-align: center;
 }
 
@@ -84,15 +85,45 @@ body {
 
 /* ===== Content Sections ===== */
 .content-section {
-  padding: 52px max(24px, calc((100% - var(--max-width)) / 2));
+  padding: 78px max(24px, calc((100% - var(--max-width)) / 2));
   background-color: var(--color-background);
+}
+
+.content-section + .content-section {
+  padding-top: 88px;
 }
 
 .content-section:nth-child(even) {
   background-color: var(--color-surface);
 }
 
-/* ===== Fade-in animation ===== */
+/* ===== Scroll reveal animation ===== */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(34px) scale(0.985);
+  transition:
+    opacity 0.72s ease,
+    transform 0.72s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.24s ease,
+    border-color 0.24s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ===== Legacy fade-in fallback ===== */
 .fade-in {
   animation: fadeInUp 0.5s ease both;
 }

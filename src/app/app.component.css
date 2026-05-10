@@ -421,6 +421,8 @@
   line-height: 1.75;
   max-width: 760px;
   margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .about-highlights {
@@ -538,13 +540,27 @@
 }
 
 .workflow-panel {
-  padding: clamp(24px, 3.5vw, 34px);
+  padding: clamp(26px, 3.6vw, 38px);
   overflow: hidden;
+  position: relative;
+}
+
+.workflow-panel::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -160px;
+  bottom: -170px;
+  background: radial-gradient(circle, rgba(26,111,196,0.10), transparent 68%);
+  pointer-events: none;
 }
 
 .workflow-header {
   max-width: 680px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .workflow-header h3 {
@@ -565,42 +581,71 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0;
+  gap: 16px;
   position: relative;
-}
-
-.workflow-flow::before {
-  content: "";
-  position: absolute;
-  top: 22px;
-  left: 22px;
-  right: 22px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-accent), rgba(26,111,196,0.12));
+  z-index: 1;
 }
 
 .workflow-flow li {
   position: relative;
-  padding: 0 14px;
-  animation: workflowStepIn 0.75s ease both;
-  animation-delay: calc(var(--step-index) * 0.16s);
+  padding: 18px 16px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, #ffffff 0%, var(--color-neutral-50) 100%);
+  min-height: 185px;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+}
+
+.workflow-flow li:hover {
+  transform: translateY(-4px);
+  border-color: rgba(26,111,196,0.38);
+  box-shadow: var(--shadow-md);
+}
+
+.workflow-flow li::after {
+  content: "";
+  position: absolute;
+  top: 36px;
+  right: -18px;
+  width: 18px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent), rgba(26,111,196,0.12));
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.workflow-flow li:not(:last-child).is-visible::after {
+  animation: workflowConnector 0.45s ease forwards 0.28s;
 }
 
 .workflow-dot {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background-color: var(--color-accent);
   color: #ffffff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 900;
-  box-shadow: 0 10px 20px rgba(26,111,196,0.28);
+  box-shadow: 0 10px 20px rgba(26,111,196,0.24);
   margin-bottom: 14px;
   position: relative;
   z-index: 1;
+}
+
+.workflow-dot::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1px solid rgba(26,111,196,0.25);
+  opacity: 0;
+}
+
+.workflow-flow li.is-visible .workflow-dot::after {
+  animation: workflowPulse 1.2s ease-out 0.1s;
 }
 
 .workflow-flow h4 {
@@ -617,14 +662,23 @@
   line-height: 1.55;
 }
 
-@keyframes workflowStepIn {
+@keyframes workflowConnector {
   from {
-    opacity: 0;
-    transform: translateY(14px);
+    transform: scaleX(0);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: scaleX(1);
+  }
+}
+
+@keyframes workflowPulse {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.78);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.55);
   }
 }
 
@@ -640,28 +694,36 @@
 
   .workflow-flow {
     grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .workflow-flow::before {
-    top: 0;
-    bottom: 0;
-    left: 21px;
-    right: auto;
-    width: 2px;
-    height: auto;
-    background: linear-gradient(180deg, var(--color-accent), rgba(26,111,196,0.12));
+    gap: 14px;
   }
 
   .workflow-flow li {
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 14px;
-    padding: 0;
+    min-height: auto;
   }
 
-  .workflow-dot {
-    margin-bottom: 0;
+  .workflow-flow li::after {
+    top: auto;
+    right: auto;
+    left: 35px;
+    bottom: -15px;
+    width: 2px;
+    height: 14px;
+    transform: scaleY(0);
+    transform-origin: top;
+    background: linear-gradient(180deg, var(--color-accent), rgba(26,111,196,0.12));
+  }
+
+  .workflow-flow li:not(:last-child).is-visible::after {
+    animation: workflowConnectorVertical 0.45s ease forwards 0.28s;
+  }
+}
+
+@keyframes workflowConnectorVertical {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
   }
 }
 
@@ -674,6 +736,10 @@
   .about-snapshot-card,
   .workflow-panel {
     padding: 22px;
+  }
+
+  .about-intro-copy p {
+    text-align: left;
   }
 }
 

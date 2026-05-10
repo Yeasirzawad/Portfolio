@@ -54,8 +54,8 @@ body {
 
 /* ===== Section Heading ===== */
 .section-heading {
-  padding-top: 22px;
-  padding-bottom: 34px;
+  padding-top: 24px;
+  padding-bottom: 36px;
   text-align: center;
 }
 
@@ -85,16 +85,27 @@ body {
 
 /* ===== Content Sections ===== */
 .content-section {
-  padding: 68px max(24px, calc((100% - var(--max-width)) / 2));
+  padding: 72px max(24px, calc((100% - var(--max-width)) / 2)) 92px;
   background-color: var(--color-background);
 }
 
 .content-section + .content-section {
-  padding-top: 74px;
+  padding-top: 84px;
 }
 
 .content-section:nth-child(even) {
   background-color: var(--color-surface);
+}
+
+/* Adds a safe breathing gap after the final row of section content. */
+.timeline,
+.skills-grid,
+.project-grid,
+.cs-list,
+.education-list,
+.certification-grid,
+.contact-layout {
+  margin-bottom: 18px;
 }
 
 /* ===== Scroll reveal animation ===== */

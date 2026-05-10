@@ -54,8 +54,8 @@ body {
 
 /* ===== Section Heading ===== */
 .section-heading {
-  padding-top: 24px;
-  padding-bottom: 36px;
+  padding-top: 14px;
+  padding-bottom: 34px;
   text-align: center;
 }
 
@@ -85,19 +85,19 @@ body {
 
 /* ===== Content Sections ===== */
 .content-section {
-  padding: 72px max(24px, calc((100% - var(--max-width)) / 2)) 92px;
+  padding: 58px max(24px, calc((100% - var(--max-width)) / 2)) 70px;
   background-color: var(--color-background);
 }
 
 .content-section + .content-section {
-  padding-top: 84px;
+  padding-top: 56px;
 }
 
 .content-section:nth-child(even) {
   background-color: var(--color-surface);
 }
 
-/* Adds a safe breathing gap after the final row of section content. */
+/* Adds a safe breathing gap after the final row of section content without creating huge blank areas. */
 .timeline,
 .skills-grid,
 .project-grid,
@@ -105,7 +105,16 @@ body {
 .education-list,
 .certification-grid,
 .contact-layout {
-  margin-bottom: 18px;
+  margin-bottom: 34px;
+}
+
+/* The About section already has a large workflow panel, so keep its handoff tighter. */
+#about.content-section {
+  padding-bottom: 54px;
+}
+
+#experience.content-section {
+  padding-top: 50px;
 }
 
 /* ===== Scroll reveal animation ===== */

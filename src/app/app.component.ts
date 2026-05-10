@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit, OnDestroy {
   name = 'Md. Yeasir Zawad';
 
   roleTitles = [
@@ -75,9 +75,65 @@ export class AppComponent {
   ];
 
   isMenuOpen = false;
+  private revealObserver?: IntersectionObserver;
+
+  ngAfterViewInit(): void {
+    setTimeout(() => this.setupScrollReveal());
+  }
+
+  ngOnDestroy(): void {
+    this.revealObserver?.disconnect();
+  }
 
   scrollToSection(id: string) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     this.isMenuOpen = false;
+  }
+
+  private setupScrollReveal(): void {
+    const revealSelectors = [
+      '.content-section .section-heading',
+      '.about-intro-panel',
+      '.about-snapshot-card',
+      '.workflow-panel',
+      '.timeline-item',
+      '.skill-card',
+      '.project-card',
+      '.cs-intro',
+      '.cs-card',
+      '.education-card',
+      '.cert-card',
+      '.contact-left',
+      '.contact-right'
+    ].join(', ');
+
+    const revealItems = Array.from(document.querySelectorAll<HTMLElement>(revealSelectors));
+
+    revealItems.forEach((item, index) => {
+      item.classList.add('reveal-item');
+      item.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 90}ms`);
+    });
+
+    if (!('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+      return;
+    }
+
+    this.revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.16,
+        rootMargin: '0px 0px -10% 0px'
+      }
+    );
+
+    revealItems.forEach((item) => this.revealObserver?.observe(item));
   }
 }

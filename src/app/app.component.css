@@ -538,13 +538,27 @@
 }
 
 .workflow-panel {
-  padding: clamp(24px, 3.5vw, 34px);
+  padding: clamp(26px, 3.6vw, 38px);
   overflow: hidden;
+  position: relative;
+}
+
+.workflow-panel::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -160px;
+  bottom: -170px;
+  background: radial-gradient(circle, rgba(26,111,196,0.10), transparent 68%);
+  pointer-events: none;
 }
 
 .workflow-header {
   max-width: 680px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .workflow-header h3 {
@@ -567,23 +581,37 @@
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0;
   position: relative;
+  z-index: 1;
 }
 
-.workflow-flow::before {
+.workflow-flow::before,
+.workflow-flow::after {
   content: "";
   position: absolute;
   top: 22px;
   left: 22px;
   right: 22px;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-accent), rgba(26,111,196,0.12));
+  border-radius: 99px;
+}
+
+.workflow-flow::before {
+  background: rgba(26,111,196,0.14);
+}
+
+.workflow-flow::after {
+  background: linear-gradient(90deg, var(--color-accent), #7bb8f0, var(--color-accent));
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.workflow-panel.is-visible .workflow-flow::after {
+  animation: drawWorkflowLine 1.7s ease forwards 0.25s;
 }
 
 .workflow-flow li {
   position: relative;
   padding: 0 14px;
-  animation: workflowStepIn 0.75s ease both;
-  animation-delay: calc(var(--step-index) * 0.16s);
 }
 
 .workflow-dot {
@@ -603,6 +631,19 @@
   z-index: 1;
 }
 
+.workflow-dot::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(26,111,196,0.25);
+  opacity: 0;
+}
+
+.workflow-flow li.is-visible .workflow-dot::after {
+  animation: workflowPulse 1.35s ease-out 0.1s;
+}
+
 .workflow-flow h4 {
   color: var(--color-primary);
   font-size: 14px;
@@ -617,14 +658,23 @@
   line-height: 1.55;
 }
 
-@keyframes workflowStepIn {
+@keyframes drawWorkflowLine {
   from {
-    opacity: 0;
-    transform: translateY(14px);
+    transform: scaleX(0);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: scaleX(1);
+  }
+}
+
+@keyframes workflowPulse {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.78);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.55);
   }
 }
 
@@ -640,17 +690,22 @@
 
   .workflow-flow {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
   }
 
-  .workflow-flow::before {
+  .workflow-flow::before,
+  .workflow-flow::after {
     top: 0;
     bottom: 0;
     left: 21px;
     right: auto;
     width: 2px;
     height: auto;
-    background: linear-gradient(180deg, var(--color-accent), rgba(26,111,196,0.12));
+    transform-origin: top;
+  }
+
+  .workflow-panel.is-visible .workflow-flow::after {
+    animation: drawWorkflowLineVertical 1.7s ease forwards 0.25s;
   }
 
   .workflow-flow li {
@@ -662,6 +717,15 @@
 
   .workflow-dot {
     margin-bottom: 0;
+  }
+}
+
+@keyframes drawWorkflowLineVertical {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
   }
 }
 

@@ -108,8 +108,9 @@ body {
   margin-bottom: 34px;
 }
 
-/* The About section already has a large workflow panel, so keep its handoff tighter. */
+/* Give the first card after the hero a deliberate landing space. */
 #about.content-section {
+  padding-top: 76px;
   padding-bottom: 54px;
 }
 

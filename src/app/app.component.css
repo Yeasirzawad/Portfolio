@@ -421,6 +421,8 @@
   line-height: 1.75;
   max-width: 760px;
   margin-bottom: 12px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .about-highlights {
@@ -734,6 +736,10 @@
   .about-snapshot-card,
   .workflow-panel {
     padding: 22px;
+  }
+
+  .about-intro-copy p {
+    text-align: left;
   }
 }
 

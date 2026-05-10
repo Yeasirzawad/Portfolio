@@ -54,8 +54,8 @@ body {
 
 /* ===== Section Heading ===== */
 .section-heading {
-  padding-top: 38px;
-  padding-bottom: 40px;
+  padding-top: 22px;
+  padding-bottom: 34px;
   text-align: center;
 }
 
@@ -77,7 +77,7 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 56px;
+  width: 52px;
   height: 3px;
   background-color: var(--color-accent);
   border-radius: 2px;
@@ -85,12 +85,12 @@ body {
 
 /* ===== Content Sections ===== */
 .content-section {
-  padding: 92px max(24px, calc((100% - var(--max-width)) / 2));
+  padding: 68px max(24px, calc((100% - var(--max-width)) / 2));
   background-color: var(--color-background);
 }
 
 .content-section + .content-section {
-  padding-top: 108px;
+  padding-top: 74px;
 }
 
 .content-section:nth-child(even) {
@@ -100,29 +100,25 @@ body {
 /* ===== Scroll reveal animation ===== */
 .reveal-item {
   opacity: 0;
-  transform: translateY(48px) scale(0.965);
-  filter: blur(8px);
+  transform: translateY(30px) scale(0.98);
   transition:
-    opacity 0.82s ease,
-    transform 0.82s cubic-bezier(0.18, 0.9, 0.22, 1),
-    filter 0.82s ease,
+    opacity 0.68s ease,
+    transform 0.68s cubic-bezier(0.18, 0.9, 0.22, 1),
     box-shadow 0.24s ease,
     border-color 0.24s ease;
   transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform, filter;
+  will-change: opacity, transform;
 }
 
 .reveal-item.is-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
-  filter: blur(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal-item {
     opacity: 1;
     transform: none;
-    filter: none;
     transition: none;
   }
 }

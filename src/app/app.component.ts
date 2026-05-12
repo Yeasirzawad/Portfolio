@@ -39,7 +39,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     'Automotive & Mobility'
   ];
 
-  Research Deliverables = [
+  researchDeliverables = [
     'Market and company research reports',
     'Competitive landscape reports',
     "Company & Financial Due diligence reports",

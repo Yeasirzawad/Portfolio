@@ -26,7 +26,6 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     'Market Research',
     'Business Intelligence',
     'Statistical Analysis',
-    'Company Research',
     "Forecasting and Trend Analysis",
     'Competitive Intelligence',
     "Dashboard Reporting","Data Storytelling","Stakeholder Communication"];
@@ -36,7 +35,9 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     'Hospitality / Travel',
     'Healthcare & Life Sciences',
     'Private Equity & M&A',
-    'Automotive & Mobility'
+    'Automotive & Mobility',
+    'Fintech & Financial Services',
+    'Energy & Sustainability'
   ];
 
   researchDeliverables = [
@@ -44,9 +45,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     'Competitive landscape reports',
     "Company & Financial Due diligence reports",
     "M&A research briefs",
-    'Forecasting and trend summaries',
     'Power BI dashboards',
-    'Pricing and opportunity diagnostics',
     'Stakeholder-ready presentations'
   ];
 

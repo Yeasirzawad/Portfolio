@@ -26,9 +26,10 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     'Market Research',
     'Business Intelligence',
     'Statistical Analysis',
+    'Company Research',
+    "Forecasting and Trend Analysis",
     'Competitive Intelligence',
-    'Forecasting',
-    'Company Research', "Dashboard Reporting","Data Storytelling","Stakeholder Communication"];
+    "Dashboard Reporting","Data Storytelling","Stakeholder Communication"];
 
   industries = [
     'FMCG & Consumer Markets',

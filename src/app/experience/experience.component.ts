@@ -14,12 +14,15 @@ export class ExperienceComponent {
         role: 'Research Analyst',
         company: 'Perceive Now, Inc.',
         duration: 'Oct 2025 – Present',
-        details: ["Built structured analytical outputs using Excel, Google Sheets, Power BI to support client research, reporting, and decision-making.",
-          "Lead market and enterprise research across industries, turning complex data into clear business insights.",
-          "Delivered 30+ market intelligence reports covering market sizing, competitive analysis, forecasting, pricing, and go-to-market strategy.",
-          "Support business development through proposal writing, research scoping, and client/investor communication.",
-          "Work with cross-functional teams to align requirements and support execution."
-        ],
+        details: [ "Lead market and enterprise research across multiple industries, turning complex data into clear business insights.",
+          "Analyze market, consumer, and competitive data to generate insights that support business planning, growth strategy, and decision-making.",
+          "Delivered 35+ analytical reports across market research, consumer insights, forecasting, pricing diagnostics, due diligence, and go-to-market strategy, turning complex business information into clear business decision.",
+        "Conduct competitor benchmarking, market trend analysis, and secondary research to identify market opportunities, risks, and strategic directions.",
+        "Support business development through proposal writing, research scoping, and client/investor communication.",
+        "Collaborate with cross-functional teams to gather inputs, organize findings, and improve reporting, documentation, and research workflows.",
+        "Used AI-assisted research workflows with ChatGPT, Perplexity, Claude/Gemini, and custom GPTs to speed up research and report development, reducing early-stage preparation effort by 40%."
+      ],
+        
         image: 'assets/logos/Perceive_Now.png',
       },
       {

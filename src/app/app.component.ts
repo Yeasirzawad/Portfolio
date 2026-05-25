@@ -17,9 +17,9 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   description = 'I combine data analytics, statistical thinking, business intelligence, and research to build dashboards, analytical outputs, and reporting that support better decisions.';
 
   aboutHighlights = [
-    { value: '35+', label: 'research and analytical outputs delivered' },
-    { value: '5+', label: 'research, BI, and analytics domains covered' },
-    { value: '10+', label: 'flagship case studies across market and business analysis' }
+    { value: '35+', label: 'Reports, dashboards, and analytical outputs delivered' },
+    { value: '5+', label: 'Research, BI, and analytics domains covered' },
+    { value: '10+', label: 'Case studies spanning business, market, and performance analysis' }
   ];
 
   coreExpertise = [

@@ -14,7 +14,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     'Research Analyst'
   ];
 
-  description = 'I turn market research, business intelligence, and statistical analysis into structured insights, dashboards, and decision-ready reporting for teams, founders, and business stakeholders.';
+  description = 'I combine data analytics, statistical thinking, business intelligence, and research to build dashboards, analytical outputs, and reporting that support better decisions.';
 
   aboutHighlights = [
     { value: '35+', label: 'research and analytical outputs delivered' },

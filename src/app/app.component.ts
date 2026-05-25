@@ -23,12 +23,13 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   ];
 
   coreExpertise = [
-    'Market Research',
+    'Data Analysis', 'Statistical Analysis',
     'Business Intelligence',
-    'Statistical Analysis',
+    "Dashboard Reporting",
     "Forecasting and Trend Analysis",
+    'Market Research',
     'Competitive Intelligence',
-    "Dashboard Reporting","Data Storytelling","Stakeholder Communication"];
+    ,"Data Storytelling","Stakeholder Communication"];
 
   industries = [
     'FMCG & Consumer Markets',

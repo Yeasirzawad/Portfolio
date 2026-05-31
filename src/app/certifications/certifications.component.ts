@@ -27,7 +27,7 @@ export class CertificationsComponent {
       logoText: 'MS',
       logoClass: 'microsoft',
       logoUrl: 'assets/certificate logo/Microsoft Certified Power BI Data Analyst Associate.png',
-      credentialUrl: '#'
+      credentialUrl: 'https://learn.microsoft.com/api/credentials/share/en-us/MdYeasirZawad-4056/821F1EB5E94FEB2F?sharingId=506681E93722C6D1'
     },
     {
       title: 'Time Series Analysis with Python',

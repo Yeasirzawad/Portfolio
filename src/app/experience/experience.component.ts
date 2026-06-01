@@ -13,26 +13,17 @@ export class ExperienceComponent {
           {
         role: 'Research Analyst',
         company: 'Perceive Now, Inc.',
-        duration: 'Oct 2025 – Present',
+        duration: 'Oct 2024 – Present',
         details: [ "Lead market and enterprise research across multiple industries, turning complex data into clear business insights.",
           "Analyze market, consumer, and competitive data to generate insights that support business planning, growth strategy, and decision-making.",
           "Delivered 35+ analytical reports across market research, consumer insights, forecasting, pricing diagnostics, due diligence, and go-to-market strategy, turning complex business information into clear business decision.",
+          "Developed an Excel-based reporting workflow that unified sales, delivery, ROI, and financial metrics, reducing stakeholder reporting preparation effort by 50% and improving KPI visibility.",
         "Conduct competitor benchmarking, market trend analysis, and secondary research to identify market opportunities, risks, and strategic directions.",
         "Support business development through proposal writing, research scoping, and client/investor communication.",
         "Collaborate with cross-functional teams to gather inputs, organize findings, and improve reporting, documentation, and research workflows.",
         "Used AI-assisted research workflows with ChatGPT, Perplexity, Claude/Gemini, and custom GPTs to speed up research and report development, reducing early-stage preparation effort by 40%."
       ],
         
-        image: 'assets/logos/Perceive_Now.png',
-      },
-      {
-        role: 'Data Analyst',
-        company: 'Perceive Now, Inc.',
-        duration: 'Nov 2024 – Sep 2025',
-        details: [
-          'Worked on statistical data analysis and research-driven problem solving to support market intelligence and client-facing analytical work.',
-          'Contributed to data-backed reporting, insight generation, and structured analysis across research and business projects.'
-        ],
         image: 'assets/logos/Perceive_Now.png',
       },
       {

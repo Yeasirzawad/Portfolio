@@ -5,19 +5,20 @@
 .education-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: clamp(12px, 2vw, 16px);
 }
 
 .education-card {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
+  gap: clamp(12px, 2vw, 18px);
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 22px 24px;
+  padding: clamp(16px, 3vw, 22px) clamp(16px, 3vw, 24px);
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  flex-wrap: wrap;
 }
 
 .education-card:hover {
@@ -30,54 +31,77 @@
 }
 
 .edu-icon {
-  width: 44px;
-  height: 44px;
+  width: clamp(36px, 6vw, 44px);
+  height: clamp(36px, 6vw, 44px);
   border-radius: var(--radius-sm);
   background-color: var(--color-accent-light);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-accent);
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 18px);
 }
 
 .edu-right {
   flex: 1;
+  min-width: 0;
 }
 
 .degree {
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 700;
   color: var(--color-primary);
   margin: 0 0 5px;
   line-height: 1.4;
+  word-wrap: break-word;
 }
 
 .school {
-  font-size: 14px;
+  font-size: clamp(12px, 1.5vw, 14px);
   color: var(--color-accent);
   font-weight: 600;
   margin: 0 0 10px;
+  word-wrap: break-word;
 }
 
 .edu-footer {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: clamp(10px, 2vw, 16px);
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .duration {
-  font-size: 13px;
+  font-size: clamp(11px, 1.5vw, 13px);
   color: var(--color-muted);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .gpa {
-  font-size: 13px;
+  font-size: clamp(11px, 1.5vw, 13px);
   font-weight: 700;
   color: var(--color-primary);
   background-color: var(--color-accent-light);
-  padding: 3px 10px;
+  padding: clamp(2px, 0.5vw, 3px) clamp(8px, 1.5vw, 10px);
   border-radius: 20px;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .education-card {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .edu-right {
+    width: 100%;
+  }
+
+  .edu-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }

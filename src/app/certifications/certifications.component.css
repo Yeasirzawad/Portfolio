@@ -1,11 +1,25 @@
 .certification-section {
-  /* inherits from content-section */
+  width: 100%;
 }
 
 .certification-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(260px, 100%, 290px), 1fr));
+  gap: clamp(14px, 2.5vw, 20px);
+}
+
+@media (max-width: 768px) {
+  .certification-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .certification-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
 
 /* ===== Card ===== */
@@ -28,14 +42,14 @@
 
 /* ===== Certificate Image ===== */
 .cert-visual {
-  height: 130px;
+  height: clamp(110px, 20vw, 130px);
   background-color: var(--color-neutral-50);
   border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 12px;
+  padding: clamp(8px, 1.5vw, 12px);
 }
 
 .cert-visual img {
@@ -46,7 +60,7 @@
 
 /* ===== Body ===== */
 .cert-body {
-  padding: 18px 20px;
+  padding: clamp(14px, 2vw, 18px) clamp(14px, 2vw, 20px);
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -54,7 +68,7 @@
 }
 
 .cert-org {
-  font-size: 12px;
+  font-size: clamp(10px, 1.2vw, 12px);
   font-weight: 700;
   color: var(--color-accent);
   text-transform: uppercase;
@@ -63,12 +77,13 @@
 }
 
 .cert-title {
-  font-size: 14.5px;
+  font-size: clamp(13px, 1.8vw, 14.5px);
   font-weight: 600;
   color: var(--color-primary);
   line-height: 1.45;
   margin: 0;
   flex-grow: 1;
+  word-wrap: break-word;
 }
 
 /* ===== Footer ===== */
@@ -76,23 +91,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: clamp(8px, 1.5vw, 10px);
   flex-wrap: wrap;
   margin-top: 10px;
-  padding-top: 12px;
+  padding-top: clamp(8px, 1.5vw, 12px);
   border-top: 1px solid var(--color-border);
 }
 
 .cert-date {
-  font-size: 12.5px;
+  font-size: clamp(10px, 1.2vw, 12.5px);
   color: var(--color-muted);
   display: flex;
   align-items: center;
   gap: 5px;
+  white-space: nowrap;
 }
 
 .cert-link {
-  font-size: 12.5px;
+  font-size: clamp(10px, 1.2vw, 12.5px);
   font-weight: 600;
   color: var(--color-accent);
   text-decoration: none;
@@ -100,6 +116,7 @@
   align-items: center;
   gap: 5px;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .cert-link:hover {

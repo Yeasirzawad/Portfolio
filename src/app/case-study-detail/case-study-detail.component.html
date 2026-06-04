@@ -1,0 +1,136 @@
+<div class="case-study-detail-wrapper" *ngIf="!notFound && caseStudy">
+  <!-- Header Navigation -->
+  <div class="cs-detail-header-nav">
+    <div class="cs-nav-container">
+      <a routerLink="/case-studies" class="back-link">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Case Studies
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="cs-detail-hero">
+    <div class="cs-detail-hero-content">
+      <span class="cs-detail-tag">{{ caseStudy.tag }}</span>
+      <h1 class="cs-detail-title">{{ caseStudy.title }}</h1>
+      <p class="cs-detail-subtitle">{{ caseStudy.subtitle }}</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="cs-detail-main">
+    <!-- Overview Section -->
+    <section class="cs-detail-section">
+      <h2 class="cs-detail-section-title">Overview</h2>
+      <p class="cs-detail-overview">{{ caseStudy.summary }}</p>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="cs-detail-section">
+      <h2 class="cs-detail-section-title">Key Impact Metrics</h2>
+      <div class="cs-detail-metrics-grid">
+        <div class="metric-card-large" *ngFor="let metric of caseStudy.metrics">
+          <div class="metric-value-large">{{ metric.value }}</div>
+          <div class="metric-label-large">{{ metric.label }}</div>
+          <div *ngIf="metric.note" class="metric-note-large">{{ metric.note }}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="cs-detail-section">
+      <h2 class="cs-detail-section-title">
+        <i class="fas fa-exclamation-circle" aria-hidden="true"></i> Challenge
+      </h2>
+      <ul class="detail-bullet-list" *ngIf="parseBulletList(caseStudy.challenge) as bullets">
+        <li *ngFor="let bullet of bullets">{{ bullet }}</li>
+      </ul>
+      <p *ngIf="!isBulletFormat(caseStudy.challenge)">{{ caseStudy.challenge }}</p>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="cs-detail-section">
+      <h2 class="cs-detail-section-title">
+        <i class="fas fa-lightbulb" aria-hidden="true"></i> Solution
+      </h2>
+      <ul class="detail-bullet-list" *ngIf="parseBulletList(caseStudy.solution) as bullets">
+        <li *ngFor="let bullet of bullets">{{ bullet }}</li>
+      </ul>
+      <p *ngIf="!isBulletFormat(caseStudy.solution)">{{ caseStudy.solution }}</p>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="cs-detail-section">
+      <h2 class="cs-detail-section-title">
+        <i class="fas fa-drafting-compass" aria-hidden="true"></i> Approach
+      </h2>
+      <ul class="detail-bullet-list" *ngIf="parseBulletList(caseStudy.approach) as bullets">
+        <li *ngFor="let bullet of bullets">{{ bullet }}</li>
+      </ul>
+      <p *ngIf="!isBulletFormat(caseStudy.approach)">{{ caseStudy.approach }}</p>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="cs-detail-section">
+      <h2 class="cs-detail-section-title">
+        <i class="fas fa-arrows-left-right" aria-hidden="true"></i> Before & After
+      </h2>
+      <div class="before-after-grid">
+        <div class="before-after-panel">
+          <h3 class="before-after-title before">Before</h3>
+          <ul class="before-after-list">
+            <li *ngFor="let item of caseStudy.beforeAfter.before">{{ item }}</li>
+          </ul>
+        </div>
+        <div class="before-after-panel">
+          <h3 class="before-after-title after">After</h3>
+          <ul class="before-after-list">
+            <li *ngFor="let item of caseStudy.beforeAfter.after">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcome/Impact Section -->
+    <section class="cs-detail-section">
+      <h2 class="cs-detail-section-title">
+        <i class="fas fa-chart-line" aria-hidden="true"></i> Outcome & Business Impact
+      </h2>
+      <p>{{ caseStudy.outcome }}</p>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="cs-detail-section">
+      <h2 class="cs-detail-section-title">Tools & Methods</h2>
+      <div class="cs-detail-tools">
+        <span class="tool-badge-large" *ngFor="let tool of caseStudy.tools">{{ tool }}</span>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cs-detail-cta">
+      <div class="cta-content">
+        <h2>Interested in similar work?</h2>
+        <p>Let's discuss how I can help with your analysis, research, or business intelligence needs.</p>
+        <div class="cta-actions">
+          <a href="#contact" class="cta-btn primary">Get in Touch</a>
+          <a routerLink="/case-studies" class="cta-btn secondary">View All Case Studies</a>
+          <a *ngIf="caseStudy.link" [href]="caseStudy.link" target="_blank" rel="noopener noreferrer" class="cta-btn tertiary">
+            <i class="fas fa-chart-line" aria-hidden="true"></i> View Dashboard
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Not Found Section -->
+<div class="case-study-not-found" *ngIf="notFound">
+  <div class="not-found-content">
+    <h1>Case Study Not Found</h1>
+    <p>Sorry, the case study you're looking for doesn't exist or has been moved.</p>
+    <a routerLink="/case-studies" class="back-to-all-btn">
+      <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Case Studies
+    </a>
+  </div>
+</div>

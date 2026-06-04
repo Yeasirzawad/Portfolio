@@ -1,0 +1,113 @@
+.case-studies-wrapper {
+  width: 100%;
+  background-color: var(--color-background);
+}
+
+/* ===== Hero Section ===== */
+.cs-hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0d3557 100%);
+  padding: clamp(40px, 8vw, 80px) clamp(20px, 4vw, 40px);
+  text-align: center;
+}
+
+.cs-hero-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.cs-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.cs-hero-desc {
+  font-size: clamp(14px, 2vw, 16px);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Case Studies Section ===== */
+.case-studies-section {
+  padding: clamp(50px, 8vw, 80px) clamp(16px, 2vw, 24px);
+  background-color: var(--color-background);
+}
+
+.case-studies-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .case-studies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .cs-hero {
+    padding: clamp(35px, 6vw, 60px) clamp(16px, 3vw, 32px);
+  }
+
+  .cs-hero h1 {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .case-studies-section {
+    padding: clamp(40px, 6vw, 60px) clamp(16px, 2vw, 20px);
+  }
+
+  .cs-hero {
+    padding: clamp(30px, 5vw, 50px) clamp(16px, 3vw, 24px);
+  }
+
+  .cs-hero h1 {
+    font-size: clamp(24px, 3.5vw, 32px);
+    margin-bottom: 12px;
+  }
+
+  .cs-hero-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-studies-section {
+    padding: clamp(30px, 5vw, 40px) clamp(12px, 2vw, 16px);
+  }
+
+  .cs-hero {
+    padding: clamp(25px, 4vw, 40px) clamp(12px, 2vw, 16px);
+  }
+
+  .cs-hero h1 {
+    font-size: clamp(20px, 3vw, 28px);
+    margin-bottom: 10px;
+  }
+
+  .cs-hero-desc {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}

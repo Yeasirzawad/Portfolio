@@ -1,0 +1,19 @@
+<section class="case-study-section">
+  <section class="section-heading">
+    <h3>Case Studies</h3>
+  </section>
+
+  <p class="cs-intro">
+    A selection of recent case studies showcasing measurable outcomes, analytical approaches, and business impact across market intelligence, business intelligence, and research domains.
+  </p>
+
+  <div class="cs-grid">
+    <app-case-study-card *ngFor="let cs of featuredCaseStudies" [caseStudy]="cs"></app-case-study-card>
+  </div>
+
+  <div class="cs-cta">
+    <a routerLink="/case-studies" class="view-all-btn">
+      View All Case Studies <i class="fas fa-arrow-right" aria-hidden="true"></i>
+    </a>
+  </div>
+</section>

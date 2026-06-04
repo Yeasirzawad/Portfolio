@@ -1,0 +1,18 @@
+<div class="case-studies-wrapper">
+  <div class="cs-hero">
+    <div class="cs-hero-content">
+      <h1>Case Studies</h1>
+      <p class="cs-hero-desc">
+        Detailed analysis of completed projects, measurable outcomes, and strategic insights across market intelligence, business intelligence, and research domains.
+      </p>
+    </div>
+  </div>
+
+  <section class="case-studies-section">
+    <div class="case-studies-container">
+      <div class="case-studies-grid">
+        <app-case-study-card *ngFor="let cs of caseStudies" [caseStudy]="cs"></app-case-study-card>
+      </div>
+    </div>
+  </section>
+</div>

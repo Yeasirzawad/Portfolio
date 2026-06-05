@@ -44,7 +44,7 @@ export class CaseStudyComponent {
       challenge: 'The client needed to determine whether Dhaka, Chittagong, or Cox\'s Bazar offered the most favourable unit economics and competitive landscape for a short-term rental investment.',
       approach: 'Designed a multi-stage scraping pipeline to capture listing attributes, host performance metrics, and guest sentiment, then built a Power BI competitive analysis model segmenting by occupancy rate, average daily rate, and review velocity.',
       outcome: 'Dhaka emerged as the clear entry market with 42% higher review density and 18% stronger occupancy rates than alternatives. The client used the report to scope an initial portfolio of 12 properties.',
-      tools: ['Python', 'Selenium', 'Pandas', 'Power BI', 'Power Query', 'DAX'],
+      tools: ['Python', 'Selenium', 'Pandas', 'Power BI', 'Power Query', "Data Modeling", 'DAX'],
       link: 'https://app.powerbi.com/view?r=eyJrIjoiZGZmMTA2YjUtZjk5YS00YjZjLWJmMmYtM2E1ZDQxZTI2MDAyIiwidCI6IjZmNDczODVjLTY3YjQtNGMwNi1hN2M0LWVmNmZhNTI4YTk1ZSIsImMiOjEwfQ%3D%3D&pageName=d51523c1ba67c0c9cc96'
     },
     {

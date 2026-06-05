@@ -42,10 +42,9 @@
       <h2 class="cs-detail-section-title">
         <i class="fas fa-exclamation-circle" aria-hidden="true"></i> Challenge
       </h2>
-      <ul class="detail-bullet-list" *ngIf="parseBulletList(caseStudy.challenge) as bullets">
-        <li *ngFor="let bullet of bullets">{{ bullet }}</li>
+      <ul class="detail-bullet-list">
+        <li *ngFor="let bullet of parseBulletList(caseStudy.challenge)">{{ bullet }}</li>
       </ul>
-      <p *ngIf="!isBulletFormat(caseStudy.challenge)">{{ caseStudy.challenge }}</p>
     </section>
 
     <!-- Solution Section -->
@@ -53,10 +52,9 @@
       <h2 class="cs-detail-section-title">
         <i class="fas fa-lightbulb" aria-hidden="true"></i> Solution
       </h2>
-      <ul class="detail-bullet-list" *ngIf="parseBulletList(caseStudy.solution) as bullets">
-        <li *ngFor="let bullet of bullets">{{ bullet }}</li>
+      <ul class="detail-bullet-list">
+        <li *ngFor="let bullet of parseBulletList(caseStudy.solution)">{{ bullet }}</li>
       </ul>
-      <p *ngIf="!isBulletFormat(caseStudy.solution)">{{ caseStudy.solution }}</p>
     </section>
 
     <!-- Approach Section -->
@@ -64,10 +62,9 @@
       <h2 class="cs-detail-section-title">
         <i class="fas fa-drafting-compass" aria-hidden="true"></i> Approach
       </h2>
-      <ul class="detail-bullet-list" *ngIf="parseBulletList(caseStudy.approach) as bullets">
-        <li *ngFor="let bullet of bullets">{{ bullet }}</li>
+      <ul class="detail-bullet-list">
+        <li *ngFor="let bullet of parseBulletList(caseStudy.approach)">{{ bullet }}</li>
       </ul>
-      <p *ngIf="!isBulletFormat(caseStudy.approach)">{{ caseStudy.approach }}</p>
     </section>
 
     <!-- Before/After Section -->
@@ -96,7 +93,9 @@
       <h2 class="cs-detail-section-title">
         <i class="fas fa-chart-line" aria-hidden="true"></i> Outcome & Business Impact
       </h2>
-      <p>{{ caseStudy.outcome }}</p>
+      <ul class="detail-bullet-list">
+        <li *ngFor="let bullet of parseBulletList(caseStudy.outcome)">{{ bullet }}</li>
+      </ul>
     </section>
 
     <!-- Tools Section -->

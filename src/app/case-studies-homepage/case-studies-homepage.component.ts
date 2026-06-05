@@ -14,4 +14,3 @@ import { CaseStudyCardComponent } from '../case-study-card/case-study-card.compo
 export class CaseStudiesHomepageComponent {
   featuredCaseStudies: CaseStudy[] = getFeaturedCaseStudies();
 }
-dads

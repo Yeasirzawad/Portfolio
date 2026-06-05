@@ -9,7 +9,6 @@ import { SkillsComponent } from "./skills/skills.component";
 import { CertificationsComponent } from "./certifications/certifications.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { ContactComponent } from "./contact/contact.component";
-import { CaseStudyComponent } from "./case-study/case-study.component";
 import { CaseStudiesHomepageComponent } from './case-studies-homepage/case-studies-homepage.component';
 import { CaseStudiesPageComponent } from './case-studies-page/case-studies-page.component';
 import { CaseStudyDetailComponent } from './case-study-detail/case-study-detail.component';
@@ -26,7 +25,6 @@ import { routes } from './app.routes';
     CertificationsComponent,
     ProjectsComponent,
     ContactComponent,
-    CaseStudyComponent,
     CaseStudiesHomepageComponent,
     CaseStudiesPageComponent,
     CaseStudyDetailComponent
@@ -35,4 +33,3 @@ import { routes } from './app.routes';
   bootstrap: [AppComponent]
 })
 export class AppModule {}
-

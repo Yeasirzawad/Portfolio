@@ -3,57 +3,52 @@
     <h3>Skills</h3>
   </section>
 
-  <!-- ===== Row 1: Core Technical Skills ===== -->
-  <div class="skills-tier">
-    <div class="tier-label">
-      <span class="tier-line"></span>
-      <span class="tier-text">Core Technical Skills</span>
-      <span class="tier-line"></span>
+  <!-- ===== Block 1: Technical Stack ===== -->
+  <div class="skills-block">
+    <div class="skills-block-header">
+      <span class="block-label">Technical Stack</span>
+      <span class="block-desc">Tools &amp; technologies I work with</span>
     </div>
-    <div class="skills-grid core-grid">
-      <div class="skill-card" *ngFor="let group of coreGroups">
-        <div class="skill-card-header">
-          <div class="skill-icon-wrap">
-            <i [class]="group.icon" aria-hidden="true"></i>
-          </div>
-          <span class="category-title">{{ group.category }}</span>
+
+    <div class="tools-grid">
+      <div class="tool-chip" *ngFor="let tool of toolStack">
+        <img
+          *ngIf="tool.iconUrl"
+          [src]="tool.iconUrl"
+          [alt]="tool.name + ' logo'"
+          class="tool-logo"
+          loading="lazy"
+        />
+        <div
+          *ngIf="!tool.iconUrl"
+          class="tool-monogram"
+          [style.background]="tool.abbrBg"
+          [style.color]="tool.abbrColor"
+        >
+          {{ tool.abbr }}
         </div>
-        <div class="skill-tags">
-          <span class="skill-tag" *ngFor="let skill of group.skills">{{ skill }}</span>
-        </div>
+        <span class="tool-name">{{ tool.name }}</span>
       </div>
     </div>
   </div>
 
-  <!-- ===== Row 2: Methods & Expertise ===== -->
-  <div class="skills-tier">
-    <div class="tier-label">
-      <span class="tier-line"></span>
-      <span class="tier-text">Methods &amp; Expertise</span>
-      <span class="tier-line"></span>
+  <!-- ===== Block 2: Methods & Expertise ===== -->
+  <div class="skills-block">
+    <div class="skills-block-header">
+      <span class="block-label">Methods &amp; Expertise</span>
+      <span class="block-desc">Analytical approaches and domain knowledge</span>
     </div>
-    <div class="skills-grid method-grid">
-      <div class="skill-card" *ngFor="let group of methodGroups">
-        <div class="skill-card-header">
-          <div class="skill-icon-wrap">
-            <i [class]="group.icon" aria-hidden="true"></i>
-          </div>
-          <span class="category-title">{{ group.category }}</span>
+
+    <div class="method-rows">
+      <div class="method-row" *ngFor="let group of methodGroups">
+        <div class="method-category">
+          <i [class]="group.icon" aria-hidden="true"></i>
+          <span>{{ group.category }}</span>
         </div>
-        <div class="skill-tags">
-          <span class="skill-tag" *ngFor="let skill of group.skills">{{ skill }}</span>
+        <div class="method-skills">
+          <span class="method-tag" *ngFor="let skill of group.skills">{{ skill }}</span>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- ===== Workflow Tools Strip ===== -->
-  <div class="workflow-strip">
-    <span class="workflow-strip-label">
-      <i class="fas fa-toolbox" aria-hidden="true"></i> Workflow &amp; Productivity Tools
-    </span>
-    <div class="workflow-tags">
-      <span class="workflow-tag" *ngFor="let tool of workflowTools">{{ tool }}</span>
     </div>
   </div>
 

@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+export interface SkillGroup {
+  category: string;
+  icon: string;
+  skills: string[];
+}
+
 @Component({
   selector: 'skills',
   standalone: true,
@@ -9,17 +15,20 @@ import { CommonModule } from '@angular/common';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
-  skillGroups = [
+  coreGroups: SkillGroup[] = [
     {
       category: 'Programming',
+      icon: 'fas fa-code',
       skills: ['Python', 'R', 'SQL']
     },
     {
       category: 'Business Intelligence & Reporting',
-      skills: ['Power BI', "Excel", "Metabase", 'Power Query', 'DAX']
+      icon: 'fas fa-chart-bar',
+      skills: ['Power BI', 'Excel', 'Metabase', 'Power Query', 'DAX']
     },
     {
       category: 'Statistical & Data Analysis',
+      icon: 'fas fa-square-root-variable',
       skills: [
         'Regression Analysis',
         'Time Series Analysis',
@@ -31,8 +40,18 @@ export class SkillsComponent {
       ]
     },
     {
+      category: 'Databases & Research Tools',
+      icon: 'fas fa-database',
+      skills: ['MySQL', 'PostgreSQL', 'SPSS', 'STATA']
+    }
+  ];
+
+  methodGroups: SkillGroup[] = [
+    {
       category: 'Market Research',
-      skills: [ 'Market Sizing',
+      icon: 'fas fa-magnifying-glass-chart',
+      skills: [
+        'Market Sizing',
         'Market Forecasting',
         'Competitive Analysis',
         'Pricing Diagnostics',
@@ -42,11 +61,8 @@ export class SkillsComponent {
       ]
     },
     {
-      category: 'Databases & Research Tools',
-      skills: ['MySQL', 'PostgreSQL', 'SPSS', 'STATA']
-    },
-    {
       category: 'Visualization & Communication',
+      icon: 'fas fa-display',
       skills: [
         'Dashboard Design',
         'Data Storytelling',
@@ -55,21 +71,18 @@ export class SkillsComponent {
       ]
     },
     {
-      category: 'Project & Workflow Tools',
-      skills: ['Trello', 'Confluence', 'Slack']
-    },
-    {
-      category: 'AI Research & Productivity Tools',
+      category: 'AI Research & Productivity',
+      icon: 'fas fa-robot',
       skills: [
         'ChatGPT',
         'Perplexity',
         'Gemini',
-        'Kimi',
-        'Gamma',
         'Custom GPTs',
         'AI-Assisted Research',
         'Prompt Engineering'
       ]
     }
   ];
+
+  workflowTools: string[] = ['Trello', 'Confluence', 'Slack', 'Kimi', 'Gamma'];
 }

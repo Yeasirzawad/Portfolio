@@ -3,14 +3,58 @@
     <h3>Skills</h3>
   </section>
 
-  <div class="skills-grid">
-    <div class="skill-card" *ngFor="let group of skillGroups">
-      <div class="skill-card-header">
-        <span class="category-title">{{ group.category }}</span>
-      </div>
-      <div class="skill-tags">
-        <span class="skill-tag" *ngFor="let skill of group.skills">{{ skill }}</span>
+  <!-- ===== Row 1: Core Technical Skills ===== -->
+  <div class="skills-tier">
+    <div class="tier-label">
+      <span class="tier-line"></span>
+      <span class="tier-text">Core Technical Skills</span>
+      <span class="tier-line"></span>
+    </div>
+    <div class="skills-grid core-grid">
+      <div class="skill-card" *ngFor="let group of coreGroups">
+        <div class="skill-card-header">
+          <div class="skill-icon-wrap">
+            <i [class]="group.icon" aria-hidden="true"></i>
+          </div>
+          <span class="category-title">{{ group.category }}</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag" *ngFor="let skill of group.skills">{{ skill }}</span>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- ===== Row 2: Methods & Expertise ===== -->
+  <div class="skills-tier">
+    <div class="tier-label">
+      <span class="tier-line"></span>
+      <span class="tier-text">Methods &amp; Expertise</span>
+      <span class="tier-line"></span>
+    </div>
+    <div class="skills-grid method-grid">
+      <div class="skill-card" *ngFor="let group of methodGroups">
+        <div class="skill-card-header">
+          <div class="skill-icon-wrap">
+            <i [class]="group.icon" aria-hidden="true"></i>
+          </div>
+          <span class="category-title">{{ group.category }}</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag" *ngFor="let skill of group.skills">{{ skill }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Workflow Tools Strip ===== -->
+  <div class="workflow-strip">
+    <span class="workflow-strip-label">
+      <i class="fas fa-toolbox" aria-hidden="true"></i> Workflow &amp; Productivity Tools
+    </span>
+    <div class="workflow-tags">
+      <span class="workflow-tag" *ngFor="let tool of workflowTools">{{ tool }}</span>
+    </div>
+  </div>
+
 </section>

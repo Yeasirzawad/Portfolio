@@ -7,6 +7,7 @@ export interface Tool {
   abbr?: string;
   abbrBg?: string;
   abbrColor?: string;
+  darkChip?: boolean; // for tools with light-colored logos (e.g. Power BI yellow)
 }
 
 export interface MethodGroup {
@@ -14,6 +15,8 @@ export interface MethodGroup {
   icon: string;
   skills: string[];
 }
+
+const SI = 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons';
 
 @Component({
   selector: 'skills',
@@ -25,30 +28,41 @@ export interface MethodGroup {
 export class SkillsComponent {
 
   toolStack: Tool[] = [
-    { name: 'Python',      iconUrl: 'https://cdn.simpleicons.org/python/3776AB' },
-    { name: 'R',           iconUrl: 'https://cdn.simpleicons.org/r/276DC3' },
-    { name: 'SQL',         abbr: 'SQL',  abbrBg: '#E8F0FE', abbrColor: '#1a73e8' },
-    { name: 'Power BI',    iconUrl: 'https://cdn.simpleicons.org/powerbi/F2C811' },
-    { name: 'Excel',       iconUrl: 'https://cdn.simpleicons.org/microsoftexcel/217346' },
-    { name: 'Metabase',    iconUrl: 'https://cdn.simpleicons.org/metabase/509EE3' },
-    { name: 'Power Query', abbr: 'PQ',   abbrBg: '#E3F2FD', abbrColor: '#0078D4' },
-    { name: 'DAX',         abbr: 'DAX',  abbrBg: '#FFF8E1', abbrColor: '#E6A817' },
-    { name: 'MySQL',       iconUrl: 'https://cdn.simpleicons.org/mysql/4479A1' },
-    { name: 'PostgreSQL',  iconUrl: 'https://cdn.simpleicons.org/postgresql/4169E1' },
-    { name: 'SPSS',        abbr: 'SPSS', abbrBg: '#E8EAF6', abbrColor: '#3949AB' },
-    { name: 'STATA',       abbr: 'STA',  abbrBg: '#E8EAF6', abbrColor: '#1A237E' },
+    // Programming
+    { name: 'Python',      iconUrl: `${SI}/python.svg` },
+    { name: 'R',           iconUrl: `${SI}/r.svg` },
+    // BI & Reporting
+    { name: 'Power BI',    iconUrl: `${SI}/powerbi.svg`,        darkChip: true },
+    { name: 'Excel',       iconUrl: `${SI}/microsoftexcel.svg` },
+    { name: 'Metabase',    iconUrl: `${SI}/metabase.svg` },
+    { name: 'Power Query', abbr: 'PQ',   abbrBg: '#DBEAFE', abbrColor: '#1D4ED8' },
+    { name: 'DAX',         abbr: 'DAX',  abbrBg: '#FEF9C3', abbrColor: '#A16207' },
+    // Databases
+    { name: 'MySQL',       iconUrl: `${SI}/mysql.svg` },
+    { name: 'PostgreSQL',  iconUrl: `${SI}/postgresql.svg` },
+    // Statistical tools (no official icon — polished monograms)
+    { name: 'SPSS',  abbr: 'SPSS', abbrBg: '#EEF2FF', abbrColor: '#4338CA' },
+    { name: 'STATA', abbr: 'STA',  abbrBg: '#ECFDF5', abbrColor: '#065F46' },
   ];
 
   methodGroups: MethodGroup[] = [
     {
       category: 'Statistical Analysis',
       icon: 'fas fa-chart-line',
-      skills: ['Regression Analysis', 'Time Series Analysis', 'A/B Testing', 'Predictive Modeling', 'Hypothesis Testing', 'Cohort Analysis', 'Forecasting']
+      skills: [
+        'Regression Analysis', 'Multivariate Analysis', 'Time Series Analysis',
+        'A/B Testing', 'ANOVA', 'Predictive Modeling',
+        'Hypothesis Testing', 'Cohort Analysis', 'Forecasting'
+      ]
     },
     {
       category: 'Market Research',
       icon: 'fas fa-magnifying-glass',
-      skills: ['Market Sizing', 'Market Forecasting', 'Competitive Analysis', 'Pricing Diagnostics', 'Customer Segmentation', 'Product-Market Fit Analysis', 'Trend Analysis']
+      skills: [
+        'Market Sizing', 'Market Forecasting', 'Competitive Analysis',
+        'Pricing Diagnostics', 'Customer Segmentation',
+        'Product-Market Fit Analysis', 'Trend Analysis'
+      ]
     },
     {
       category: 'Visualization & Communication',
@@ -58,12 +72,16 @@ export class SkillsComponent {
     {
       category: 'AI Research & Productivity',
       icon: 'fas fa-robot',
-      skills: ['Prompt Engineering', 'AI-Assisted Research', 'Custom GPTs', 'ChatGPT', 'Gemini', 'Perplexity']
+      skills: [
+        'Prompt Engineering', 'AI-Assisted Research', 'Custom GPTs',
+        'ChatGPT', 'Gemini', 'Perplexity',
+        'Claude Code', 'Antigravity', 'IDE', 'CLI'
+      ]
     },
     {
       category: 'Workflow & Collaboration',
       icon: 'fas fa-layer-group',
-      skills: ['Trello', 'Confluence', 'Slack', 'Kimi', 'Gamma']
+      skills: ['GitHub', 'Trello', 'Confluence', 'Slack', 'Kimi', 'Gamma']
     }
   ];
 }

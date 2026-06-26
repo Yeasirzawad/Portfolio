@@ -11,7 +11,11 @@
     </div>
 
     <div class="tools-grid">
-      <div class="tool-chip" *ngFor="let tool of toolStack">
+      <div
+        class="tool-chip"
+        [class.dark-chip]="tool.darkChip"
+        *ngFor="let tool of toolStack"
+      >
         <img
           *ngIf="tool.iconUrl"
           [src]="tool.iconUrl"

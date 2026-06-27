@@ -13,6 +13,8 @@ export interface Tool {
 export interface MethodGroup {
   category: string;
   icon: string;
+  color: string;      // accent color for border-top and icon
+  colorLight: string; // light tint for icon badge background
   skills: string[];
 }
 
@@ -49,6 +51,8 @@ export class SkillsComponent {
     {
       category: 'Statistical Analysis',
       icon: 'fas fa-chart-line',
+      color: '#7C3AED',
+      colorLight: '#F3EDFF',
       skills: [
         'Regression Analysis', 'Multivariate Analysis', 'Time Series Analysis',
         'A/B Testing', 'ANOVA', 'Predictive Modeling',
@@ -58,6 +62,8 @@ export class SkillsComponent {
     {
       category: 'Market Research',
       icon: 'fas fa-magnifying-glass',
+      color: '#0891B2',
+      colorLight: '#E0F7FA',
       skills: [
         'Market Sizing', 'Market Forecasting', 'Competitive Analysis',
         'Pricing Diagnostics', 'Customer Segmentation',
@@ -67,11 +73,15 @@ export class SkillsComponent {
     {
       category: 'Visualization & Communication',
       icon: 'fas fa-display',
+      color: '#059669',
+      colorLight: '#ECFDF5',
       skills: ['Dashboard Design', 'Data Storytelling', 'Executive Reporting', 'Report Writing']
     },
     {
       category: 'AI Research & Productivity',
       icon: 'fas fa-robot',
+      color: '#D97706',
+      colorLight: '#FFFBEB',
       skills: [
         'Prompt Engineering', 'AI-Assisted Research', 'Custom GPTs',
         'ChatGPT', 'Gemini', 'Perplexity',
@@ -81,6 +91,8 @@ export class SkillsComponent {
     {
       category: 'Workflow & Collaboration',
       icon: 'fas fa-layer-group',
+      color: '#1a6fc4',
+      colorLight: '#E8F1FB',
       skills: ['GitHub', 'Trello', 'Confluence', 'Slack', 'Kimi', 'Gamma']
     }
   ];

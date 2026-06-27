@@ -43,14 +43,28 @@
       <span class="block-desc">Analytical approaches and domain knowledge</span>
     </div>
 
-    <div class="method-rows">
-      <div class="method-row" *ngFor="let group of methodGroups">
-        <div class="method-category">
-          <i [class]="group.icon" aria-hidden="true"></i>
-          <span>{{ group.category }}</span>
+    <div class="method-grid">
+      <div
+        class="method-card"
+        *ngFor="let group of methodGroups"
+        [style.border-top-color]="group.color"
+      >
+        <div class="method-card-header">
+          <div
+            class="method-icon-badge"
+            [style.background]="group.colorLight"
+            [style.color]="group.color"
+          >
+            <i [class]="group.icon" aria-hidden="true"></i>
+          </div>
+          <span class="method-card-title" [style.color]="group.color">{{ group.category }}</span>
         </div>
-        <div class="method-skills">
-          <span class="method-tag" *ngFor="let skill of group.skills">{{ skill }}</span>
+        <div class="method-tags">
+          <span
+            class="method-tag"
+            *ngFor="let skill of group.skills"
+            [style.--tag-hover-bg]="group.color"
+          >{{ skill }}</span>
         </div>
       </div>
     </div>

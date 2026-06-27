@@ -87,13 +87,6 @@ export class SkillsComponent {
         'ChatGPT', 'Gemini', 'Perplexity',
         'Claude Code', 'Antigravity', 'IDE', 'CLI'
       ]
-    },
-    {
-      category: 'Workflow & Collaboration',
-      icon: 'fas fa-layer-group',
-      color: '#1a6fc4',
-      colorLight: '#E8F1FB',
-      skills: ['GitHub', 'Trello', 'Confluence', 'Slack', 'Kimi', 'Gamma']
     }
   ];
 }

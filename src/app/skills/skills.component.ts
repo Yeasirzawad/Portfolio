@@ -31,20 +31,20 @@ export class SkillsComponent {
 
   toolStack: Tool[] = [
     // Programming
-    { name: 'Python',      iconUrl: `${SI}/python.svg` },
-    { name: 'R',           iconUrl: `${SI}/r.svg` },
+    { name: 'Python', iconUrl: `${SI}/python.svg` },
+    { name: 'R', iconUrl: `${SI}/r.svg` },
     // BI & Reporting
-    { name: 'Power BI',    iconUrl: `${SI}/powerbi.svg`,        darkChip: true },
-    { name: 'Excel',       iconUrl: `${SI}/microsoftexcel.svg` },
-    { name: 'Metabase',    iconUrl: `${SI}/metabase.svg` },
-    { name: 'Power Query', abbr: 'PQ',   abbrBg: '#DBEAFE', abbrColor: '#1D4ED8' },
-    { name: 'DAX',         abbr: 'DAX',  abbrBg: '#FEF9C3', abbrColor: '#A16207' },
+    { name: 'Power BI', iconUrl: `${SI}/powerbi.svg`, darkChip: true },
+    { name: 'Excel', iconUrl: `${SI}/microsoftexcel.svg` },
+    { name: 'Metabase', iconUrl: `${SI}/metabase.svg` },
+    { name: 'Power Query', abbr: 'PQ', abbrBg: '#DBEAFE', abbrColor: '#1D4ED8' },
+    { name: 'DAX', abbr: 'DAX', abbrBg: '#FEF9C3', abbrColor: '#A16207' },
     // Databases
-    { name: 'MySQL',       iconUrl: `${SI}/mysql.svg` },
-    { name: 'PostgreSQL',  iconUrl: `${SI}/postgresql.svg` },
+    { name: 'MySQL', iconUrl: `${SI}/mysql.svg` },
+    { name: 'PostgreSQL', iconUrl: `${SI}/postgresql.svg` },
     // Statistical tools (no official icon — polished monograms)
-    { name: 'SPSS',  abbr: 'SPSS', abbrBg: '#EEF2FF', abbrColor: '#4338CA' },
-    { name: 'STATA', abbr: 'STA',  abbrBg: '#ECFDF5', abbrColor: '#065F46' },
+    { name: 'SPSS', abbr: 'SPSS', abbrBg: '#EEF2FF', abbrColor: '#4338CA' },
+    { name: 'STATA', abbr: 'STA', abbrBg: '#ECFDF5', abbrColor: '#065F46' },
   ];
 
   methodGroups: MethodGroup[] = [
@@ -66,8 +66,8 @@ export class SkillsComponent {
       colorLight: '#E0F7FA',
       skills: [
         'Market Sizing', 'Market Forecasting', 'Competitive Analysis',
-        'Pricing Diagnostics', 'Customer Segmentation',
-        'Product-Market Fit Analysis', 'Trend Analysis'
+        'Pricing Diagnostics', 'Customer Segmentation', 'Trend Analysis',
+        'Product-Market Fit Analysis'
       ]
     },
     {

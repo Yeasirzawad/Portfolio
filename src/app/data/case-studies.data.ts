@@ -31,32 +31,32 @@ export const CASE_STUDIES: CaseStudy[] = [
     tag: 'Market Intelligence',
     slug: 'hmf-market-share-whitespace-analysis',
     title: 'HMF Express U.S. Market Share & Whitespace Analysis',
-    subtitle: 'Market sizing and territory-level opportunity analysis',
-    summary: 'Built a U.S.-wide market intelligence and opportunity analysis for HMF Express to quantify market size, territory share, customer wallet penetration, competitor allocation, and whitespace opportunities across the hollow-metal doors and frames market.',
+    subtitle: 'Market sizing, competitor mapping, and whitespace analysis',
+    summary: 'Built a U.S.-wide market intelligence framework for HMF Express, a Senneca Holdings brand — consolidating nine Excel datasets into a single sales-ready view of market size, territory and customer share, competitor allocation, and whitespace opportunity across the hollow-metal doors and frames industry.',
     metrics: [
       { value: '$5.7B', label: 'Total U.S. Market Size', note: 'Hollow-metal doors and frames' },
       { value: '$36.1M', label: 'Territory-Level Whitespace', note: 'Across 8 key states' },
       { value: '$876.0M', label: 'Customer-Level Whitespace', note: 'Across 1,190 accounts' }
     ],
-    challenge: 'The business had shipment data, but lacked a decision-ready view of total market potential, HMF share by territory and customer, competitor exposure, and where sales teams should focus. This made it difficult to identify attack markets, defend positions, and prioritize high-value accounts.',
-    solution: 'Developed a unified market intelligence framework that consolidated territorial benchmarks, customer spending capacity, and competitor allocation into a single sales-ready view. Translated complex market data into prioritized action categories for leadership.',
-    approach: 'Analyzed multiple Excel-based datasets covering territory market size, HMF shipments, customer spend capacity, fair-share benchmarks, competitor allocation, customer trend labels, and pricing posture. Used Python to validate rankings, concentration metrics, share gaps, whitespace estimates, and opportunity pools, then translated the findings into an executive-ready report structured around sales action categories.',
-    outcome: 'Delivered a sales-ready market intelligence framework that quantified a $5.7B U.S. market, identified $36.1M in territory-level whitespace across 8 states, and surfaced $876.0M in customer-level whitespace across 1,190 accounts. The final analysis gave leadership a clear basis to prioritize attack territories, defend stronghold markets, reactivate declining customers, and focus growth efforts on the highest-value opportunities.',
+    challenge: 'Shipment data showed what HMF sold — but not total market size, territory position, or how much customer wallet remained uncaptured, leaving leadership without a basis for territory or account prioritization.\nNine disconnected Excel workbooks (territory sizing, shipments, customer spend, fair-share benchmarks, competitor allocation, pricing) had no unified structure to compare against, so patterns stayed buried in spreadsheets no one could act on.\nNo visibility into competitor allocation or manufacturer type across 1,190 customer accounts made it impossible to tell where HMF spend was genuinely at risk versus already secure.\nSales resources were deployed on instinct rather than evidence, with no way to distinguish attack markets, defend markets, and reactivation targets.',
+    solution: 'Consolidated territory market sizing, HMF shipments, customer spend capacity, fair-share benchmarks, competitor allocation, and regional pricing into one unified market intelligence framework.\nUsed Python (pandas, NumPy) to calculate concentration ratios, fair-share deviations, and whitespace — Fair-Share Revenue minus Actual HMF Revenue for territories, Estimated Customer Spend minus HMF Revenue for accounts — validated against raw shipment data.\nClassified every account into four sales-ready action tiers (Grow, Retain, Reactivate, Monitor) so the analysis could be acted on directly rather than reinterpreted.\nLayered in competitor and manufacturer-type allocation and territory/regional pricing posture (national blended $472/unit) so leadership could see share gaps, competitive exposure, and pricing power in one report.',
+    approach: 'Audited every sheet across the nine datasets — row counts, columns, coverage — before writing any section, to keep every claim tied to what the data actually supported.\nSized the U.S. hollow-metal market at $5.7B by state, exposing extreme concentration: the top 10 states hold ~62% of market value, with Texas alone at 18.5%.\nBenchmarked HMF’s actual territory revenue against a fair-share model, isolating $36.1M in positive whitespace across 8 states — led by Texas ($11.1M), California ($8.3M), and Arizona ($6.1M).\nModeled spend capacity across 1,190 customer accounts to size $876.0M in customer whitespace, then cross-referenced it against competitor allocation (ASSA ABLOY 22%, Allegion 17%) and manufacturer type.\nApplied trend segmentation (growing / declining / stable / insufficient data) to flag a high-risk pocket of 191 declining accounts holding $86.7M in revenue at under 10% HMF share.',
+    outcome: 'Quantified HMF’s full addressable opportunity: a $5.7B national market, $36.1M in recoverable territory whitespace, and $876.0M in customer whitespace.\nHanded leadership a ranked attack list — Texas, California, Arizona, New York, Colorado — representing 88.2% of all positive territory whitespace.\nSurfaced that roughly 60% of HMF’s existing revenue comes from accounts where its wallet share sits below 5%, reframing "stable" accounts as the biggest growth lever rather than a low priority.\nConverted 1,190 accounts into an action-ready pipeline for 2025–2026 — 461 Reactivate ($439.4M), 236 Grow ($289.3M), 453 Monitor, and 40 Retain — replacing instinct-driven prioritization with a quantified sales playbook.',
     beforeAfter: {
       before: [
-        'Sales teams using disconnected regional reports and incomplete shipment data',
-        'No visibility into territory-level market share or customer wallet penetration',
-        'Unclear prioritization of attack markets, defense zones, and opportunity accounts',
-        'Limited ability to quantify whitespace or benchmark competitive positioning'
+        'Shipment data only — no visibility into total market size, territory share, or customer wallet penetration',
+        'No way to separate attack markets, defend markets, and reactivation targets; sales prioritization ran on instinct',
+        'Competitor exposure and manufacturer-type risk unknown at the customer level across 1,190 accounts',
+        'Nine disconnected Excel workbooks with no unified share, whitespace, or pricing view'
       ],
       after: [
-        'Single source of truth for $5.7B market view and HMF positioning',
-        'Clear territory and account-level opportunity identification and prioritization',
-        '$36.1M in identified whitespace across 8 key states ready for sales action',
-        'Data-driven playbook for market capture and customer reactivation strategy'
+        'U.S. market sized at $5.7B with fair-share benchmarking across every territory',
+        '$36.1M in territory whitespace and $876.0M in customer whitespace, ranked and ready for sales action',
+        'Competitor spend mapped by customer and manufacturer type (Project, Quick Ship & Custom, Specialty, Hybrid)',
+        'Every account classified into Grow / Retain / Reactivate / Monitor for 2025–2026 sales planning'
       ]
     },
-    tools: ['Python', 'Pandas', 'NumPy', 'Excel', 'Market Sizing', 'Whitespace Analysis'],
+    tools: ['Python', 'Pandas', 'NumPy', 'Excel', 'Market Sizing', 'Fair-Share Benchmarking', 'Competitive Intelligence', 'Whitespace Analysis'],
     featured: true
   },
   {

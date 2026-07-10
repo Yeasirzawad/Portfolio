@@ -19,6 +19,7 @@ export interface MethodGroup {
 }
 
 const SI = 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons';
+const TOOLS_IMG = 'assets/Tools Image';
 
 @Component({
   selector: 'skills',
@@ -34,7 +35,7 @@ export class SkillsComponent {
     { name: 'Python', iconUrl: `${SI}/python.svg` },
     { name: 'R', iconUrl: `${SI}/r.svg` },
     // BI & Reporting
-    { name: 'Power BI', iconUrl: `${SI}/powerbi.svg`, darkChip: true },
+    { name: 'Power BI', iconUrl: `${TOOLS_IMG}/Power Bi logo.svg`, darkChip: true },
     { name: 'Excel', iconUrl: `${SI}/microsoftexcel.svg` },
     { name: 'Metabase', iconUrl: `${SI}/metabase.svg` },
     { name: 'Power Query', abbr: 'PQ', abbrBg: '#DBEAFE', abbrColor: '#1D4ED8' },
@@ -42,9 +43,9 @@ export class SkillsComponent {
     // Databases
     { name: 'MySQL', iconUrl: `${SI}/mysql.svg` },
     { name: 'PostgreSQL', iconUrl: `${SI}/postgresql.svg` },
-    // Statistical tools (no official icon — polished monograms)
-    { name: 'SPSS', abbr: 'SPSS', abbrBg: '#EEF2FF', abbrColor: '#4338CA' },
-    { name: 'STATA', abbr: 'STA', abbrBg: '#ECFDF5', abbrColor: '#065F46' },
+    // Statistical tools
+    { name: 'SPSS', iconUrl: `${TOOLS_IMG}/SPSS Logo.png` },
+    { name: 'STATA', iconUrl: `${TOOLS_IMG}/stata-logo.svg` },
   ];
 
   methodGroups: MethodGroup[] = [

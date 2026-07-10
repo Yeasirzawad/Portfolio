@@ -104,8 +104,7 @@
 .tool-chip:nth-child(1) .tool-logo { filter: invert(35%) sepia(80%) saturate(500%) hue-rotate(190deg) brightness(90%); }
 /* R — #276DC3 */
 .tool-chip:nth-child(2) .tool-logo { filter: invert(30%) sepia(70%) saturate(700%) hue-rotate(210deg) brightness(85%); }
-/* Power BI — amber filter so icon is visible on the warm-yellow light chip */
-.tool-chip.dark-chip .tool-logo { filter: invert(62%) sepia(85%) saturate(600%) hue-rotate(10deg) brightness(88%); }
+/* Power BI — full-color logo, no filter needed */
 /* Excel — #217346 */
 .tool-chip:nth-child(4) .tool-logo { filter: invert(30%) sepia(60%) saturate(600%) hue-rotate(120deg) brightness(80%); }
 /* Metabase — #509EE3 */

@@ -30,26 +30,26 @@ export const CASE_STUDIES: CaseStudy[] = [
     slug: 'hmf-market-share-whitespace-analysis',
     title: 'HMF Express U.S. Market Share & Whitespace Analysis',
     subtitle: 'Market sizing, competitor mapping, and whitespace analysis',
-    summary: 'Built a U.S.-wide market intelligence framework for HMF Express, a Senneca Holdings brand — consolidating nine Excel datasets into a single sales-ready view of market size, territory and customer share, competitor allocation, and whitespace opportunity across the hollow-metal doors and frames industry.',
+    summary: 'Built a U.S.-wide market intelligence framework for HMF Express, a Senneca Holdings brand, consolidating nine Excel datasets into a single sales-ready view of market size, territory and customer share, competitor allocation, and whitespace opportunity across the hollow-metal doors and frames industry.',
     metrics: [
       { value: '$5.7B', label: 'Total U.S. Market Size', note: 'Hollow-metal doors and frames' },
       { value: '$36.1M', label: 'Territory-Level Whitespace', note: 'Across 8 key states' },
       { value: '$876.0M', label: 'Customer-Level Whitespace', note: 'Across 1,190 accounts' }
     ],
-    challenge: 'Shipment data showed what HMF sold — but not total market size, territory position, or how much customer wallet remained uncaptured, leaving leadership without a basis for territory or account prioritization.\nNine disconnected Excel workbooks (territory sizing, shipments, customer spend, fair-share benchmarks, competitor allocation, pricing) had no unified structure to compare against, so patterns stayed buried in spreadsheets no one could act on.\nNo visibility into competitor allocation or manufacturer type across 1,190 customer accounts made it impossible to tell where HMF spend was genuinely at risk versus already secure.\nSales resources were deployed on instinct rather than evidence, with no way to distinguish attack markets, defend markets, and reactivation targets.',
-    approach: 'Audited every sheet across the nine Excel datasets — territory sizing, shipments, customer spend, fair-share, competitor allocation, pricing — before writing any section, so every claim stayed tied to what the data actually supported.\nBuilt a unified fair-share model (Fair-Share Revenue minus Actual HMF Revenue) to benchmark territory performance against expected market participation for each state.\nModeled customer-level spend capacity across 1,190 accounts under low / base / high scenarios, calculating customer whitespace as Estimated Spend minus HMF Revenue.\nUsed Python (pandas, NumPy) to calculate concentration ratios, rankings, and share gaps, then cross-referenced results against competitor allocation and manufacturer type (Project, Quick Ship & Custom, Specialty, Hybrid).\nApplied trend segmentation (growing / declining / stable / insufficient data) and classified every account into four action tiers — Grow, Retain, Reactivate, Monitor — so sales teams could act on the analysis directly.\nBenchmarked territory and regional pricing posture (national blended $472/unit) to flag premium, neutral, and discount markets.',
+    challenge: 'Shipment data showed what HMF sold, but not total market size, territory position, or how much customer wallet remained uncaptured, leaving leadership without a basis for territory or account prioritization.\nNine disconnected Excel workbooks (territory sizing, shipments, customer spend, fair-share benchmarks, competitor allocation, pricing) had no unified structure to compare against, so patterns stayed buried in spreadsheets no one could act on.\nNo visibility into competitor allocation or manufacturer type across 1,190 customer accounts made it impossible to tell where HMF spend was genuinely at risk versus already secure.\nSales resources were deployed on instinct rather than evidence, with no way to distinguish attack markets, defend markets, and reactivation targets.',
+    approach: 'Audited every sheet across the nine Excel datasets (territory sizing, shipments, customer spend, fair-share, competitor allocation, pricing) before writing any section, so every claim stayed tied to what the data actually supported.\nBuilt a unified fair-share model (Fair-Share Revenue minus Actual HMF Revenue) to benchmark territory performance against expected market participation for each state.\nModeled customer-level spend capacity across 1,190 accounts under low, base, and high scenarios, calculating customer whitespace as Estimated Spend minus HMF Revenue.\nUsed Python (pandas, NumPy) to calculate concentration ratios, rankings, and share gaps, then cross-referenced results against competitor allocation and manufacturer type (Project, Quick Ship & Custom, Specialty, Hybrid).\nApplied trend segmentation (growing, declining, stable, insufficient data) and classified every account into four action tiers (Grow, Retain, Reactivate, Monitor) so sales teams could act on the analysis directly.\nBenchmarked territory and regional pricing posture (national blended $472/unit) to flag premium, neutral, and discount markets.',
     impact: {
       before: [
-        'Shipment data only — no visibility into total market size, territory share, or customer wallet penetration',
+        'Shipment data only, with no visibility into total market size, territory share, or customer wallet penetration',
         'No way to separate attack markets, defend markets, and reactivation targets; sales prioritization ran on instinct',
         'Competitor exposure and manufacturer-type risk unknown at the customer level across 1,190 accounts',
         'Nine disconnected Excel workbooks with no unified share, whitespace, or pricing view'
       ],
       after: [
         '$5.7B U.S. market sized, with $36.1M in territory whitespace ranked across an attack list led by Texas, California, and Arizona (88.2% of all positive whitespace)',
-        '$876.0M in customer whitespace identified — revealing ~60% of existing HMF revenue comes from accounts under 5% wallet share',
-        'Competitor spend mapped by customer and manufacturer type (ASSA ABLOY 22%, Allegion 17%, plus Project / Quick Ship / Specialty / Hybrid segmentation)',
-        '1,190 accounts converted into a 2025–2026 action pipeline — 461 Reactivate ($439.4M), 236 Grow ($289.3M), 453 Monitor, 40 Retain'
+        '$876.0M in customer whitespace identified, revealing ~60% of existing HMF revenue comes from accounts under 5% wallet share',
+        'Competitor spend mapped by customer and manufacturer type (ASSA ABLOY 22%, Allegion 17%, plus Project, Quick Ship, Specialty, and Hybrid segmentation)',
+        '1,190 accounts converted into a 2025-2026 action pipeline: 461 Reactivate ($439.4M), 236 Grow ($289.3M), 453 Monitor, 40 Retain'
       ]
     },
     tools: ['Python', 'Pandas', 'NumPy', 'Excel', 'Market Sizing', 'Fair-Share Benchmarking', 'Competitive Intelligence', 'Whitespace Analysis'],
@@ -58,7 +58,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     tag: 'Market Entry Analysis',
     slug: 'airbnb-market-entry-study-bangladesh',
-    title: 'Airbnb Market Entry Study — Bangladesh',
+    title: 'Airbnb Bangladesh Market Entry Study',
     subtitle: 'Competitive analysis and market viability assessment',
     summary: 'Evaluated Airbnb expansion viability across Bangladesh by scraping and analysing 1,347 listings, 4,608 reviews, and 613 host profiles to identify the strongest entry market.',
     metrics: [
@@ -77,7 +77,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       ],
       after: [
         'Data-backed market analysis covering 1,347 listings across Bangladesh',
-        'Dhaka identified as the clear entry market — 42% higher review density and 18% stronger occupancy than alternatives',
+        'Dhaka identified as the clear entry market, with 42% higher review density and 18% stronger occupancy than alternatives',
         'Clear competitive positioning benchmarks across Dhaka, Chittagong, and Cox\'s Bazar',
         'Client moved forward with a 12-property initial portfolio in the recommended market'
       ]
@@ -97,7 +97,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { value: '4', label: 'Reports Unified', note: 'Canada, Mexico, US regions' },
       { value: '5+', label: 'Hours Saved', note: 'Manual work eliminated per cycle' }
     ],
-    challenge: 'The finance and operations teams were maintaining four separate Excel-based reports across Canada, Mexico, and the US — creating version-control issues, 5+ hours of manual preparation per cycle, and inconsistent KPI definitions.',
+    challenge: 'The finance and operations teams were maintaining four separate Excel-based reports across Canada, Mexico, and the US, creating version-control issues, 5+ hours of manual preparation per cycle, and inconsistent KPI definitions.',
     approach: 'Unified all data sources through a single Power Query ETL layer with a shared data model, replacing four disconnected regional reports.\nStandardized KPI logic across Canada, Mexico, and US regions to eliminate definitional inconsistencies.\nDesigned a cohort analysis module tracking customer retention and basket growth over rolling 12-month windows.',
     impact: {
       before: [
@@ -128,7 +128,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { value: '50+', label: 'Companies Evaluated', note: 'With tiering and comparison' }
     ],
     challenge: 'The client lacked a structured and repeatable way to identify high-fit tenant companies. Early target lists overemphasized obvious large pharmaceutical players while failing to surface emerging and mid-tier companies with stronger near-term fit across UC Davis IP alignment, infrastructure needs, growth signals, and relationship potential.',
-    approach: 'Developed a baseline commercialization mapping report of UC Davis assets to establish the research and IP foundation.\nBuilt a weighted scoring framework across five dimensions — IP alignment, infrastructure fit, growth and PR signals, clinical validation, and relational strength.\nTranslated the scoring logic into a Power BI dashboard with tiering, filtering, and comparison views to support outreach prioritization and strategic decision-making.',
+    approach: 'Developed a baseline commercialization mapping report of UC Davis assets to establish the research and IP foundation.\nBuilt a weighted scoring framework across five dimensions: IP alignment, infrastructure fit, growth and PR signals, clinical validation, and relational strength.\nTranslated the scoring logic into a Power BI dashboard with tiering, filtering, and comparison views to support outreach prioritization and strategic decision-making.',
     impact: {
       before: [
         'No structured approach to tenant identification and prioritization',
@@ -159,7 +159,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { value: '330', label: 'Households Surveyed', note: 'Plus 27 qualitative interviews' }
     ],
     challenge: 'The evaluation needed to determine whether a multi-component livelihood recovery project had produced measurable improvements across income, agriculture, food security, women\'s participation, financial access, and disaster preparedness for vulnerable households affected by COVID-19 and related shocks.',
-    approach: 'Combined 330 household surveys with qualitative research — 8 FGDs, 19 KIIs, 5 IDIs, and 3 case studies — to assess multi-dimensional livelihood improvements.\nUsed SPSS, Excel, Power Query, and Power BI to clean survey data and compare baseline vs endline indicators across 8 development indicators.\nApplied statistical analysis to isolate project impact from external factors, then translated findings into indicator-based evaluation reporting aligned with development-sector criteria.',
+    approach: 'Combined 330 household surveys with qualitative research (8 FGDs, 19 KIIs, 5 IDIs, and 3 case studies) to assess multi-dimensional livelihood improvements.\nUsed SPSS, Excel, Power Query, and Power BI to clean survey data and compare baseline vs endline indicators across 8 development indicators.\nApplied statistical analysis to isolate project impact from external factors, then translated findings into indicator-based evaluation reporting aligned with development-sector criteria.',
     impact: {
       before: [
         'Baseline agricultural technology adoption of just 32%, with no statistical framework to track change',
@@ -219,7 +219,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { value: '23%', label: 'Salary Premium', note: 'SQL + Python vs single skill' },
       { value: '70%', label: 'Research Time Savings', note: 'vs manual job board browsing' }
     ],
-    challenge: 'There was no consolidated, up-to-date view of how demand for data roles varied by location, seniority, or required stack — making it hard for job seekers or hiring managers to benchmark effectively.',
+    challenge: 'There was no consolidated, up-to-date view of how demand for data roles varied by location, seniority, or required stack, making it hard for job seekers or hiring managers to benchmark effectively.',
     approach: 'Built a Python + Selenium scraper targeting Indeed, collecting and cleaning 11,290 postings and 4,989 company records.\nModeled the data in Power BI with DAX measures for salary ranges, skill-frequency heatmaps, and role-level comparisons.\nBuilt an interactive dashboard enabling real-time market intelligence on hiring trends and compensation benchmarks.',
     impact: {
       before: [

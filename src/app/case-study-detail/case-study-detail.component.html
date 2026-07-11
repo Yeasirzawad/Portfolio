@@ -62,19 +62,13 @@
       <h2 class="cs-detail-section-title">
         <span class="cs-section-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></span> Impact
       </h2>
-      <div class="before-after-grid">
-        <div class="before-after-panel before-panel">
-          <h3 class="before-after-title before">Before</h3>
-          <ul class="before-after-list">
-            <li *ngFor="let item of caseStudy.impact.before">{{ item }}</li>
-          </ul>
-        </div>
-        <div class="before-after-panel after-panel">
-          <h3 class="before-after-title after">After</h3>
-          <ul class="before-after-list">
-            <li *ngFor="let item of caseStudy.impact.after">{{ item }}</li>
-          </ul>
-        </div>
+      <div class="impact-table">
+        <div class="impact-col-header before"><span class="ba-mark">✕</span> Before</div>
+        <div class="impact-col-header after"><span class="ba-mark">✓</span> After</div>
+        <ng-container *ngFor="let row of impactRows(caseStudy.impact)">
+          <div class="impact-cell before-cell" [class.impact-cell-empty]="!row.before">{{ row.before }}</div>
+          <div class="impact-cell after-cell" [class.impact-cell-empty]="!row.after">{{ row.after }}</div>
+        </ng-container>
       </div>
     </section>
 

@@ -38,64 +38,44 @@
     </section>
 
     <!-- Challenge Section -->
-    <section class="cs-detail-section">
+    <section class="cs-detail-section cs-section-challenge">
       <h2 class="cs-detail-section-title">
-        <i class="fas fa-exclamation-circle" aria-hidden="true"></i> Challenge
+        <span class="cs-section-icon"><i class="fas fa-exclamation-circle" aria-hidden="true"></i></span> Challenge
       </h2>
       <ul class="detail-bullet-list">
         <li *ngFor="let bullet of parseBulletList(caseStudy.challenge)">{{ bullet }}</li>
       </ul>
     </section>
 
-    <!-- Solution Section -->
-    <section class="cs-detail-section">
-      <h2 class="cs-detail-section-title">
-        <i class="fas fa-lightbulb" aria-hidden="true"></i> Solution
-      </h2>
-      <ul class="detail-bullet-list">
-        <li *ngFor="let bullet of parseBulletList(caseStudy.solution)">{{ bullet }}</li>
-      </ul>
-    </section>
-
     <!-- Approach Section -->
-    <section class="cs-detail-section">
+    <section class="cs-detail-section cs-section-approach">
       <h2 class="cs-detail-section-title">
-        <i class="fas fa-drafting-compass" aria-hidden="true"></i> Approach
+        <span class="cs-section-icon"><i class="fas fa-drafting-compass" aria-hidden="true"></i></span> Approach
       </h2>
       <ul class="detail-bullet-list">
         <li *ngFor="let bullet of parseBulletList(caseStudy.approach)">{{ bullet }}</li>
       </ul>
     </section>
 
-    <!-- Before/After Section -->
-    <section class="cs-detail-section">
+    <!-- Impact Section -->
+    <section class="cs-detail-section cs-section-impact">
       <h2 class="cs-detail-section-title">
-        <i class="fas fa-arrows-left-right" aria-hidden="true"></i> Before & After
+        <span class="cs-section-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></span> Impact
       </h2>
       <div class="before-after-grid">
-        <div class="before-after-panel">
+        <div class="before-after-panel before-panel">
           <h3 class="before-after-title before">Before</h3>
           <ul class="before-after-list">
-            <li *ngFor="let item of caseStudy.beforeAfter.before">{{ item }}</li>
+            <li *ngFor="let item of caseStudy.impact.before">{{ item }}</li>
           </ul>
         </div>
-        <div class="before-after-panel">
+        <div class="before-after-panel after-panel">
           <h3 class="before-after-title after">After</h3>
           <ul class="before-after-list">
-            <li *ngFor="let item of caseStudy.beforeAfter.after">{{ item }}</li>
+            <li *ngFor="let item of caseStudy.impact.after">{{ item }}</li>
           </ul>
         </div>
       </div>
-    </section>
-
-    <!-- Outcome/Impact Section -->
-    <section class="cs-detail-section">
-      <h2 class="cs-detail-section-title">
-        <i class="fas fa-chart-line" aria-hidden="true"></i> Outcome & Business Impact
-      </h2>
-      <ul class="detail-bullet-list">
-        <li *ngFor="let bullet of parseBulletList(caseStudy.outcome)">{{ bullet }}</li>
-      </ul>
     </section>
 
     <!-- Tools Section -->

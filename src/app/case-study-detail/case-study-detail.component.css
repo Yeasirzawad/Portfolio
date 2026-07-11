@@ -96,13 +96,52 @@
   margin: 0 0 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .cs-detail-section-title i {
   color: var(--color-accent);
-  font-size: 20px;
+  font-size: 16px;
 }
+
+/* ===== Section Icon Badge (colored per section) ===== */
+.cs-section-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  transition: transform 0.25s ease;
+}
+
+.cs-detail-section:hover .cs-section-icon {
+  transform: rotate(-6deg) scale(1.06);
+}
+
+/* Challenge — warm red/amber accent */
+.cs-section-challenge .cs-section-icon {
+  background: #FEF2F2;
+  color: #DC2626;
+}
+.cs-section-challenge .cs-section-icon i { color: #DC2626; }
+
+/* Approach — brand blue accent */
+.cs-section-approach .cs-section-icon {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+.cs-section-approach .cs-section-icon i { color: var(--color-accent); }
+
+/* Impact — green accent, matching the "after" checkmark */
+.cs-section-impact .cs-section-icon {
+  background: #ECFDF5;
+  color: #16A34A;
+}
+.cs-section-impact .cs-section-icon i { color: #16A34A; }
 
 .cs-detail-section p {
   font-size: 15.5px;
@@ -127,17 +166,42 @@
   color: var(--color-neutral-600);
   line-height: 1.75;
   margin: 0;
-  padding-left: 28px;
+  padding: 10px 14px 10px 28px;
+  border-radius: var(--radius-sm);
   position: relative;
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 
 .detail-bullet-list li::before {
   content: "•";
   position: absolute;
-  left: 0;
+  left: 14px;
+  top: 10px;
   color: var(--color-accent);
   font-weight: bold;
   font-size: 18px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.detail-bullet-list li:hover {
+  background: var(--color-neutral-50);
+  color: var(--color-neutral-800);
+  transform: translateX(4px);
+}
+
+.detail-bullet-list li:hover::before {
+  transform: scale(1.25);
+}
+
+.cs-section-challenge .detail-bullet-list li:hover {
+  background: #FEF2F2;
+}
+.cs-section-challenge .detail-bullet-list li:hover::before {
+  color: #DC2626;
+}
+
+.cs-section-approach .detail-bullet-list li:hover::before {
+  color: var(--color-accent);
 }
 
 /* ===== Overview ===== */
@@ -145,6 +209,8 @@
   font-size: 16px !important;
   color: var(--color-neutral-700) !important;
   line-height: 1.8 !important;
+  border-left: 3px solid var(--color-accent);
+  padding-left: 20px;
 }
 
 /* ===== Metrics Grid ===== */
@@ -157,15 +223,23 @@
 .metric-card-large {
   background: var(--color-neutral-50);
   border: 1px solid var(--color-border);
+  border-top: 3px solid transparent;
   border-radius: var(--radius-md);
   padding: 28px 20px;
   text-align: center;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .metric-card-large:hover {
   background-color: var(--color-accent-light);
   border-color: var(--color-accent);
+  border-top-color: var(--color-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(26, 111, 196, 0.16);
+}
+
+.metric-card-large:hover .metric-value-large {
+  transform: scale(1.05);
 }
 
 .metric-value-large {
@@ -173,6 +247,8 @@
   font-weight: 700;
   color: var(--color-accent);
   margin-bottom: 8px;
+  display: inline-block;
+  transition: transform 0.25s ease;
 }
 
 .metric-label-large {
@@ -202,6 +278,30 @@
   border-radius: var(--radius-md);
   padding: 28px;
   border: 1px solid var(--color-border);
+  border-top: 3px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.before-panel {
+  background: linear-gradient(180deg, #FEF2F2 0%, var(--color-neutral-50) 55%);
+  border-top-color: #FCA5A5;
+}
+
+.before-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(220, 38, 38, 0.1);
+  border-color: #FCA5A5;
+}
+
+.after-panel {
+  background: linear-gradient(180deg, #ECFDF5 0%, var(--color-neutral-50) 55%);
+  border-top-color: #6EE7B7;
+}
+
+.after-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(22, 163, 74, 0.12);
+  border-color: #6EE7B7;
 }
 
 .before-after-title {
@@ -250,8 +350,20 @@
   font-size: 14px;
   line-height: 1.6;
   color: var(--color-neutral-700);
-  padding-left: 0;
+  padding: 8px 10px;
   margin: 0;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.before-panel .before-after-list li:hover {
+  background: rgba(220, 38, 38, 0.07);
+  transform: translateX(3px);
+}
+
+.after-panel .before-after-list li:hover {
+  background: rgba(22, 163, 74, 0.08);
+  transform: translateX(3px);
 }
 
 /* ===== Tools ===== */
@@ -269,12 +381,14 @@
   font-weight: 600;
   border-radius: 22px;
   display: inline-block;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tool-badge-large:hover {
   background-color: var(--color-accent);
   color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(26, 111, 196, 0.28);
 }
 
 /* ===== CTA Section ===== */

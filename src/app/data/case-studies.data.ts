@@ -40,16 +40,16 @@ export const CASE_STUDIES: CaseStudy[] = [
     approach: 'Audited every sheet across the nine Excel datasets (territory sizing, shipments, customer spend, fair-share, competitor allocation, pricing) before writing any section, so every claim stayed tied to what the data actually supported.\nBuilt a unified fair-share model (Fair-Share Revenue minus Actual HMF Revenue) to benchmark territory performance against expected market participation for each state.\nModeled customer-level spend capacity across 1,190 accounts under low, base, and high scenarios, calculating customer whitespace as Estimated Spend minus HMF Revenue.\nUsed Python (pandas, NumPy) to calculate concentration ratios, rankings, and share gaps, then cross-referenced results against competitor allocation and manufacturer type (Project, Quick Ship & Custom, Specialty, Hybrid).\nApplied trend segmentation (growing, declining, stable, insufficient data) and classified every account into four action tiers (Grow, Retain, Reactivate, Monitor) so sales teams could act on the analysis directly.\nBenchmarked territory and regional pricing posture (national blended $472/unit) to flag premium, neutral, and discount markets.',
     impact: {
       before: [
-        'Shipment data only, with no visibility into total market size, territory share, or customer wallet penetration',
+        'Shipment data only, with no visibility into total market size or territory-level share',
         'No way to separate attack markets, defend markets, and reactivation targets; sales prioritization ran on instinct',
         'Competitor exposure and manufacturer-type risk unknown at the customer level across 1,190 accounts',
-        'Nine disconnected Excel workbooks with no unified share, whitespace, or pricing view'
+        'Nine disconnected Excel workbooks with no unified view of customer whitespace or wallet penetration'
       ],
       after: [
         '$5.7B U.S. market sized, with $36.1M in territory whitespace ranked across an attack list led by Texas, California, and Arizona (88.2% of all positive whitespace)',
-        '$876.0M in customer whitespace identified, revealing ~60% of existing HMF revenue comes from accounts under 5% wallet share',
+        '1,190 accounts converted into a 2025-2026 action pipeline: 461 Reactivate ($439.4M), 236 Grow ($289.3M), 453 Monitor, 40 Retain',
         'Competitor spend mapped by customer and manufacturer type (ASSA ABLOY 22%, Allegion 17%, plus Project, Quick Ship, Specialty, and Hybrid segmentation)',
-        '1,190 accounts converted into a 2025-2026 action pipeline: 461 Reactivate ($439.4M), 236 Grow ($289.3M), 453 Monitor, 40 Retain'
+        '$876.0M in customer whitespace identified in one unified view, revealing ~60% of existing HMF revenue comes from accounts under 5% wallet share'
       ]
     },
     tools: ['Python', 'Pandas', 'NumPy', 'Excel', 'Market Sizing', 'Fair-Share Benchmarking', 'Competitive Intelligence', 'Whitespace Analysis'],
@@ -71,16 +71,17 @@ export const CASE_STUDIES: CaseStudy[] = [
     impact: {
       before: [
         'No data-backed view of which Bangladesh divisions offered real Airbnb market potential',
-        'Pricing, competition, and amenity expectations varied by division with no side-by-side comparison',
-        'Host response quality and Superhost share, key maturity signals, were invisible without manual, listing-by-listing review',
-        'No way to tell whether the market could support a new entrant, or where to enter first'
+        'Pricing and competitive intensity impossible to compare division by division',
+        'Host response quality and Superhost share, key market-maturity signals, were invisible without manual, listing-by-listing review',
+        'No way to tell whether the market could support a new entrant, or which division to enter first',
+        'No context on real-world rent, setup costs, seasonality, or legal risk to turn platform data into an investment decision'
       ],
       after: [
         '1,347 listings, 4,608 reviews, and 613 hosts consolidated into one structured decision-support study, cutting early-stage market validation time by an estimated 50-70% versus manual research',
-        'Dhaka identified as the strongest entry market: 656 listings, a 95.75% host response rate, and 150 superhosts, the deepest and most professionally mature market in the dataset',
-        'Chattogram identified as the strongest secondary market, priced 53% above Dhaka ($62.57 vs $40.88) but with weaker response quality (62.62%) and roughly half the listing depth',
-        'Barisal flagged as a premium-looking but unproven niche: a $121 average nightly rate and 5.00 rating built on just 3 reviews and 52 listings, too thin for a high-confidence call',
-        'Secondary research on rent, setup costs, seasonality, and regulation folded into the same study, strengthening investment evaluation beyond platform data alone'
+        'Division-by-division pricing compared directly: Chattogram priced 53% above Dhaka ($62.57 vs $40.88), while Barisal\'s $121 average rate stood out as a thin, unproven premium niche (5.00 rating on just 3 reviews and 52 listings)',
+        'Dhaka\'s 95.75% host response rate and 150 superhosts far outpaced Chattogram\'s 62.62%, exposing a clear operational-quality gap between the two markets',
+        'Dhaka confirmed as the strongest first-entry market (656 listings, the deepest and most professionally mature division), with Chattogram identified as the best secondary option',
+        'Secondary research on rent, setup costs, seasonality, and regulation folded into the same study, turning platform data into a full positioning and risk-aware investment recommendation'
       ]
     },
     tools: ['Python', 'Selenium', 'Pandas', 'NumPy', 'Power BI', 'Power Query', 'DAX', 'Market Research'],
@@ -135,14 +136,15 @@ export const CASE_STUDIES: CaseStudy[] = [
         'Tenant lists skewed toward obvious large pharmaceutical names, with no structured way to surface mid-tier or emerging fits',
         'No consistent scoring across IP, infrastructure, growth, and relationship dimensions, so company comparisons stayed subjective',
         'UC Davis commercialization assets and candidate companies analyzed in separate silos with no shared framework',
-        'No repeatable process for refreshing leads or re-scoring companies as new signals emerged'
+        'No repeatable process for refreshing leads or re-scoring companies as new signals emerged',
+        'No way to tell which infrastructure capabilities actually mattered for tenant fit, so infrastructure needs went unassessed'
       ],
       after: [
-        'Two client-facing reports plus an interactive Power BI dashboard delivered on one shared scoring backbone',
-        '50+ companies scored and compared across five weighted dimensions: IP alignment, infrastructure fit, growth and PR, clinical validation, and relational strength',
         'Every company tiered into Engage Now, Emerging Fit, or Watchlist, surfacing credible mid-tier and emerging companies alongside the obvious large players',
-        'Infrastructure compatibility (GMP access, biorepository, imaging, flow cytometry) identified as a key differentiator for oncology, regenerative medicine, and diagnostics fits',
-        'Scalable framework established for monthly lead refreshes and dashboard updates going forward'
+        '50+ companies scored and compared across five weighted dimensions: IP alignment, infrastructure fit, growth and PR, clinical validation, and relational strength',
+        'Two client-facing reports plus an interactive Power BI dashboard delivered on one shared scoring backbone connecting UC Davis assets to candidate companies',
+        'Scalable framework established for monthly lead refreshes and dashboard updates going forward',
+        'Infrastructure compatibility (GMP access, biorepository, imaging, flow cytometry) identified as a key differentiator for oncology, regenerative medicine, and diagnostics fits'
       ]
     },
     tools: ['Power BI', 'DAX', 'Excel', 'Google Sheets', 'Power Query', 'Multi-Factor Scoring'],
@@ -196,15 +198,15 @@ export const CASE_STUDIES: CaseStudy[] = [
     impact: {
       before: [
         'No clarity on which parts of the microbiome platform were genuinely defensible versus easy for competitors to copy or bypass',
-        'Patent, reproducibility, and data-monetization questions handled separately, with no shared framework connecting IP, science, and commercial strategy',
-        'No prioritized view of which regions or product lines deserved IP and commercial investment',
-        'Risk of the report becoming a generic patent list or competitor summary instead of a board-ready decision tool'
+        'No structured way to know which competitors could replicate or bypass Decode Age\'s value, or how fast',
+        'No prioritized view of which product lines were most exposed to revenue erosion',
+        'No prioritized view of which regions deserved IP and commercial investment, or what to act on now versus later'
       ],
       after: [
         '174 patent documents consolidated into 162 unique families, risk-labeled and classified into four asset buckets, revealing Process & Reproducibility Systems as the highest-risk battleground (37 families, 8.1% High-risk share) and Algorithms as the most crowded (59 families, 88.1% Medium-risk)',
         '21 competitors scored against Decode Age\'s five capability layers, with Microba surfacing as the highest-overlap threat at a 10/10 match',
         'Revenue kill-zone mapping showed Preventive/Longevity and IBS/IBD facing up to ~80% peak exposure under aggressive competitive scenarios, versus slower but strategically important pressure on Oncology and B2B/Pharma',
-        'Defensive counter-moves quantified with risk-reduction estimates (30-45% for productizing the reproducibility engine, 20-40% for scaling reference cohorts), then sequenced into a board-ready 12/24/36-month action roadmap across IP, technical, geographic, and commercial priorities'
+        'Geographic capital efficiency mapped across the US, EU/UPC, UK, APAC, and MEA, then translated into quantified defensive counter-moves (30-45% risk reduction for productizing the reproducibility engine, 20-40% for scaling reference cohorts) and sequenced into a board-ready 12/24/36-month action roadmap'
       ]
     },
     tools: ['Python', 'Lens.org', 'Excel', 'Google Sheets', 'Patent Landscape Analysis', 'Competitive Intelligence', 'CPC Classification', 'Revenue Risk Mapping'],
@@ -226,15 +228,15 @@ export const CASE_STUDIES: CaseStudy[] = [
     impact: {
       before: [
         'Job-market data for data careers scattered across thousands of postings and company pages, with no structured view of demand',
-        'Salary ranges, required skills, and hiring intensity impossible to compare across roles, levels, and industries',
+        'Salary ranges and in-demand skills impossible to compare across roles, levels, and industries',
         'Company context (industry, revenue, workplace ratings) disconnected from job-level demand signals',
-        'No scalable way for job seekers or analysts to read the market beyond individual listings'
+        'No way to see which specialized skills actually differentiated Data Engineer and Data Scientist roles, beyond generic "in-demand skills" lists'
       ],
       after: [
         '11,290 job postings and 4,989 company records across 131 industries consolidated into one interactive dashboard, cutting manual labor-market research time by an estimated 60-80%',
         'Machine Learning Engineer identified as the highest-paid role at a $165K average salary, with Python, SQL, Power BI, and Tableau as the most consistently demanded skills across all 5 role groups',
-        'Specialized skills (Scala, TensorFlow, Kafka) isolated as differentiators specific to Data Engineer and Data Scientist roles',
-        'Company landscape benchmarked alongside job data: 22.18% of employers in the $1B-$5B revenue band, 45.5% average CEO approval, and a 3.7/5 average workplace rating'
+        'Company landscape benchmarked alongside job data: 22.18% of employers in the $1B-$5B revenue band, 45.5% average CEO approval, and a 3.7/5 average workplace rating',
+        'Specialized skills (Scala, TensorFlow, Kafka) isolated as differentiators specific to Data Engineer and Data Scientist roles'
       ]
     },
     tools: ['Python', 'Selenium', 'Pandas', 'NumPy', 'Power BI', 'Power Query', 'DAX', 'Skill Extraction'],

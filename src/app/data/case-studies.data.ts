@@ -58,31 +58,32 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     tag: 'Market Entry Analysis',
     slug: 'airbnb-market-entry-study-bangladesh',
-    title: 'Airbnb Bangladesh Market Entry Study',
-    subtitle: 'Competitive analysis and market viability assessment',
-    summary: 'Evaluated Airbnb expansion viability across Bangladesh by scraping and analysing 1,347 listings, 4,608 reviews, and 613 host profiles to identify the strongest entry market.',
+    title: 'Airbnb Bangladesh Market Entry Analysis',
+    subtitle: 'Market entry analysis, competitive benchmarking, and positioning',
+    summary: 'Ran a client-facing Airbnb market-entry study for Bangladesh, combining a Selenium-scraped dataset of 1,347 listings, 4,608 reviews, and 613 hosts with secondary market research to determine whether, where, and how an investor should enter the short-term rental market.',
     metrics: [
-      { value: '1,347', label: 'Listings Analyzed', note: 'Across all Bangladesh markets' },
-      { value: '42%', label: 'Higher Review Density', note: 'Dhaka vs alternatives' },
-      { value: '12', label: 'Initial Portfolio Size', note: 'For recommended market' }
+      { value: '1,347', label: 'Listings Analyzed', note: 'Across 8 Bangladesh divisions' },
+      { value: '50-70%', label: 'Faster Market Validation', note: 'vs manual listing-by-listing research' },
+      { value: '95.75%', label: 'Dhaka Host Response Rate', note: 'vs 62.62% in Chattogram' }
     ],
-    challenge: 'The client needed to determine whether Dhaka, Chittagong, or Cox\'s Bazar offered the most favourable unit economics and competitive landscape for a short-term rental investment, with no structured way to compare the three markets.',
-    approach: 'Designed a multi-stage scraping pipeline to capture listing attributes, host performance metrics, and guest sentiment across all major Bangladesh markets.\nBuilt a Power BI competitive analysis model segmenting by occupancy rate, average daily rate, and review velocity.\nTranslated raw data into competitive positioning benchmarks across Dhaka, Chittagong, and Cox\'s Bazar.',
+    challenge: 'A client considering Airbnb investment in Bangladesh had no data-backed view of which divisions offered real market potential, leaving the decision resting on manual browsing and anecdotal assumptions.\nPricing, competitive intensity, and guest amenity expectations varied by division with no structured way to compare them side by side.\nHost behavior and response quality, key signals of market maturity and competitiveness, were invisible without a listing-by-listing comparison.\nThere was no way to tell whether the market was mature enough to support a new entrant, or which division would give the strongest first foothold.',
+    approach: 'Built a Selenium scraping pipeline collecting listing, host, review, pricing, rating, and amenity data across all 8 Bangladesh divisions, then consolidated it into a single analysis-ready dataset.\nBuilt a Power BI dashboard comparing divisions on listing volume, pricing, review activity, host response rate, and Superhost share, alongside a facilities and amenity breakdown.\nReframed the dashboard output from an investor\'s perspective, using scale, traction, host professionalism, and amenity completeness as proxies for market maturity and entry risk.\nLayered in secondary research (tourism and business travel demand, seasonality, rent benchmarks, setup and operating costs, and Bangladesh-specific Airbnb regulation) to convert descriptive data into a market-entry and positioning recommendation.',
     impact: {
       before: [
-        'No structured market analysis across Bangladesh short-term rental landscape',
-        'Uncertain market potential and competitive intensity in each city',
-        'Inability to compare unit economics across Dhaka, Chittagong, and Cox\'s Bazar',
-        'Risk of expanding into suboptimal market with unclear demand signals'
+        'No data-backed view of which Bangladesh divisions offered real Airbnb market potential',
+        'Pricing, competition, and amenity expectations varied by division with no side-by-side comparison',
+        'Host response quality and Superhost share, key maturity signals, were invisible without manual, listing-by-listing review',
+        'No way to tell whether the market could support a new entrant, or where to enter first'
       ],
       after: [
-        'Data-backed market analysis covering 1,347 listings across Bangladesh',
-        'Dhaka identified as the clear entry market, with 42% higher review density and 18% stronger occupancy than alternatives',
-        'Clear competitive positioning benchmarks across Dhaka, Chittagong, and Cox\'s Bazar',
-        'Client moved forward with a 12-property initial portfolio in the recommended market'
+        '1,347 listings, 4,608 reviews, and 613 hosts consolidated into one structured decision-support study, cutting early-stage market validation time by an estimated 50-70% versus manual research',
+        'Dhaka identified as the strongest entry market: 656 listings, a 95.75% host response rate, and 150 superhosts, the deepest and most professionally mature market in the dataset',
+        'Chattogram identified as the strongest secondary market, priced 53% above Dhaka ($62.57 vs $40.88) but with weaker response quality (62.62%) and roughly half the listing depth',
+        'Barisal flagged as a premium-looking but unproven niche: a $121 average nightly rate and 5.00 rating built on just 3 reviews and 52 listings, too thin for a high-confidence call',
+        'Secondary research on rent, setup costs, seasonality, and regulation folded into the same study, strengthening investment evaluation beyond platform data alone'
       ]
     },
-    tools: ['Python', 'Selenium', 'Pandas', 'Power BI', 'DAX'],
+    tools: ['Python', 'Selenium', 'Pandas', 'NumPy', 'Power BI', 'Power Query', 'DAX', 'Market Research'],
     link: 'https://app.powerbi.com/view?r=eyJrIjoiZGZmMTA2YjUtZjk5YS00YjZjLWJmMmYtM2E1ZDQxZTI2MDAyIiwidCI6IjZmNDczODVjLTY3YjQtNGMwNi1hN2M0LWVmNmZhNTI4YTk1ZSIsImMiOjEwfQ%3D%3D&pageName=d51523c1ba67c0c9cc96',
     featured: true
   },
@@ -90,152 +91,153 @@ export const CASE_STUDIES: CaseStudy[] = [
     tag: 'Business Intelligence',
     slug: 'customer-cohort-market-performance-dashboard',
     title: 'Customer Cohort & Market Performance Dashboard',
-    subtitle: 'Multi-region reporting consolidation and automation',
-    summary: 'Consolidated four regional reports for a multinational grocery chain into a single Power BI view, cutting reporting preparation time by 65%.',
+    subtitle: 'KPI tracking, cohort analysis, and multi-region consolidation',
+    summary: 'Built a Power BI business intelligence solution for a multinational grocery chain operating across Canada, Mexico, and the US, consolidating four regional reports, KPI tracking, product and brand trends, and customer cohort analysis into one interactive dashboard.',
     metrics: [
       { value: '65%', label: 'Reduction in Prep Time', note: 'Per reporting cycle' },
       { value: '4', label: 'Reports Unified', note: 'Canada, Mexico, US regions' },
       { value: '5+', label: 'Hours Saved', note: 'Manual work eliminated per cycle' }
     ],
-    challenge: 'The finance and operations teams were maintaining four separate Excel-based reports across Canada, Mexico, and the US, creating version-control issues, 5+ hours of manual preparation per cycle, and inconsistent KPI definitions.',
-    approach: 'Unified all data sources through a single Power Query ETL layer with a shared data model, replacing four disconnected regional reports.\nStandardized KPI logic across Canada, Mexico, and US regions to eliminate definitional inconsistencies.\nDesigned a cohort analysis module tracking customer retention and basket growth over rolling 12-month windows.',
+    challenge: 'Market and customer performance reporting was fragmented across four separate regional reports and manual spreadsheet processes, with no consistent way to track KPIs across Canada, Mexico, and the US.\nComparing sales and performance across markets meant manually reconciling spreadsheets each cycle, making trend spotting slow and error-prone.\nCustomer cohort behavior (retention, repeat-purchase patterns) had no structured analysis layer, so the business could see sales but not the customer dynamics driving them.\nRecurring reporting consumed 5+ hours of manual work per cycle, time that could have gone toward interpreting results instead of assembling them.',
+    approach: 'Cleaned and transformed source data from four regional reports through Power Query, then built a single structured data model to replace the disconnected spreadsheets.\nBuilt KPI measures and visual summaries in DAX for sales and performance tracking, structured so Canada, Mexico, and the US could be compared side by side in one view.\nAdded a cohort analysis layer grouping customers by acquisition period to track retention and behavioral patterns over time, turning the dashboard into more than a sales KPI tracker.\nLayered in product and brand trend analysis so management could identify top performers and regional differences without leaving the dashboard.\nDesigned the model so recurring analysis could refresh automatically each cycle, balancing management-friendly summary views with deeper analytical drill-down.',
     impact: {
       before: [
-        'Four separate Excel-based regional reports with inconsistent KPI definitions',
-        'Manual data entry and 5+ hours of reconciliation per reporting cycle',
-        'Version-control issues and duplication of analytical work',
-        'Unable to conduct fast cross-regional performance comparisons'
+        'Four separate regional reports and manual spreadsheet processes, with no consistent way to track KPIs across Canada, Mexico, and the US',
+        '5+ hours of manual reconciliation work per reporting cycle, with sales, product, and regional comparisons done by hand',
+        'No structured view of customer cohort behavior, retention, or repeat-purchase patterns behind the sales numbers',
+        'Slow, error-prone trend spotting across brands, products, and regions'
       ],
       after: [
-        'Single Power BI dashboard with unified data model across all regions',
-        '65% reduction in preparation time per reporting cycle',
-        'Automated ETL pipeline eliminating manual reconciliation',
-        'VP can conduct cross-regional reviews in under 30 minutes'
+        'Four regional reports consolidated into one interactive Power BI model, cutting reporting preparation time by 65% per cycle',
+        '5+ hours of manual spreadsheet work eliminated per reporting cycle through automated Power Query transformation and DAX measures',
+        'Cohort analysis layer added on top of KPI tracking, surfacing customer retention and behavioral patterns the old reports never showed',
+        'Top-performing brands, products, and customer segments identified in one view across all 3 regions, instead of stitched together from four separate reports'
       ]
     },
-    tools: ['Power BI', 'Power Query', 'DAX', 'Cohort Analysis', 'ETL'],
+    tools: ['Power BI', 'Power Query', 'DAX', 'Data Modeling', 'Cohort Analysis', 'KPI Reporting', 'ETL'],
     featured: true
   },
   {
     tag: 'Market Research',
     slug: 'aggie-square-tenant-targeting-readiness',
     title: 'Aggie Square Tenant Targeting & Readiness Dashboard',
-    subtitle: 'Multi-factor company scoring and strategic prioritization',
-    summary: 'Built a multi-phase tenant targeting solution for Wexford Connect Labs by combining commercialization research, multi-factor scoring, and a Power BI dashboard to identify and prioritize high-potential life sciences companies for Aggie Square.',
+    subtitle: 'Commercialization mapping, multi-factor scoring, and prioritization',
+    summary: 'Built a three-phase tenant targeting solution for Wexford Connect Labs, mapping UC Davis patents, labs, and infrastructure into a five-dimension scoring model that ranks life sciences companies into Engage Now, Emerging Fit, and Watchlist tiers for Aggie Square, then surfaced the framework in an interactive Power BI dashboard.',
     metrics: [
       { value: '2', label: 'Client-Facing Reports', note: 'Commercialization + scoring' },
       { value: '5', label: 'Scoring Dimensions', note: 'IP, infrastructure, growth, validation, relations' },
       { value: '50+', label: 'Companies Evaluated', note: 'With tiering and comparison' }
     ],
-    challenge: 'The client lacked a structured and repeatable way to identify high-fit tenant companies. Early target lists overemphasized obvious large pharmaceutical players while failing to surface emerging and mid-tier companies with stronger near-term fit across UC Davis IP alignment, infrastructure needs, growth signals, and relationship potential.',
-    approach: 'Developed a baseline commercialization mapping report of UC Davis assets to establish the research and IP foundation.\nBuilt a weighted scoring framework across five dimensions: IP alignment, infrastructure fit, growth and PR signals, clinical validation, and relational strength.\nTranslated the scoring logic into a Power BI dashboard with tiering, filtering, and comparison views to support outreach prioritization and strategic decision-making.',
+    challenge: 'Early target lists leaned on large, already-obvious pharmaceutical names, while mid-tier and emerging companies, often the stronger near-term fits for Aggie Square, went unsurfaced.\nNo consistent way to compare companies across IP alignment, infrastructure needs, growth signals, and relationship potential, so prioritization relied on individual judgment rather than a repeatable method.\nUC Davis commercialization assets (patents, translational labs, infrastructure) and candidate tenant companies lived in separate, disconnected research threads with no shared framework connecting them.\nNo scalable process existed for refreshing leads or re-scoring companies as new funding, PR, or clinical signals emerged.',
+    approach: 'Built a baseline commercialization report mapping UC Davis patents, research domains (Cancer Biology, Neuroscience, Biomedical Engineering & Imaging, Regenerative Medicine, Microbiome & Gut-Brain Health), translational labs, and infrastructure.\nDesigned a weighted, five-pillar scoring model (IP Alignment, Infrastructure Fit, Growth & PR, Clinical Validation, Relational/Alumni Signals) built on domain-to-therapeutic crosswalks and infrastructure compatibility mapping.\nScored clinical validation using confirmed UC Davis trial and payment ties rather than general commercial activity, and assigned a non-zero baseline to companies without confirmed ties so sparse data did not unfairly penalize them.\nSegmented every company into three outreach tiers (Engage Now, Emerging Fit, Watchlist) and modeled the results in Power BI with DAX measures and helper tables for dynamic filtering by company, tier, domain, and infrastructure need.\nSeparated raw research, scoring logic, and presentation into distinct layers, reports for narrative explanation and the dashboard for exploration, so the same analytical backbone served both executive review and operational outreach.',
     impact: {
       before: [
-        'No structured approach to tenant identification and prioritization',
-        'Focus on obvious large pharma players while missing emerging opportunities',
-        'Fragmented research inputs without unified scoring framework',
-        'Manual, non-repeatable process for lead identification'
+        'Tenant lists skewed toward obvious large pharmaceutical names, with no structured way to surface mid-tier or emerging fits',
+        'No consistent scoring across IP, infrastructure, growth, and relationship dimensions, so company comparisons stayed subjective',
+        'UC Davis commercialization assets and candidate companies analyzed in separate silos with no shared framework',
+        'No repeatable process for refreshing leads or re-scoring companies as new signals emerged'
       ],
       after: [
-        'Two client-facing reports plus an interactive Power BI dashboard delivered',
-        'Structured 5-factor scoring framework with clear fit criteria',
-        'Dashboard enabling comparison across 50+ companies and five scoring dimensions',
-        'Emerging and mid-tier companies surfaced with equal weighting alongside large pharma',
-        'Scalable, repeatable system for future lead refreshes and outreach planning'
+        'Two client-facing reports plus an interactive Power BI dashboard delivered on one shared scoring backbone',
+        '50+ companies scored and compared across five weighted dimensions: IP alignment, infrastructure fit, growth and PR, clinical validation, and relational strength',
+        'Every company tiered into Engage Now, Emerging Fit, or Watchlist, surfacing credible mid-tier and emerging companies alongside the obvious large players',
+        'Infrastructure compatibility (GMP access, biorepository, imaging, flow cytometry) identified as a key differentiator for oncology, regenerative medicine, and diagnostics fits',
+        'Scalable framework established for monthly lead refreshes and dashboard updates going forward'
       ]
     },
-    tools: ['Power BI', 'DAX', 'Excel', 'Google Sheets', 'Power Query'],
+    tools: ['Power BI', 'DAX', 'Excel', 'Google Sheets', 'Power Query', 'Multi-Factor Scoring'],
     featured: false
   },
   {
     tag: 'Impact Evaluation',
     slug: 'post-covid-livelihood-recovery-endline',
     title: 'Post-COVID-19 Livelihood Recovery Endline Evaluation',
-    subtitle: 'Mixed-method household livelihood and resilience assessment',
-    summary: 'Analyzed mixed-method endline data for a livelihood recovery intervention in Ramu, Cox\'s Bazar to assess changes in income, agricultural practices, women\'s empowerment, financial inclusion, and community resilience.',
+    subtitle: 'Mixed-method livelihood and resilience assessment, Ramu, Cox\'s Bazar',
+    summary: 'Evaluated a post-COVID-19 livelihood recovery intervention for 330 households across two unions of Ramu, Cox\'s Bazar, combining household survey data with 8 FGDs, 19 KIIs, 5 IDIs, and 3 case studies to measure real baseline-to-endline change in income, agriculture, women\'s empowerment, financial inclusion, and disaster preparedness.',
     metrics: [
-      { value: '59%', label: 'Income Increase', note: 'Mean household income growth' },
+      { value: '59%', label: 'Income Increase', note: 'BDT 10,536 to BDT 16,828 mean household income' },
       { value: '98%', label: 'Tech Adoption', note: 'Agricultural technology from 32%' },
-      { value: '330', label: 'Households Surveyed', note: 'Plus 27 qualitative interviews' }
+      { value: '330', label: 'Households Surveyed', note: 'Plus 35 FGDs, KIIs, IDIs & case studies' }
     ],
-    challenge: 'The evaluation needed to determine whether a multi-component livelihood recovery project had produced measurable improvements across income, agriculture, food security, women\'s participation, financial access, and disaster preparedness for vulnerable households affected by COVID-19 and related shocks.',
-    approach: 'Combined 330 household surveys with qualitative research (8 FGDs, 19 KIIs, 5 IDIs, and 3 case studies) to assess multi-dimensional livelihood improvements.\nUsed SPSS, Excel, Power Query, and Power BI to clean survey data and compare baseline vs endline indicators across 8 development indicators.\nApplied statistical analysis to isolate project impact from external factors, then translated findings into indicator-based evaluation reporting aligned with development-sector criteria.',
+    challenge: 'Vulnerable households in Ramu, Cox\'s Bazar faced compounding shocks, COVID-19 income loss, the Rohingya influx, floods, cyclones, and landslides, with no evidence base to show whether recovery interventions were actually working.\nMean household income sat at just BDT 10,536, agricultural technology adoption at 32%, and rights and entitlement awareness at only 8%, leaving households exposed on income, production, and access to support simultaneously.\nRecovery planning existed mostly on paper: only 6% of households had implemented a Resilient Livelihood Restoration Plan, and just 11% of trained households had a business plan.\nThe evaluation needed to isolate real project impact across income, agriculture, women\'s participation, food security, financial inclusion, and disaster preparedness, and hold it to OECD-DAC-style evaluation criteria, not just report survey averages.',
+    approach: 'Built an indicator-based household questionnaire linked to specific project outcomes (income, RLRP, agricultural adoption, off-farm business, food diversity, financial access, disaster preparedness, rights awareness), then fielded it across 330 households in two Ramu unions, Khuniapalong and Dakkhin Mithachhari.\nPaired the survey with 8 FGDs, 19 KIIs, 5 IDIs, and 3 case studies to explain the quantitative shifts with community and stakeholder context.\nCleaned and coded the dataset in SPSS, Excel, and Power Query, then compared baseline-to-endline values indicator by indicator rather than reporting single-point averages.\nBuilt Power BI visuals and indicator-level summaries for the final report, then interpreted every result against OECD-DAC-style evaluation dimensions, relevance, coherence, efficiency, effectiveness, impact, and sustainability, rather than presenting numbers in isolation.',
     impact: {
       before: [
-        'Baseline agricultural technology adoption of just 32%, with no statistical framework to track change',
-        'Homestead gardening practiced by only 31% of households at baseline',
-        'Rights awareness at just 8%, with limited qualitative context to explain the gap',
-        'Unclear project effectiveness across income, food security, and resilience dimensions'
+        'Mean household income of just BDT 10,536, with limited off-farm income diversification',
+        'Only 6% of households had implemented a Resilient Livelihood Restoration Plan, leaving recovery planning largely theoretical',
+        'Agricultural technology adoption at 32%, with low resilience to climate and market shocks',
+        'Just 11% of trained households had a business plan, and off-farm income activity was minimal',
+        'Rights and entitlement awareness at only 8%, leaving households unable to access available support systems'
       ],
       after: [
-        'Agricultural technology adoption rose from 32% to 98% of surveyed households',
-        'Homestead gardening increased from 31% to 94%',
-        'Rights awareness improved from 8% to 99%',
-        '59% increase in mean household income, evidenced across 330 households',
-        'Clear evidence brief delivered for future livelihood programming and donor reporting'
+        'Mean household income rose 59% to BDT 16,828, evidenced across 330 households',
+        'RLRP implementation jumped from 6% to 85.5%, moving households from planning to action',
+        'Agricultural technology adoption rose to 98%, with homestead gardening up from 31% to 94% (women\'s involvement 21.2% to 86.4%)',
+        'Business plan development rose to 84%, and 62% of trained participants went on to start businesses',
+        'Rights and entitlement awareness rose to 99%, alongside financial institution access improving from 45% to 63%'
       ]
     },
-    tools: ['SPSS', 'Excel', 'Power Query', 'Power BI', 'DAX', 'KoBoToolbox'],
+    tools: ['SPSS', 'Excel', 'Power Query', 'Power BI', 'DAX', 'KoBoToolbox', 'Mixed-Method Evaluation', 'Indicator Tracking'],
     featured: false
   },
   {
     tag: 'Intellectual Property Research',
     slug: 'decode-age-ip-validation-competitive-intelligence',
     title: 'Decode Age IP Validation, Competitive Intelligence & Commercial Readiness Analysis',
-    subtitle: 'Patent landscape and commercialization risk assessment',
-    summary: 'Built a strategic IP validation and competitive intelligence framework for Decode Age\'s microbiome platform by combining patent landscape analysis, competitor dossiers, technical reproducibility review, and commercialization assessment.',
+    subtitle: 'Patent landscape, replication risk, and revenue exposure assessment',
+    summary: 'Built a strategic (not Freedom-to-Operate) IP validation and competitive intelligence framework for Decode Age\'s microbiome platform, combining a 162-family patent landscape, 21 competitor dossiers, and technical reproducibility review to map defensibility, replication risk, and revenue exposure across the platform\'s four core IP asset classes.',
     metrics: [
-      { value: '162', label: 'Patent Families Analyzed', note: 'From 174 patent documents' },
-      { value: '21', label: 'Competitors Evaluated', note: 'Direct and adjacent markets' },
-      { value: '12/24/36', label: 'Month Action Pathways', note: 'Sequenced for capital efficiency' }
+      { value: '162', label: 'Patent Families Analyzed', note: 'Consolidated from 174 patent documents' },
+      { value: '21', label: 'Competitors Assessed', note: 'Scored against Decode Age\'s five capability layers' },
+      { value: '~80%', label: 'Peak Revenue Exposure', note: 'Preventive/Longevity & IBS/IBD, aggressive scenario' }
     ],
-    challenge: 'The business needed a clearer answer on which parts of the platform were genuinely defensible, where competitors could replicate or bypass value, which product lines were most exposed, and where IP or commercialization spend would compound value rather than leak capital.',
-    approach: 'Analyzed 174 patent documents, consolidated into 162 unique patent families, and classified them into Decode Age-relevant asset buckets to map IP defensibility zones.\nAssessed 21 direct and adjacent competitors across replication pathways, bypass routes, product overlap, and revenue impact.\nStructured findings into a board-ready report covering IP economics, technical reproducibility, data monetization, geographic capital efficiency, and product revenue readiness.\nTranslated technical patent findings into 12/24/36-month action sequencing for capital-efficient decision-making.',
+    challenge: 'Decode Age had a strong technical narrative, but no clear answer on which parts of its microbiome platform were genuinely defensible versus easy for competitors to copy or bypass.\nNo structured view of where patent filing would protect value versus where it would waste capital, or whether the platform\'s reproducibility was strong enough for clinical trust and external deployment.\nData, biobanking, and reference database assets had unclear monetization potential, with no governance or licensing readiness assessment.\nNo prioritized view of which regions justified IP and commercial investment, which product lines were most exposed to revenue erosion, or what to act on now versus later.',
+    approach: 'Scoped the work explicitly as strategic IP validation, not Freedom-to-Operate, using patent data as a proxy for novelty pressure, replication risk, and capital intensity rather than legal clearance.\nBuilt a Lens.org search and classification framework (CPC filters, short-token keywords, 16S/amplicon exclusions) to isolate Decode Age\'s real IP surface, then analyzed 174 patent documents in Python, consolidating them into 162 unique families and risk-labeling each High, Medium, or Low.\nClassified every family into four business-relevant asset buckets (Process & Reproducibility Systems, Algorithms & Computational Analysis, Biobanking & Viability Systems, Databases/Scores/Reference Frameworks) so the platform was assessed as a system rather than a component list.\nBuilt dossiers for 21 direct and adjacent competitors (Microba, Genova, Metabolon, Tiny Health, Macrogen, and others), scoring each against Decode Age\'s five capability layers and mapping replication pathways, bypass routes, and revenue impact.\nLayered in geographic capital efficiency (US, EU/UPC, UK, APAC, MEA), product-to-revenue conversion friction, and Go/Hold/Pivot decision triggers, then sequenced every recommendation across 12, 24, and 36-month windows.',
     impact: {
       before: [
-        'Complex microbiome technology narrative without clear IP defensibility assessment',
-        'Unclear replication risks across product lines and competitor landscape',
-        'No prioritized action roadmap for IP or commercialization spending',
-        'Difficulty communicating defensibility and revenue-readiness to board'
+        'No clarity on which parts of the microbiome platform were genuinely defensible versus easy for competitors to copy or bypass',
+        'Patent, reproducibility, and data-monetization questions handled separately, with no shared framework connecting IP, science, and commercial strategy',
+        'No prioritized view of which regions or product lines deserved IP and commercial investment',
+        'Risk of the report becoming a generic patent list or competitor summary instead of a board-ready decision tool'
       ],
       after: [
-        'Board-ready IP landscape assessment of 162 patent families',
-        'Clear mapping of defensible zones, replication risks, and product exposure',
-        '12/24/36-month action pathway with capital efficiency sequencing',
-        'Strategic recommendations for product prioritization and go-to-market'
+        '174 patent documents consolidated into 162 unique families, risk-labeled and classified into four asset buckets, revealing Process & Reproducibility Systems as the highest-risk battleground (37 families, 8.1% High-risk share) and Algorithms as the most crowded (59 families, 88.1% Medium-risk)',
+        '21 competitors scored against Decode Age\'s five capability layers, with Microba surfacing as the highest-overlap threat at a 10/10 match',
+        'Revenue kill-zone mapping showed Preventive/Longevity and IBS/IBD facing up to ~80% peak exposure under aggressive competitive scenarios, versus slower but strategically important pressure on Oncology and B2B/Pharma',
+        'Defensive counter-moves quantified with risk-reduction estimates (30-45% for productizing the reproducibility engine, 20-40% for scaling reference cohorts), then sequenced into a board-ready 12/24/36-month action roadmap across IP, technical, geographic, and commercial priorities'
       ]
     },
-    tools: ['Python', 'Lens.org', 'Excel', 'Google Sheets', 'Patent Landscape Analysis', 'Competitive Intelligence'],
+    tools: ['Python', 'Lens.org', 'Excel', 'Google Sheets', 'Patent Landscape Analysis', 'Competitive Intelligence', 'CPC Classification', 'Revenue Risk Mapping'],
     featured: false
   },
   {
     tag: 'Market Intelligence',
     slug: 'us-data-careers-job-market-analysis',
-    title: 'US Data Careers Job Market Analysis',
-    subtitle: 'Talent market trends and compensation benchmarking',
-    summary: 'Scraped 11,290 job postings to uncover hiring trends, salary benchmarks, and in-demand skills across data-driven roles in the United States.',
+    title: 'U.S. Data Job Market Analysis',
+    subtitle: 'Large-scale labor-market scraping and compensation benchmarking',
+    summary: 'Scraped and analyzed 11,290 Indeed job postings and 4,989 company records across 5 data-role groups (Data Analyst, Business Analyst, Data Scientist, Data Engineer, Machine Learning Engineer) to build a Power BI dashboard benchmarking hiring demand, salary trends, required skills, and employer characteristics across 131 industries.',
     metrics: [
-      { value: '11,290', label: 'Job Postings Analyzed', note: 'Across data-driven roles' },
-      { value: '23%', label: 'Salary Premium', note: 'SQL + Python vs single skill' },
-      { value: '70%', label: 'Research Time Savings', note: 'vs manual job board browsing' }
+      { value: '11,290', label: 'Job Postings Analyzed', note: 'Across 5 role groups, 131 industries' },
+      { value: '$165K', label: 'Highest Average Salary', note: 'Machine Learning Engineer, the top-paid role' },
+      { value: '60-80%', label: 'Faster Market Research', note: 'vs manual job board browsing' }
     ],
-    challenge: 'There was no consolidated, up-to-date view of how demand for data roles varied by location, seniority, or required stack, making it hard for job seekers or hiring managers to benchmark effectively.',
-    approach: 'Built a Python + Selenium scraper targeting Indeed, collecting and cleaning 11,290 postings and 4,989 company records.\nModeled the data in Power BI with DAX measures for salary ranges, skill-frequency heatmaps, and role-level comparisons.\nBuilt an interactive dashboard enabling real-time market intelligence on hiring trends and compensation benchmarks.',
+    challenge: 'Job market data for data-driven careers was scattered across thousands of postings and company pages, with no structured way to see which roles were most in demand.\nSalary ranges, required skills, and hiring intensity varied by role and level with no consolidated way to compare them.\nCompany-level context (industry, size, revenue, workplace ratings) lived separately from job postings, so demand signals and employer quality could not be viewed together.\nWithout structuring the data, students, job seekers, and analysts had no scalable way to read the market beyond individual listings.',
+    approach: 'Built a Selenium scraping pipeline collecting 11,290 job posting links across 5 role groups (Data Analyst, Business Analyst, Data Scientist, Data Engineer, Machine Learning Engineer), then followed linked employer pages to scrape 4,989 company records.\nCleaned and transformed the combined dataset in pandas, handling missing values, removing duplicates, and standardizing role, salary, and location fields.\nParsed job descriptions to extract skill indicators (Python, SQL, Tableau, Power BI, AWS, TensorFlow, Kafka, Java, Excel, and more) as structured flags rather than free text.\nBuilt a multi-page Power BI dashboard (summary, job information, company and skills, company overview) joining job-level demand with company-level context like revenue band, CEO approval, and employee ratings.',
     impact: {
       before: [
-        'Manual job board browsing with no systematic market view',
-        'Unclear salary benchmarks across roles, locations, and skill combinations',
-        'Difficult to identify in-demand skill combinations and compensation impact',
-        'Time-consuming process for job seekers and hiring managers'
+        'Job-market data for data careers scattered across thousands of postings and company pages, with no structured view of demand',
+        'Salary ranges, required skills, and hiring intensity impossible to compare across roles, levels, and industries',
+        'Company context (industry, revenue, workplace ratings) disconnected from job-level demand signals',
+        'No scalable way for job seekers or analysts to read the market beyond individual listings'
       ],
       after: [
-        'Interactive dashboard with 11,290 job postings and salary data',
-        'Clear compensation benchmarks by role, location, and skill stack',
-        '23% salary premium identified for SQL + Python proficiency',
-        '70% time savings compared to manual research methods'
+        '11,290 job postings and 4,989 company records across 131 industries consolidated into one interactive dashboard, cutting manual labor-market research time by an estimated 60-80%',
+        'Machine Learning Engineer identified as the highest-paid role at a $165K average salary, with Python, SQL, Power BI, and Tableau as the most consistently demanded skills across all 5 role groups',
+        'Specialized skills (Scala, TensorFlow, Kafka) isolated as differentiators specific to Data Engineer and Data Scientist roles',
+        'Company landscape benchmarked alongside job data: 22.18% of employers in the $1B-$5B revenue band, 45.5% average CEO approval, and a 3.7/5 average workplace rating'
       ]
     },
-    tools: ['Python', 'Selenium', 'Pandas', 'Power BI', 'DAX'],
+    tools: ['Python', 'Selenium', 'Pandas', 'NumPy', 'Power BI', 'Power Query', 'DAX', 'Skill Extraction'],
     link: 'https://app.powerbi.com/view?r=eyJrIjoiYTQ5MDc4NjAtYzI0ZS00YTRjLWE4NGEtODgxMzY4Yjc2ZGI2IiwidCI6IjZmNDczODVjLTY3YjQtNGMwNi1hN2M0LWVmNmZhNTI4YTk1ZSIsImMiOjEwfQ%3D%3D&pageName=8261f97ece42040ada0a',
     featured: false
   }
